@@ -1,0 +1,37 @@
+{
+  "name": "md-share",
+  "version": "1.0.0",
+  "private": true,
+  "description": "md-share",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "gatsby": "^4.18.2",
+    "gatsby-plugin-image": "^2.18.1",
+    "gatsby-plugin-manifest": "^4.18.1",
+    "gatsby-plugin-react-helmet": "^5.18.0",
+    "gatsby-plugin-sharp": "^4.18.1",
+    "gatsby-plugin-sitemap": "^5.18.1",
+    "gatsby-source-filesystem": "^4.18.1",
+    "gatsby-transformer-remark": "^5.18.1",
+    "gatsby-transformer-sharp": "^4.18.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.45",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "typescript": "^4.7.4"
+  }
+}
