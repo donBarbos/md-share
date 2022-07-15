@@ -1,9 +1,15 @@
 import type { GatsbyConfig } from "gatsby"
 
+const meta = require("./gatsby-meta-config")
+
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `md-share`,
-    siteUrl: `https://md-share.netlify.app`,
+    title: meta.title,
+    description: meta.description,
+    author: meta.author,
+    // siteUrl: "https://md-share.netlify.app",
+    siteUrl: meta.siteUrl,
+    lang: meta.lang,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -11,10 +17,24 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     "gatsby-plugin-image",
+    "gatsby-plugin-catch-links",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-robots-txt",
-    "gatsby-plugin-offline",
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://md-share.netlify.app",
+        sitemap: "https://md-share.netlify.app/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-offline",
+      options: {
+        precachePages: ["/index.html"],
+        importWorkboxFrom: "cdn",
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {

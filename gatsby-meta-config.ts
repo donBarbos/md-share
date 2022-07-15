@@ -2,7 +2,7 @@ module.exports = {
   title: "md share",
   description: `application for share Markdown files`,
   author: "donBarbos",
-  siteUrl: "https://gatsby-starter-apple.netlify.app",
+  siteUrl: "https://md-share.netlify.app",
   lang: "en",
   utterances: "donBarbos/md-share",
   links: {

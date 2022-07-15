@@ -30,11 +30,10 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "off",
   },
   overrides: [
-    // Override some TypeScript rules just for .js files
     {
-      files: ["*.js"],
+      files: ["*.ts"],
       rules: {
-        "@typescript-eslint/no-var-requires": "off", //
+        "@typescript-eslint/no-var-requires": "off",
       },
     },
   ],
