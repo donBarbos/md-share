@@ -71,7 +71,7 @@ const docLinks = [
     text: "GraphQL Typegen Documentation",
     url: "https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/",
     color: "#8954A8",
-  }
+  },
 ]
 
 const badgeStyle = {
@@ -84,7 +84,7 @@ const badgeStyle = {
   borderRadius: 4,
   padding: "4px 6px",
   display: "inline-block",
-  position: "relative" as "relative",
+  position: "relative" as const,
   top: -2,
   marginLeft: 10,
   lineHeight: 1,
@@ -149,12 +149,12 @@ const IndexPage = () => {
         🎉🎉🎉
       </h1>
       <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this page
-        update in real-time. 😎
+        Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this page update in
+        real-time. 😎
       </p>
       <ul style={doclistStyles}>
-        {docLinks.map(doc => (
-          <li style={docLinkStyle}>
+        {docLinks.map((doc) => (
+          <li key={"none"} style={docLinkStyle}>
             <a
               style={linkStyle}
               href={`${doc.url}?utm_source=starter&utm_medium=ts-docs&utm_campaign=minimal-starter-ts`}
@@ -165,7 +165,7 @@ const IndexPage = () => {
         ))}
       </ul>
       <ul style={listStyles}>
-        {links.map(link => (
+        {links.map((link) => (
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
             <span>
               <a
