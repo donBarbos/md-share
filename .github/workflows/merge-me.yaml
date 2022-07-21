@@ -6,7 +6,6 @@ on:
       - completed
     workflows:
       - 'Checks'
-      - 'Docker Image CI'
 
 jobs:
   merge-me:
