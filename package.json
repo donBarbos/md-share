@@ -73,7 +73,7 @@
     "typography": "^0.16.21"
   },
   "devDependencies": {
-    "@types/node": "^18.0.4",
+    "@types/node": "^18.0.6",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@types/react-helmet": "^6.1.5",
