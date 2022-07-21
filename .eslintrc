@@ -44,8 +44,7 @@
     "react/prop-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "import/no-named-as-default": "off",
-    "import/no-unresolved": "off"
+    "import/no-named-as-default": "off"
   },
   "overrides": [
     {
