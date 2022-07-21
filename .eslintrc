@@ -16,7 +16,7 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": ["./tsconfig.json"],
+    "project": "./tsconfig.json",
     "ecmaFeatures": {
       "jsx": true
     },
@@ -24,6 +24,11 @@
   "sourceType": "module"
   },
   "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    },
     "react": {
       "version": "detect"
     }
@@ -37,7 +42,10 @@
   "rules": {
     "prettier/prettier": ["error"],
     "react/prop-types": "off",
-    "@typescript-eslint/explicit-function-return-type": "off"
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "import/no-named-as-default": "off",
+    "import/no-unresolved": "off"
   },
   "overrides": [
     {
