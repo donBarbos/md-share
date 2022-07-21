@@ -1,15 +1,13 @@
-import type { GatsbyConfig } from "gatsby"
-
-const meta = require("./gatsby-meta-config")
-
-const config: GatsbyConfig = {
+module.exports = {
   siteMetadata: {
-    title: meta.title,
-    description: meta.description,
-    author: meta.author,
-    // siteUrl: "https://md-share.netlify.app",
-    siteUrl: meta.siteUrl,
-    lang: meta.lang,
+    title: "md share",
+    description: `application for share Markdown files`,
+    author: "donBarbos",
+    siteUrl: "https://md-share.netlify.app",
+    lang: "en",
+    repo: "donBarbos/md-share",
+    github: "https://github.com/donBarbos/md-share",
+    icon: "src/images/icon.png",
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -60,7 +58,11 @@ const config: GatsbyConfig = {
       },
       __key: "pages",
     },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
   ],
 }
-
-export default config

@@ -30,17 +30,14 @@
     "baseUrl": "./src",
     "paths": {
       "@/src": ["./"],
-      "@images/*": ["images/*"],
-      "@layouts/*": ["layouts/*"],
-      "@pages/*": ["pages/*"],
-      "@stores/*": ["stores/*"],
-      "@templates/*": ["templates/*"],
       "@components/*": ["components/*"],
       "@constants/*": ["constants/*"],
       "@hooks/*": ["hooks/*"],
-      "@posts/*": ["posts/*"],
+      "@images/*": ["images/*"],
+      "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"],
-      "@types/*": ["types/*"],
+      "@templates/*": ["templates/*"],
+      "@types": ["types"],      // use this if there is index.ts in folder
       "@utils/*": ["utils/*"]
     },                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
@@ -61,7 +58,7 @@
     // "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
     "sourceMap": true,
     // "outFile": "./",                                  /* Specify a file that bundles all outputs into one JavaScript file. If `declaration` is true, also designates a file that bundles all .d.ts output. */
-    // "outDir": "./",                                   /* Specify an output folder for all emitted files. */
+    // "outDir": "public",                                   /* Specify an output folder for all emitted files. */
     // "removeComments": true,                           /* Disable emitting comments. */
     "noEmit": true,
     // "importHelpers": true,                            /* Allow importing helper functions from tslib once per project, instead of including them per-file. */
@@ -92,25 +89,24 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
-    // "strictBindCallApply": true,                      /* Check that the arguments for `bind`, `call`, and `apply` methods match the original function. */
+    "strictBindCallApply": true,
     // "strictPropertyInitialization": true,             /* Check for class properties that are declared but not set in the constructor. */
-    // "noImplicitThis": true,                           /* Enable error reporting when `this` is given the type `any`. */
+    "noImplicitThis": true,
     // "useUnknownInCatchVariables": true,               /* Type catch clause variables as 'unknown' instead of 'any'. */
-    // "alwaysStrict": true,                             /* Ensure 'use strict' is always emitted. */
+    "alwaysStrict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     // "exactOptionalPropertyTypes": true,               /* Interpret optional property types as written, rather than adding 'undefined'. */
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     // "noUncheckedIndexedAccess": true,                 /* Include 'undefined' in index signature results */
-    // "noImplicitOverride": true,                       /* Ensure overriding members in derived classes are marked with an override modifier. */
+    "noImplicitOverride": true,
     // "noPropertyAccessFromIndexSignature": true,       /* Enforces using indexed accessors for keys declared using an indexed type */
-    // "allowUnusedLabels": true,                        /* Disable error reporting for unused labels. */
-    // "allowUnreachableCode": true,                     /* Disable error reporting for unreachable code. */
+    "allowUnreachableCode": false,
 
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true
   },
-  "include": ["./src/**/*", "./gatsby-node.ts", "./gatsby-config.ts", "./plugins/**/*"]
+  "include": ["./src/**/*", "./gatsby-config.ts", "./gatsby-node.ts", "./gatsby-ssr.ts", "./gatsby-browser.ts"]
 }
