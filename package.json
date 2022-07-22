@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
-    "gatsby": "^4.19.1",
+    "gatsby": "^4.19.2",
     "gatsby-plugin-catch-links": "^4.19.0",
     "gatsby-plugin-image": "^2.19.0",
     "gatsby-plugin-manifest": "^4.19.0",
