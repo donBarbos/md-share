@@ -1,8 +1,8 @@
 import { useState, useCallback, useEffect } from "react"
 
-import { LIGHT, DARK } from "@constants/theme"
+import { LIGHT, DARK } from "../constants/theme"
 
-/** @see gatsby-ssr.js */
+/** @see gatsby-ssr.ts */
 declare global {
   interface Window {
     __theme: string
