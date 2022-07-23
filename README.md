@@ -1,56 +1,57 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby minimal TypeScript starter
-
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/7ed08b7d-034b-4d4e-b303-b2501ecf8708/deploy-status)](https://app.netlify.com/sites/md-share/deploys)
+  <a href="https://md-share.netlify.app">
+    <img alt="Markdown" src="./src/images/icon.png" width="45" />
+  </a>
+  share
 </h1>
 
-## 🚀 Quick start
+<h3 align="center">
+  Application for share Markdown files
+</h3>
 
-1.  **Create a Gatsby site.**
+<p align="center">
+  <a href="https://app.netlify.com/sites/md-share/deploys"><img src="https://api.netlify.com/api/v1/badges/7ed08b7d-034b-4d4e-b303-b2501ecf8708/deploy-status" alt="Netlify Status"></a>
+  <a href="https://github.com/donBarbos/md-share/actions/workflows/checks.yml"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/donBarbos/md-share/Checks?label=build"></a>
+  <a href="https://github.com/donBarbos/md-share/blob/master/LICENSE"><img src="https://img.shields.io/github/license/donBarbos/md-share" alt="License"></a>
+</p>
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+## Requirements
+* node
+* yarn
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby
+
+## 🚀 Setup
+* install dependens
+    ```bash
+    yarn install
     ```
 
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
+* create dir `public/` with static
+    ```bash
+    yarn build
     ```
 
-3.  **Open the code and start customizing!**
 
-    Your site is now running at http://localhost:8000!
+## 🔧 Tech Stack
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+* `TypeScript` — ...
+* `React` — ...
+* `Gatsby` — ...
+* `Yarn` — ...
 
-4.  **Learn more**
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+## 🤝 Contributing
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+Any contributions you make are **greatly appreciated**.
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+Make sure you run: `yarn install`
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+## 📝 License
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+Distributed under the GPL-3.0 license. See `LICENSE` for more information.
 
-## 🚀 Quick start (Gatsby Cloud)
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+## 📢 Contact
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+[donbarbos](https://github.com/donBarbos): donbarbos@proton.me
