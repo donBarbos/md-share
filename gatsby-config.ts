@@ -7,7 +7,7 @@ module.exports = {
     lang: "en",
     repo: "donBarbos/md-share",
     github: "https://github.com/donBarbos/md-share",
-    icon: "src/images/icon.png",
+    icon: "./src/images/icon.png",
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -36,11 +36,12 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "./src/images/icon.png",
       },
     },
     "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-styled-components",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
@@ -61,7 +62,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        pathToConfigModule: `./src/utils/typography`,
       },
     },
   ],

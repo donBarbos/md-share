@@ -25,21 +25,19 @@
 
     /* Modules */
     "module": "esnext",
-    // "rootDir": "./",                                  /* Specify the root folder within your source files. */
     "moduleResolution": "node",
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
-      "@/src": ["./"],
-      "@components/*": ["components/*"],
-      "@constants/*": ["constants/*"],
-      "@hooks/*": ["hooks/*"],
-      "@images/*": ["images/*"],
-      "@pages/*": ["pages/*"],
-      "@styles/*": ["styles/*"],
-      "@templates/*": ["templates/*"],
-      "@types": ["types"],      // use this if there is index.ts in folder
-      "@utils/*": ["utils/*"]
-    },                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
+      "@src/*": ["./src/components/*"],
+      "@components/*": ["./src/components/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@images/*": ["./src/images/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@templates/*": ["./src/templates/*"],
+      "@types": ["./src/types"],
+      "@utils/*": ["./src/utils/*"]
+    },
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     // "typeRoots": [],                                  /* Specify multiple folders that act like `./node_modules/@types`. */
     // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
