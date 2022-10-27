@@ -9,19 +9,19 @@ const Navbar = () => {
       <a className="nav-logo">.mdShare</a>
       <ul className="nav-menu">
         <li className="nav-item">
-          <a className="nav-link" href="./">
-            Home
-          </a>
+          <Link href="./">
+            <a className="nav-link">Home</a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="about">
-            About
-          </a>
+          <Link href="about">
+            <a className="nav-link">About</a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="contant">
-            Contact
-          </a>
+          <Link href="contant">
+            <a className="nav-link">Contact</a>
+          </Link>
         </li>
         <li className="nav-item theme-btn">
           <ThemeChanger />
