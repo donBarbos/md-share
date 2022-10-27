@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
     <StyledFooter>
       © {new Date().getFullYear()}&nbsp;
-      <a href="https://www.dontkillkenny.com"> donBarbos</a>
+      <Link href="https://www.dontkillkenny.com">donBarbos</Link>
     </StyledFooter>
   )
 }
