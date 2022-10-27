@@ -28,8 +28,13 @@ const StyledButton = styled.button`
   cursor: pointer;
   outline: none;
   display: block;
+  background-color: var(--bg);
 
   &:hover {
     border: 1px solid var(--accent-color);
+  }
+
+  &:active {
+    border: 2px solid var(--accent-color);
   }
 `
