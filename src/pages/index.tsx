@@ -1,8 +1,6 @@
 import type { NextPage, GetStaticProps } from 'next'
 import { NextSeo } from 'next-seo'
 import styles from '@styles/Home.module.css'
-import Header from '@components/header'
-import Footer from '@components/footer'
 import Layout from '@components/layout'
 
 const Home: NextPage = () => {
@@ -34,7 +32,7 @@ const Home: NextPage = () => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async (_context) => {
+export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {},
   }
