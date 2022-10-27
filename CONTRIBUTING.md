@@ -15,11 +15,12 @@ If you have a suggestion that would make this better, please fork the repo and c
 ### Before working on PR
 
 Make sure you run
-* `yarn install`
-* `yarn prepare`
-* `yarn prettier`
-* `yarn lint`
-* `yarn build`
+
+- `yarn install`
+- `yarn prepare`
+- `yarn prettier`
+- `yarn lint`
+- `yarn build`
 
 ### Styleguide
 

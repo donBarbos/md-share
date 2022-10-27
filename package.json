@@ -14,22 +14,23 @@
     "start": "next start",
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
     "lint:fix": "yarn lint --fix",
-    "prettier": "prettier --write src/**/*.{js,jsx,ts,tsx,json} next.config.js next-seo.config.ts package.json tsconfig.json",
+    "prettier": "prettier --write src/**/*.{js,jsx,ts,tsx,json} *.{js,ts,json,md}",
+    "prettier:check": "yarn prettier --check",
     "typecheck": "tsc --noEmit",
     "prepare": "husky install",
     "commit": "cz"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "prettier --write",
+      "prettier --config ./.prettierrc --write",
       "yarn lint:fix"
     ],
     "*.scss": [
-      "prettier --write",
+      "prettier --config ./.prettierrc --write",
       "stylelint --fix"
     ],
     "{*.{json,md}}": [
-      "prettier --write"
+      "prettier --config ./.prettierrc --write"
     ]
   },
   "dependencies": {
