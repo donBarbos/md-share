@@ -28,4 +28,5 @@ jobs:
       - name: Run lint
         run: |
           yarn lint
+          yarn prettier:check
           yarn typecheck
