@@ -17,7 +17,9 @@ If you have a suggestion that would make this better, please fork the repo and c
 Make sure you run
 * `yarn install`
 * `yarn prepare`
-* `yarn `
+* `yarn prettier`
+* `yarn lint`
+* `yarn build`
 
 ### Styleguide
 
