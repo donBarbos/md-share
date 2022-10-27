@@ -1,5 +1,4 @@
-import type { NextPage } from 'next'
-import type { GetStaticProps } from 'next'
+import type { NextPage, GetStaticProps } from 'next'
 import { NextSeo } from 'next-seo'
 import styles from '@styles/Home.module.css'
 import Header from '@components/header'
