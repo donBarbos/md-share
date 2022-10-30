@@ -42,7 +42,7 @@
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
-    "@types/node": "18.11.3",
+    "@types/node": "18.11.7",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "@types/styled-components": "^5.1.26",
