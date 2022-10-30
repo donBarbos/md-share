@@ -1,10 +1,10 @@
 import type { NextPage, GetStaticProps } from 'next'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
-import styled from 'styled-components'
+import { StatusCode, BackHomeButton } from '@styles/error'
 import Layout from '@components/layout'
 
-const Home: NextPage = () => {
+const ServerErrorPage: NextPage = () => {
   return (
     <>
       <NextSeo
@@ -12,9 +12,9 @@ const Home: NextPage = () => {
         description="Sorry, we had some technical problems during your last operation."
       />
       <Layout>
-        <H1>500 | Internal Server Error.</H1>
+        <StatusCode>500 | Internal Server Error.</StatusCode>
         <Link href="./">
-          <StyledButton>go back home</StyledButton>
+          <BackHomeButton>go back home</BackHomeButton>
         </Link>
       </Layout>
     </>
@@ -27,38 +27,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default Home
-
-const H1 = styled.h1`
-  font-size: 4rem;
-
-  @media only screen and (max-width: 768px) {
-    font-size: 2rem;
-  }
-`
-
-const StyledButton = styled.a`
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  font-size: 26px;
-  cursor: pointer;
-  outline: none;
-  padding: 10px 25px;
-  border: 2px solid var(--fg);
-  transition: all 300ms ease;
-  position: relative;
-  display: inline-block;
-
-  color: var(--bg);
-  background: var(--fg);
-
-  &:hover {
-    color: var(--fg);
-    border: 2px solid var(--fg);
-    background: transparent;
-  }
-
-  @media only screen and (max-width: 768px) {
-    font-size: 20px;
-  }
-`
+export default ServerErrorPage
