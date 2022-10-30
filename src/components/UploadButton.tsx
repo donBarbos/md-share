@@ -71,8 +71,4 @@ const StyledButton = styled.div`
   padding: 15px 32px;
   cursor: pointer;
   flex: 1 1 auto;
-
-  :hover {
-    filter: brightness(80%);
-  }
 `

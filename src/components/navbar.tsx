@@ -1,13 +1,19 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import ThemeChanger from '@components/ThemeChanger'
 import BurgerMenu from '@components/burger'
 
 const Navbar = () => {
+  const [isActive, setActive] = useState(false)
+  const toggleClass = () => {
+    setActive(!isActive)
+  }
+
   return (
     <StyledNavbar>
       <a className="nav-logo">.mdShare</a>
-      <ul className="nav-menu">
+      <ul className={isActive ? 'nav-menu.active' : 'nav-menu'}>
         <li className="nav-item">
           <Link href="./">
             <a className="nav-link">Home</a>
@@ -27,7 +33,7 @@ const Navbar = () => {
           <ThemeChanger />
         </li>
       </ul>
-      <BurgerMenu />
+      <BurgerMenu isActive={isActive} toggleClass={toggleClass} />
     </StyledNavbar>
   )
 }
@@ -80,27 +86,13 @@ const StyledNavbar = styled.div`
     padding: 8px;
   }
 
-  .hamburger {
-    display: none;
-  }
-
-  .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: var(--fg);
-  }
-
   @media only screen and (max-width: 768px) {
     .nav-menu {
       position: fixed;
       left: -100%;
       top: 5rem;
       flex-direction: column;
-      background-color: #fff;
+      background-color: var(--bg);
       width: 100%;
       border-radius: 10px;
       text-align: center;
@@ -114,25 +106,6 @@ const StyledNavbar = styled.div`
 
     .nav-item {
       margin: 2.5rem 0;
-    }
-
-    .hamburger {
-      display: block;
-      cursor: pointer;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-      opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-      -webkit-transform: translateY(8px) rotate(45deg);
-      transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-      -webkit-transform: translateY(-8px) rotate(-45deg);
-      transform: translateY(-8px) rotate(-45deg);
     }
   }
 `

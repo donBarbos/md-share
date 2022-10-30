@@ -1,8 +1,13 @@
 import styled from 'styled-components'
 
-const BurgerMenu = () => {
+interface BurgerMenuProps {
+  isActive: boolean
+  toggleClass: () => void
+}
+
+const BurgerMenu = ({ isActive, toggleClass }: BurgerMenuProps) => {
   return (
-    <StyledBurger>
+    <StyledBurger className={isActive ? 'active' : undefined} onClick={toggleClass}>
       <StyledBar />
       <StyledBar />
       <StyledBar />
@@ -31,16 +36,16 @@ const StyledBar = styled.span`
   background-color: var(--fg);
 
   @media only screen and (max-width: 768px) {
-    &:active &:nth-child(2) {
+    .active &:nth-child(2) {
       opacity: 0;
     }
 
-    &:active &:nth-child(1) {
+    .active &:nth-child(1) {
       -webkit-transform: translateY(8px) rotate(45deg);
       transform: translateY(8px) rotate(45deg);
     }
 
-    &:active &:nth-child(3) {
+    .active &:nth-child(3) {
       -webkit-transform: translateY(-8px) rotate(-45deg);
       transform: translateY(-8px) rotate(-45deg);
     }
