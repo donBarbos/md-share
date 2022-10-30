@@ -16,7 +16,6 @@ export const BackHomeButton = styled.button`
   outline: none;
   padding: 10px 25px;
   border: 2px solid var(--fg);
-  transition: all 300ms ease;
   position: relative;
   display: inline-block;
 
@@ -24,6 +23,7 @@ export const BackHomeButton = styled.button`
   background: var(--fg);
 
   &:hover {
+    transition: all 300ms ease;
     color: var(--fg);
     border: 2px solid var(--fg);
     background: transparent;
