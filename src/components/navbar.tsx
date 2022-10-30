@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import styled from 'styled-components'
 import Link from 'next/link'
+import styled from 'styled-components'
 import ThemeChanger from '@components/ThemeChanger'
 import BurgerMenu from '@components/burger'
 
@@ -15,18 +15,18 @@ const Navbar = () => {
       <a className="nav-logo">.mdShare</a>
       <ul className={isActive ? 'nav-menu.active' : 'nav-menu'}>
         <li className="nav-item">
-          <Link href="./">
-            <a className="nav-link">Home</a>
+          <Link href="./" className="nav-link">
+            Home
           </Link>
         </li>
         <li className="nav-item">
-          <Link href="about">
-            <a className="nav-link">About</a>
+          <Link href="about" className="nav-link">
+            About
           </Link>
         </li>
         <li className="nav-item">
-          <Link href="contact">
-            <a className="nav-link">Contact</a>
+          <Link href="contact" className="nav-link">
+            Contact
           </Link>
         </li>
         <li className="nav-item theme-btn">
@@ -41,12 +41,11 @@ const Navbar = () => {
 export default Navbar
 
 const StyledNavbar = styled.div`
-  flex: 0 0 auto;
-  padding: 10px;
   border-bottom: 1px solid #e2e8f0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
 
   .nav-logo {
     color: inherit;

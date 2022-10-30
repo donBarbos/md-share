@@ -34,7 +34,7 @@
     ]
   },
   "dependencies": {
-    "next": "12.3.1",
+    "next": "^13.0.0",
     "next-seo": "^5.8.0",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
@@ -50,7 +50,7 @@
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "8.26.0",
-    "eslint-config-next": "12.3.1",
+    "eslint-config-next": "^13.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.0",
