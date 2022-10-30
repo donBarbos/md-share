@@ -11,7 +11,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <Wrapper>
       <Header />
-      <Main className=".main-content">{children}</Main>
+      <Main>{children}</Main>
       <Footer />
     </Wrapper>
   )
@@ -20,19 +20,20 @@ const Layout = ({ children }: LayoutProps) => {
 export default Layout
 
 const Wrapper = styled.div`
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100vh;
   justify-content: space-between;
   padding: 0 2rem;
 `
 
 const Main = styled.main`
   flex: 1 0 auto;
-  overflow: auto;
   padding: 4rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 `

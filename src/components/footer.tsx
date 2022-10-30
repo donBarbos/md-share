@@ -18,6 +18,7 @@ const StyledFooter = styled.footer`
   justify-content: center;
   align-items: center;
   padding 25px;
+  margin-top: auto;
 
   a {
     color: inherit;

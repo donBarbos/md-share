@@ -12,15 +12,17 @@ const GlobalStyle = createGlobalStyle`
     --bg: #000;
   }
 
+  * {
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
   body {
     font-family: -apple-system,BlinkMacSystemFont,Lato,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
     font-size: 16px;
     font-weight: 500;
     text-align: center;
     text-rendering: optimizelegibility;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
     height: 100%;
     width: 100%;
     margin: 0;
