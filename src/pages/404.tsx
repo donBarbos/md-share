@@ -1,4 +1,4 @@
-import type { NextPage, GetStaticProps } from 'next'
+import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { StatusCode, BackHomeButton } from '@styles/error'

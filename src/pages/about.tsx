@@ -1,4 +1,4 @@
-import type { NextPage, GetStaticProps } from 'next'
+import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import Layout from '@components/layout'
 
