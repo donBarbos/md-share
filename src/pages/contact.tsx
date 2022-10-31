@@ -21,6 +21,15 @@ const Contact: NextPage = () => {
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
+          <p>
+            Группы применяются в различных областях математики. Например, в топологии, введя понятие
+            фундаментальной группы[10]. Помимо теоретического применения групп существует множество
+            способов применения групп на практике. К примеру, они применяются в криптографии,
+            которая опирается на вычислительную теорию групп и знания в области алгоритмов.
+            Применение теории групп не ограничивается только математикой, её широко используют в
+            таких науках как физика, химия и информатика.{' '}
+          </p>
+
           <a href="https://nextjs.org/learn">
             <h2>Learn &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
@@ -29,12 +38,6 @@ const Contact: NextPage = () => {
       </Layout>
     </>
   )
-}
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {},
-  }
 }
 
 export default Contact

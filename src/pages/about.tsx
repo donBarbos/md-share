@@ -31,10 +31,4 @@ const About: NextPage = () => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {},
-  }
-}
-
 export default About
