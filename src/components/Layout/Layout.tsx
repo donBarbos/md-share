@@ -4,10 +4,6 @@ import Header from '@components/Header'
 import Footer from '@components/Footer'
 import { LayoutProps } from './types'
 
-interface LayoutProps {
-  children?: ReactChild | ReactChild[]
-}
-
 const Layout = ({ children }: LayoutProps) => {
   return (
     <Wrapper>
