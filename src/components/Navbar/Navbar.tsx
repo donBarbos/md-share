@@ -95,7 +95,7 @@ const StyledNavbar = styled.div`
       width: 100%;
       border-radius: 10px;
       text-align: center;
-      transition: 0.3s;
+      transition: left 0.3s;
       box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     }
 

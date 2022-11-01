@@ -29,7 +29,7 @@ const StyledBar = styled.span`
   height: 3px;
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out, background 0s;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   background-color: var(--fg);
 
   @media only screen and (max-width: 768px) {
