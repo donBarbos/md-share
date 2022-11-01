@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 import ThemeChanger from '@components/ThemeChanger'
-import BurgerMenu from '@components/burger'
+import BurgerMenu from '@components/BurgerMenu'
 
 const Navbar = () => {
   const [isActive, setActive] = useState(false)
@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <StyledNavbar>
       <a className="nav-logo">.mdShare</a>
-      <ul className={isActive ? 'nav-menu.active' : 'nav-menu'}>
+      <ul className={isActive ? 'nav-menu active' : 'nav-menu'}>
         <li className="nav-item">
           <Link href="./" className="nav-link">
             Home
@@ -104,7 +104,7 @@ const StyledNavbar = styled.div`
     }
 
     .nav-item {
-      margin: 2.5rem 0;
+      margin: 1rem 0;
     }
   }
 `

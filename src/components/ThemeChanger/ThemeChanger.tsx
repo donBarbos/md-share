@@ -33,8 +33,4 @@ const StyledButton = styled.button`
   &:hover {
     border: 1px solid var(--accent-color);
   }
-
-  &:active {
-    border: 2px solid var(--accent-color);
-  }
 `

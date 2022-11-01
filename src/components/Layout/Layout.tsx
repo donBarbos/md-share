@@ -1,7 +1,8 @@
 import { ReactChild } from 'react'
 import styled from 'styled-components'
-import Header from '@components/header'
-import Footer from '@components/footer'
+import Header from '@components/Header'
+import Footer from '@components/Footer'
+import { LayoutProps } from './types'
 
 interface LayoutProps {
   children?: ReactChild | ReactChild[]
@@ -29,11 +30,10 @@ const Wrapper = styled.div`
 `
 
 const Main = styled.main`
-  flex: 1 0 auto;
-  padding: 4rem 0;
-  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  margin-top: 12px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  padding: 2rem 4rem;
 `

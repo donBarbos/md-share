@@ -23,14 +23,14 @@ const StyledButton = styled.div`
     margin-left: -250px;
     width: 500px;
     height: 200px;
-    border: 4px dashed #fff;
+    border: 4px dashed var(--fg);
   }
   form p {
     width: 100%;
     height: 100%;
     text-align: center;
     line-height: 170px;
-    color: #ffffff;
+    color: var(--fg);
     font-family: Arial;
   }
   form input {
@@ -44,15 +44,15 @@ const StyledButton = styled.div`
   }
   form button {
     margin: 0;
-    color: #fff;
-    background: #16a085;
+    color: var(--fg);
+    background: var(--bg);
     border: none;
     width: 508px;
     height: 35px;
     margin-top: -20px;
     margin-left: -4px;
     border-radius: 4px;
-    border-bottom: 4px solid #117a60;
+    border-bottom: 4px solid var(--bg);
     transition: all 0.2s ease;
     outline: none;
   }
