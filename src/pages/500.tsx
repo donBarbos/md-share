@@ -2,7 +2,7 @@ import type { NextPage, GetStaticProps } from 'next'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { StatusCode, BackHomeButton } from '@styles/error'
-import Layout from '@components/layout'
+import Layout from '@components/Layout'
 
 const ServerErrorPage: NextPage = () => {
   return (
