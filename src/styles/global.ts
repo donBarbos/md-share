@@ -21,10 +21,13 @@ const GlobalStyle = createGlobalStyle`
     font-family: -apple-system,BlinkMacSystemFont,Lato,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
     font-size: 16px;
     font-weight: 500;
+
     text-align: center;
     text-rendering: optimizelegibility;
+
     height: 100%;
     width: 100%;
+
     margin: 0;
     padding: 0;
 
