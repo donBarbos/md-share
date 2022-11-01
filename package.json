@@ -10,7 +10,8 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
     "lint:fix": "yarn lint --fix",
@@ -21,17 +22,9 @@
     "commit": "cz"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "prettier --config ./.prettierrc --write",
-      "yarn lint:fix"
-    ],
-    "*.scss": [
-      "prettier --config ./.prettierrc --write",
-      "stylelint --fix"
-    ],
-    "{*.{json,md}}": [
-      "prettier --config ./.prettierrc --write"
-    ]
+    "*.{js,jsx,ts,tsx}": ["prettier --config ./.prettierrc --write", "yarn lint:fix"],
+    "*.scss": ["prettier --config ./.prettierrc --write", "stylelint --fix"],
+    "{*.{json,md}}": ["prettier --config ./.prettierrc --write"]
   },
   "dependencies": {
     "next": "^13.0.0",
