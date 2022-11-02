@@ -21,9 +21,17 @@
     "commit": "cz"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": ["prettier --config ./.prettierrc --write", "yarn lint:fix"],
-    "*.scss": ["prettier --config ./.prettierrc --write", "stylelint --fix"],
-    "{*.{json,md}}": ["prettier --config ./.prettierrc --write"]
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --config ./.prettierrc --write",
+      "yarn lint:fix"
+    ],
+    "*.scss": [
+      "prettier --config ./.prettierrc --write",
+      "stylelint --fix"
+    ],
+    "{*.{json,md}}": [
+      "prettier --config ./.prettierrc --write"
+    ]
   },
   "dependencies": {
     "next": "^13.0.0",
