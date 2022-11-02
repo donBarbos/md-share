@@ -4,9 +4,11 @@ const UploadButton = () => {
   return (
     <StyledButton>
       <form>
-        <input type="file" />
-        <p>Drag your files here or click in this area.</p>
-        <button type="submit">Upload</button>
+        <input type="file" id="actual-btn" hidden />
+
+        <label for="actual-btn">Choose File</label>
+
+        <span id="file-chosen">No file chosen</span>
       </form>
     </StyledButton>
   )
@@ -15,60 +17,18 @@ const UploadButton = () => {
 export default UploadButton
 
 const StyledButton = styled.div`
-  form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -250px;
-    width: 500px;
-    height: 200px;
-    border: 4px dashed var(--fg);
-  }
-  form p {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    line-height: 170px;
-    color: var(--fg);
-    font-family: Arial;
-  }
-  form input {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    outline: none;
-    opacity: 0;
-  }
-  form button {
-    margin: 0;
-    color: var(--fg);
-    background: var(--bg);
-    border: none;
-    width: 508px;
-    height: 35px;
-    margin-top: -20px;
-    margin-left: -4px;
-    border-radius: 4px;
-    border-bottom: 4px solid var(--bg);
-    transition: all 0.2s ease;
-    outline: none;
-  }
-  form button:hover {
-    background: #149174;
-    color: #0c5645;
-  }
-  form button:active {
-    border: 0;
+  label {
+    background-color: indigo;
+    color: white;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
   }
 
-  font-size: 1.6rem;
-  border-radius: 12px;
-  text-align: center;
-  display: inline-block;
-  padding: 15px 32px;
-  cursor: pointer;
-  flex: 1 1 auto;
+  .file-chosen {
+    margin-left: 0.3rem;
+    font-family: sans-serif;
+  }
 `
