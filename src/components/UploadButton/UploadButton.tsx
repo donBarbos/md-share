@@ -6,7 +6,7 @@ const UploadButton = () => {
       <form>
         <input type="file" id="actual-btn" hidden />
 
-        <label for="actual-btn">Choose File</label>
+        <label htmlFor="actual-btn">Choose File</label>
 
         <span id="file-chosen">No file chosen</span>
       </form>
