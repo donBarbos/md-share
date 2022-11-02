@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
+import Link from 'next/link'
 import Layout from '@components/Layout'
 
 const About: NextPage = () => {
@@ -7,25 +8,18 @@ const About: NextPage = () => {
     <>
       <NextSeo title="about" />
       <Layout>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
+        <h1>About this site</h1>
         <p>
-          Get started by editing <code>pages/index.tsx</code>
+          Imagine the situation, you have written a useful Markdown note and you decide to share it.
+          Now you just upload a file and get a link to a page with your note that you can share.
         </p>
-
-        <div>
-          <a href="https://nextjs.org/docs">
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn">
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-        </div>
+        <ul>
+          <li>
+            Go to <Link href="./">Homepage</Link>
+          </li>
+          <li>Upload your `File.md`</li>
+          <li>Send a link to the generated page</li>
+        </ul>
       </Layout>
     </>
   )
