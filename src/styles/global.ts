@@ -7,6 +7,19 @@ const GlobalStyle = createGlobalStyle`
     --accent-color: #FF4D4D;
   }
 
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fg: #fff;
+      --bg: #000;
+      --accent-color: #FF4D4D;
+    }
+
+    [data-theme="light"] {
+      --fg: #000;
+      --bg: #fff;
+    }
+  }
+
   [data-theme="dark"] {
     --fg: #fff;
     --bg: #000;
