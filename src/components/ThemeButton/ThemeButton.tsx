@@ -1,7 +1,7 @@
 import { useTheme } from 'next-themes'
 import { StyledButton } from './styles'
 
-const ThemeChanger = () => {
+const ThemeButton = () => {
   const { theme, setTheme } = useTheme()
   let button
 
@@ -14,4 +14,4 @@ const ThemeChanger = () => {
   return button
 }
 
-export default ThemeChanger
+export default ThemeButton

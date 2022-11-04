@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
-import ThemeChanger from '@components/ThemeChanger'
+import ThemeButton from '@components/ThemeButton'
 import BurgerMenu from '@components/BurgerMenu'
 import { StyledNavbar } from './styles'
 
@@ -30,7 +30,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="nav-item theme-btn">
-          <ThemeChanger />
+          <ThemeButton />
         </li>
       </ul>
       <BurgerMenu isActive={isActive} toggleClass={toggleClass} />
