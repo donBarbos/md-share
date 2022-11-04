@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import { BurgerMenuProps } from './types'
 import { StyledBurger, StyledBar } from './styles'
 
