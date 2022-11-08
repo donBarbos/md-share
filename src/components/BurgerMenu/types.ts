@@ -1,4 +1,4 @@
-export interface BurgerMenuProps {
+export type BurgerMenuProps = {
   isActive: boolean
   toggleClass: () => void
 }

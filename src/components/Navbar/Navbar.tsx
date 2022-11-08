@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
+import { StyledNavbar } from './styles'
 import ThemeButton from '@components/ThemeButton'
 import BurgerMenu from '@components/BurgerMenu'
-import { StyledNavbar } from './styles'
 
 const Navbar = () => {
   const [isActive, setActive] = useState(false)

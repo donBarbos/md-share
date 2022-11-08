@@ -1,5 +1,5 @@
 import { ReactChild } from 'react'
 
-export interface LayoutProps {
+export type LayoutProps = {
   children?: ReactChild | ReactChild[]
 }

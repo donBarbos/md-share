@@ -1,4 +1,4 @@
-import { BurgerMenuProps } from './types'
+import type { BurgerMenuProps } from './types'
 import { StyledBurger, StyledBar } from './styles'
 
 const BurgerMenu = ({ isActive, toggleClass }: BurgerMenuProps) => {
