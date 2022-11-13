@@ -11,8 +11,8 @@
       "@root/*": ["./*"],
       "@public/*": ["public/*"],
       "@components/*": ["src/components/*"],
-      "@styles/*": ["src/styles/*"],
-      "@pages/*": ["src/pages/*"]
+      "@pages/*": ["src/pages/*"],
+      "@styles/*": ["src/styles/*"]
     },
 
     "resolveJsonModule": true,
@@ -30,5 +30,5 @@
     "skipLibCheck": true
   },
   "include": ["next-env.d.ts", "next.config.js", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "out"]
 }
