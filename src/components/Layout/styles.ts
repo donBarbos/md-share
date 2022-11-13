@@ -16,4 +16,5 @@ export const Main = styled.main`
   justify-content: center;
   align-items: center;
   padding: 2rem 4rem;
+  line-height: 120%;
 `
