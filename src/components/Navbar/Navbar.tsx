@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { StyledNavbar } from './styles'
 import ThemeButton from '@components/ThemeButton'
 import BurgerMenu from '@components/BurgerMenu'
 
 const Navbar = () => {
+  const location = useRouter().pathname.toString()
   const [isActive, setActive] = useState(false)
   const toggleClass = () => {
     setActive(!isActive)
@@ -15,17 +17,17 @@ const Navbar = () => {
       <a className="nav-logo">.mdShare</a>
       <ul className={isActive ? 'nav-menu active' : 'nav-menu'}>
         <li className="nav-item">
-          <Link href="./" className="nav-link">
+          <Link href="/" className={location == '/' ? 'nav-link active' : 'nav-link'}>
             Home
           </Link>
         </li>
         <li className="nav-item">
-          <Link href="about" className="nav-link">
+          <Link href="/about" className={location == '/about' ? 'nav-link active' : 'nav-link'}>
             About
           </Link>
         </li>
         <li className="nav-item">
-          <Link href="contact" className="nav-link">
+          <Link href="/contact" className={location == '/contact' ? 'nav-link active' : 'nav-link'}>
             Contact
           </Link>
         </li>
