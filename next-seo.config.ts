@@ -5,13 +5,13 @@ const seo = {
   icon: './favicon.ico',
   github: 'https://github.com/donBarbos/md-share',
   repo: 'donBarbos/md-share',
-  siteUrl: 'https://md-share.netlify.app',
+  siteUrl: 'https://md-share.vercel.app',
   lang: 'en',
 }
 
 const SEO = {
-  // title: defined   => title would be titleTemplate
-  // title: undefined => title would be defaultTitle
+  // if title: defined   => title would be titleTemplate
+  // if title: undefined => title would be defaultTitle
   titleTemplate: `%s | ${seo.title}`,
   defaultTitle: seo.title,
   description: seo.description,
@@ -30,7 +30,7 @@ const SEO = {
   additionalLinkTags: [
     {
       rel: 'icon',
-      href: './favicon.ico',
+      href: seo.icon,
     },
   ],
 }
