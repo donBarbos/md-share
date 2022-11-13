@@ -10,6 +10,7 @@ export const StyledFooter = styled.footer`
 
   a {
     color: inherit;
+    text-decoration: none;
   }
 
   a:hover {
