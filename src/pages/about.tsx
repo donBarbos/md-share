@@ -9,10 +9,12 @@ const About: NextPage = () => {
       <NextSeo title="about" />
       <Layout>
         <h1>About this site</h1>
-        <p>
+        <br />
+        <h3>
           Imagine the situation, you have written a useful Markdown note and you decide to share it.
           Now you just upload a file and get a link to a page with your note that you can share.
-        </p>
+        </h3>
+        <br />
         <ul>
           <li>
             Go to <Link href="./">Homepage</Link>

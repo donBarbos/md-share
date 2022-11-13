@@ -8,6 +8,8 @@ const Home: NextPage = () => {
     <>
       <NextSeo title="" description="" />
       <Layout>
+        <h1>Just Upload Your Markdown Note</h1>
+        <br />
         <UploadButton />
       </Layout>
     </>
