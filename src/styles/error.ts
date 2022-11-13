@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const StatusCode = styled.h1`
+  line-height: 1.4;
+  margin-bottom: 16px;
   font-size: 4rem;
 
   @media only screen and (max-width: 768px) {
@@ -16,8 +18,9 @@ export const BackHomeButton = styled.button`
   outline: none;
   padding: 10px 25px;
   border: 2px solid var(--fg);
-  position: relative;
   display: inline-block;
+  position: relative;
+  margin: 0 auto;
 
   color: var(--bg);
   background: var(--fg);
