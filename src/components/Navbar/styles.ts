@@ -11,6 +11,11 @@ export const StyledNavbar = styled.div`
     color: inherit;
     font-weight: 700;
     font-size: 2.1rem;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
   }
 
   .nav-menu {
@@ -35,6 +40,10 @@ export const StyledNavbar = styled.div`
     text-align: center;
     padding: 14px 25px;
     text-decoration: none;
+  }
+
+  .nav-link.active {
+    color: var(--accent-color);
   }
 
   .nav-link:hover {
