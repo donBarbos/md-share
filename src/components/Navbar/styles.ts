@@ -19,6 +19,7 @@ export const StyledNavbar = styled.div`
   }
 
   .nav-menu {
+    z-index: 999;
     list-style-type: none;
     margin: 0;
     padding: 0;
