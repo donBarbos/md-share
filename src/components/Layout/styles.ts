@@ -17,4 +17,22 @@ export const Main = styled.main`
   align-items: center;
   padding: 2rem 4rem;
   line-height: 120%;
+
+  /* Link styles */
+  a {
+    color: inherit;
+    text-decoration: none;
+    font-style: italic;
+    border-bottom: 0.5px solid var(--fg);
+  }
+  a:hover {
+    color: var(--accent-color);
+    border-bottom: 0.5px solid var(--accent-color);
+  }
+  a:active {
+    position: relative;
+    border-bottom: none;
+    top: 2px;
+    left: 2px;
+  }
 `
