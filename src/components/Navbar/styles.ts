@@ -61,11 +61,11 @@ export const StyledNavbar = styled.div`
       left: -100%;
       top: 5rem;
       flex-direction: column;
-      background-color: var(--bg);
+      background: var(--bg);
       width: 100%;
       border-radius: 10px;
       text-align: center;
-      transition: left 0.3s;
+      transition: left 0.3s, color 0.1s, background 0.1s;
       box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     }
 

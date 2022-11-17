@@ -10,14 +10,13 @@ export const StyledBurger = styled.div`
 `
 
 export const StyledBar = styled.span`
+  background: var(--fg);
   display: block;
   border-radius: 6px;
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  background-color: var(--fg);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, color 0.1s, background 0.1s;
 
   @media only screen and (max-width: 768px) {
     .active &:nth-child(2) {
