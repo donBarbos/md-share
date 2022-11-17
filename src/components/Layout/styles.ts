@@ -16,7 +16,10 @@ export const Main = styled.main`
   justify-content: center;
   align-items: center;
   padding: 2rem 4rem;
-  line-height: 120%;
+
+  @media only screen and (max-width: 768px) {
+    padding: 2rem 0rem;
+  }
 
   /* Link styles */
   a {
