@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
-import { StyledNavbar } from './styles'
+import { StyledNavbar, NavLogo, NavMenu, NavItem, NavLink } from './styles'
 import ThemeButton from '@components/ThemeButton'
 import BurgerMenu from '@components/BurgerMenu'
 
@@ -14,27 +13,27 @@ const Navbar = () => {
 
   return (
     <StyledNavbar>
-      <a className="nav-logo">.mdShare</a>
-      <ul className={isActive ? 'nav-menu active' : 'nav-menu'}>
-        <li className="nav-item">
-          <Link href="/" className={location == '/' ? 'nav-link active' : 'nav-link'}>
+      <NavLogo>.mdShare</NavLogo>
+      <NavMenu className={isActive ? 'active' : ''}>
+        <NavItem>
+          <NavLink href="/" className={location == '/' ? 'active' : ''}>
             Home
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link href="/about" className={location == '/about' ? 'nav-link active' : 'nav-link'}>
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="/about" className={location == '/about' ? 'active' : ''}>
             About
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link href="/contact" className={location == '/contact' ? 'nav-link active' : 'nav-link'}>
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="/contact" className={location == '/contact' ? 'active' : ''}>
             Contact
-          </Link>
-        </li>
-        <li className="nav-item theme-btn">
+          </NavLink>
+        </NavItem>
+        <NavItem>
           <ThemeButton />
-        </li>
-      </ul>
+        </NavItem>
+      </NavMenu>
       <BurgerMenu isActive={isActive} toggleClass={toggleClass} />
     </StyledNavbar>
   )
