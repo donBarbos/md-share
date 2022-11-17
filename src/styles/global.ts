@@ -44,6 +44,9 @@ const GlobalStyle = createGlobalStyle`
 
     color: var(--fg);
     background-color: var(--bg);
+
+    /* for a smooth theme change */
+    transition: color 0.1s, background 0.1s;
   }
 `
 
