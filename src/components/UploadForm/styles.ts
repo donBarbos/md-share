@@ -23,7 +23,6 @@ export const StyledLabel = styled.label`
   border-radius: 10px;
   border: 2px dashed #555;
   color: var(--fg);
-  transition: color 0.1s ease-in-out, border 0.1s ease-in-out;
   cursor: pointer;
 
   &:active {
@@ -66,9 +65,9 @@ export const StyledButton = styled.button`
   color: var(--fg);
   background: var(--bg);
   border-color: var(--accent-color);
-  transition-duration: 0.4s;
 
   &:hover {
+    transition: all 0.4s;
     color: var(--bg);
     background: var(--accent-color);
   }

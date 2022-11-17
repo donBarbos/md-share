@@ -2,10 +2,11 @@ import styled from 'styled-components'
 
 export const StatusCode = styled.h1`
   line-height: 1.4;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   font-size: 4rem;
 
   @media only screen and (max-width: 768px) {
+    margin-bottom: 16px;
     font-size: 2rem;
   }
 `
@@ -28,8 +29,7 @@ export const BackHomeButton = styled.button`
   &:hover {
     transition: all 0.3s ease;
     color: var(--fg);
-    border: 2px solid var(--fg);
-    background: transparent;
+    background: var(--bg);
   }
 
   @media only screen and (max-width: 768px) {
