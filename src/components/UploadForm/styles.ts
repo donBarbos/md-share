@@ -1,12 +1,22 @@
 import styled from 'styled-components'
 
+export const StyledForm = styled.form`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+`
+
 export const StyledLabel = styled.label`
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-width: 4rem;
   width: 100%;
+  max-width: 50rem;
   height: 16rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
