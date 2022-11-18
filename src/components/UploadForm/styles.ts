@@ -6,6 +6,10 @@ export const StyledForm = styled.form`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+
+  * {
+    transition: color 0.1s, background 0.1s;
+  }
 `
 
 export const StyledLabel = styled.label`
@@ -33,6 +37,9 @@ export const StyledLabel = styled.label`
     font-size: 16px;
     cursor: pointer;
     margin-top: 12px;
+    width: 95%;
+    max-width: 18rem;
+    transition: color 0.1s, background 0.1s, border 0.1s;
   }
   input[type='file']::file-selector-button {
     margin-right: 1rem;
@@ -41,6 +48,7 @@ export const StyledLabel = styled.label`
     border-radius: 10px;
     color: var(--bg);
     background: var(--fg);
+    transition: color 0.1s, background 0.1s, border 0.1s;
   }
   input[type='file']::file-selector-button:hover {
     border: 2px solid var(--accent-color);
@@ -65,9 +73,9 @@ export const StyledButton = styled.button`
   color: var(--fg);
   background: var(--bg);
   border-color: var(--accent-color);
+  transition: color 0.4s ease-in-out, background 0.4s ease-in-out;
 
   &:hover {
-    transition: all 0.4s;
     color: var(--bg);
     background: var(--accent-color);
   }

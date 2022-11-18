@@ -27,6 +27,7 @@ export const Main = styled.main`
     text-decoration: none;
     font-style: italic;
     border-bottom: 0.5px solid var(--fg);
+    transition: color 0.1s, background 0.1s, border 0.1s;
   }
   a:hover {
     color: var(--accent-color);
