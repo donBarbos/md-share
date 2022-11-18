@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { StyledNavbar, NavLogo, NavMenu, NavItem, NavLink } from './styles'
-import ThemeButton from '@components/ThemeButton'
+import ThemeToggle from '@components/ThemeToggle'
 import BurgerMenu from '@components/BurgerMenu'
 
 const Navbar = () => {
@@ -31,7 +31,7 @@ const Navbar = () => {
           </NavLink>
         </NavItem>
         <NavItem>
-          <ThemeButton />
+          <ThemeToggle />
         </NavItem>
       </NavMenu>
       <BurgerMenu isActive={isActive} toggleClass={toggleClass} />

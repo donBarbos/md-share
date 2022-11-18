@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 
-export const StyledNavbar = styled.div`
+export const StyledNavbar = styled.nav`
   border-bottom: 1px solid #e2e8f0;
   display: flex;
   justify-content: space-between;
