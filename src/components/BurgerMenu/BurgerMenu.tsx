@@ -1,9 +1,9 @@
 import type { BurgerMenuProps } from './types'
 import { StyledBurger, StyledBar } from './styles'
 
-const BurgerMenu = ({ isActive, toggleClass }: BurgerMenuProps) => {
+const BurgerMenu = ({ isActive, setActive }: BurgerMenuProps) => {
   return (
-    <StyledBurger className={isActive ? 'active' : undefined} onClick={toggleClass}>
+    <StyledBurger className={isActive ? 'active' : undefined} onClick={setActive}>
       <StyledBar />
       <StyledBar />
       <StyledBar />

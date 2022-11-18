@@ -7,14 +7,11 @@ import BurgerMenu from '@components/BurgerMenu'
 const Navbar = () => {
   const location = useRouter().pathname.toString()
   const [isActive, setActive] = useState(false)
-  const toggleClass = () => {
-    setActive(!isActive)
-  }
 
   return (
     <StyledNavbar>
       <NavLogo>.mdShare</NavLogo>
-      <NavMenu className={isActive ? 'active' : ''}>
+      <NavMenu className={isActive ? 'active' : undefined}>
         <NavItem>
           <NavLink href="/" className={location == '/' ? 'active' : ''}>
             Home
@@ -34,7 +31,7 @@ const Navbar = () => {
           <ThemeToggle />
         </NavItem>
       </NavMenu>
-      <BurgerMenu isActive={isActive} toggleClass={toggleClass} />
+      <BurgerMenu isActive={isActive} setActive={() => setActive(!isActive)} />
     </StyledNavbar>
   )
 }
