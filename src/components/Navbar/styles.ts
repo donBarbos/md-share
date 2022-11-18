@@ -18,6 +18,14 @@ export const NavLogo = styled.a`
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+
+  @media only screen and (max-width: 250px) {
+    font-size: 0;
+  }
 `
 
 export const NavMenu = styled.ul`
