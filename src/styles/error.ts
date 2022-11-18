@@ -25,9 +25,9 @@ export const BackHomeButton = styled.button`
 
   color: var(--bg);
   background: var(--fg);
+  transition: all 0.4s ease-in-out;
 
   &:hover {
-    transition: all 0.3s ease;
     color: var(--fg);
     background: var(--bg);
   }
