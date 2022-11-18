@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledBurger = styled.div`
+export const Burger = styled.div`
   display: none;
 
   @media only screen and (max-width: 768px) {
@@ -9,7 +9,7 @@ export const StyledBurger = styled.div`
   }
 `
 
-export const StyledBar = styled.span`
+export const Bar = styled.span`
   background: var(--fg);
   display: block;
   border-radius: 6px;

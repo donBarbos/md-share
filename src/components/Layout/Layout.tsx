@@ -1,15 +1,15 @@
 import type { LayoutProps } from './types'
-import { Wrapper, Main } from './styles'
+import * as Styled from './styles'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <Wrapper>
+    <Styled.Wrapper>
       <Header />
-      <Main>{children}</Main>
+      <Styled.Main>{children}</Styled.Main>
       <Footer />
-    </Wrapper>
+    </Styled.Wrapper>
   )
 }
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledForm = styled.form`
+export const Form = styled.form`
   position: relative;
   display: flex;
   justify-content: center;
@@ -12,7 +12,7 @@ export const StyledForm = styled.form`
   }
 `
 
-export const StyledLabel = styled.label`
+export const Label = styled.label`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -63,7 +63,7 @@ export const DropTitle = styled.span`
   margin-bottom: 20px;
 `
 
-export const StyledButton = styled.button`
+export const Button = styled.button`
   width: 10rem;
   height: 3rem;
   border-radius: 12px;

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledFooter = styled.footer`
+export const Footer = styled.footer`
   flex: 0 0 auto;
   border-top: 1px solid #e2e8f0;
   justify-content: center;

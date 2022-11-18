@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import { StyledFooter } from './styles'
+import * as Styled from './styles'
 
 const Footer = () => {
   return (
-    <StyledFooter>
+    <Styled.Footer>
       © {new Date().getFullYear()}&nbsp;
       <Link href="https://www.dontkillkenny.com">donBarbos</Link>
-    </StyledFooter>
+    </Styled.Footer>
   )
 }
 

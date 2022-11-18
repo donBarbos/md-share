@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import { StyledNavbar, NavLogo, NavMenu, NavItem, NavLink } from './styles'
+import * as Styled from './styles'
 import ThemeToggle from '@components/ThemeToggle'
 import BurgerMenu from '@components/BurgerMenu'
 
@@ -9,30 +9,30 @@ const Navbar = () => {
   const [isActive, setActive] = useState(false)
 
   return (
-    <StyledNavbar>
-      <NavLogo>.mdShare</NavLogo>
-      <NavMenu className={isActive ? 'active' : undefined}>
-        <NavItem>
-          <NavLink href="/" className={location == '/' ? 'active' : ''}>
+    <Styled.Navbar>
+      <Styled.NavLogo>.mdShare</Styled.NavLogo>
+      <Styled.NavMenu className={isActive ? 'active' : undefined}>
+        <Styled.NavItem>
+          <Styled.NavLink href="/" className={location == '/' ? 'active' : ''}>
             Home
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink href="/about" className={location == '/about' ? 'active' : ''}>
+          </Styled.NavLink>
+        </Styled.NavItem>
+        <Styled.NavItem>
+          <Styled.NavLink href="/about" className={location == '/about' ? 'active' : ''}>
             About
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink href="/contact" className={location == '/contact' ? 'active' : ''}>
+          </Styled.NavLink>
+        </Styled.NavItem>
+        <Styled.NavItem>
+          <Styled.NavLink href="/contact" className={location == '/contact' ? 'active' : ''}>
             Contact
-          </NavLink>
-        </NavItem>
-        <NavItem>
+          </Styled.NavLink>
+        </Styled.NavItem>
+        <Styled.NavItem>
           <ThemeToggle />
-        </NavItem>
-      </NavMenu>
+        </Styled.NavItem>
+      </Styled.NavMenu>
       <BurgerMenu isActive={isActive} setActive={() => setActive(!isActive)} />
-    </StyledNavbar>
+    </Styled.Navbar>
   )
 }
 

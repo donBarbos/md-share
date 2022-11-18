@@ -1,13 +1,13 @@
 import type { BurgerMenuProps } from './types'
-import { StyledBurger, StyledBar } from './styles'
+import * as Styled from './styles'
 
 const BurgerMenu = ({ isActive, setActive }: BurgerMenuProps) => {
   return (
-    <StyledBurger className={isActive ? 'active' : undefined} onClick={setActive}>
-      <StyledBar />
-      <StyledBar />
-      <StyledBar />
-    </StyledBurger>
+    <Styled.Burger className={isActive ? 'active' : undefined} onClick={setActive}>
+      <Styled.Bar />
+      <Styled.Bar />
+      <Styled.Bar />
+    </Styled.Burger>
   )
 }
 
