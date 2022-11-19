@@ -1,0 +1,87 @@
+.toggle {
+  font-size: 0.9rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid;
+  padding: 5px;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  background: var(--bg);
+}
+.toggle:hover {
+  border: 1px solid var(--accent-color);
+}
+
+.theme_toggle {
+  --size: 2rem;
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  inline-size: var(--size);
+  block-size: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  outline-offset: 5px;
+
+  & > svg {
+    inline-size: 100%;
+    block-size: 100%;
+    stroke-linecap: round;
+  }
+
+  @media (hover: none) {
+    --size: 48px;
+  }
+}
+
+.sun_and_moon {
+  & > :is(.moon, .sun, .sun_beams) {
+    transform-origin: center center;
+  }
+
+  & > :is(.moon, .sun) {
+    fill: var(--icon-fill);
+
+    @nest .theme_toggle:is(:hover, :focus-visible) > & {
+      fill: var(--icon-fill-hover);
+    }
+  }
+
+  & > .sun_beams {
+    stroke: var(--icon-fill);
+    stroke-width: 2px;
+
+    @nest .theme_toggle:is(:hover, :focus-visible) & {
+      stroke: var(--icon-fill-hover);
+    }
+  }
+
+  @nest [data-theme='dark'] & {
+    & > .sun {
+      transform: scale(1.75);
+    }
+
+    & > .sun_beams {
+      opacity: 0;
+    }
+
+    & > .moon > circle {
+      transform: translateX(-7px);
+
+      @supports (cx: 1) {
+        transform: translateX(0);
+        cx: 17;
+      }
+    }
+  }
+}
