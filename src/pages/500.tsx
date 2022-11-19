@@ -1,7 +1,7 @@
 import type { NextPage, GetStaticProps } from 'next'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
-import { StatusCode, BackHomeButton } from '@styles/error'
+import styles from '@styles/error.module.css'
 import Layout from '@components/Layout'
 
 const ServerErrorPage: NextPage = () => {
@@ -12,9 +12,9 @@ const ServerErrorPage: NextPage = () => {
         description="Sorry, we had some technical problems during your last operation."
       />
       <Layout>
-        <StatusCode>500 | Internal Server Error.</StatusCode>
+        <h1 className={styles.status_code}>500 | Internal Server Error.</h1>
         <Link href="./">
-          <BackHomeButton>go back home</BackHomeButton>
+          <button className={styles.backhome}>go back home</button>
         </Link>
       </Layout>
     </>

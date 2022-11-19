@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import * as Styled from './styles'
+import Link from 'next/link'
+import styles from './styles.module.css'
 import ThemeToggle from '@components/ThemeToggle'
 import BurgerMenu from '@components/BurgerMenu'
 
@@ -9,30 +10,51 @@ const Navbar = () => {
   const [isActive, setActive] = useState(false)
 
   return (
-    <Styled.Navbar>
-      <Styled.NavLogo>.mdShare</Styled.NavLogo>
-      <Styled.NavMenu className={isActive ? 'active' : undefined}>
-        <Styled.NavItem>
-          <Styled.NavLink href="/" className={location == '/' ? 'active' : ''}>
+    <nav className={styles.navbar}>
+      <a className={styles.navbar__logo}>.mdShare</a>
+      <ul
+        className={isActive ? `${styles.navbar__menu} ${styles.active_menu}` : styles.navbar__menu}
+      >
+        <li className={styles.navbar__item}>
+          <Link
+            href="/"
+            className={
+              location == '/' ? `${styles.navbar__link} ${styles.active_link}` : styles.navbar__link
+            }
+          >
             Home
-          </Styled.NavLink>
-        </Styled.NavItem>
-        <Styled.NavItem>
-          <Styled.NavLink href="/about" className={location == '/about' ? 'active' : ''}>
+          </Link>
+        </li>
+        <li className={styles.navbar__item}>
+          <Link
+            href="/about"
+            className={
+              location == '/about'
+                ? `${styles.navbar__link} ${styles.active_link}`
+                : styles.navbar__link
+            }
+          >
             About
-          </Styled.NavLink>
-        </Styled.NavItem>
-        <Styled.NavItem>
-          <Styled.NavLink href="/contact" className={location == '/contact' ? 'active' : ''}>
+          </Link>
+        </li>
+        <li className={styles.navbar__item}>
+          <Link
+            href="/contact"
+            className={
+              location == '/contact'
+                ? `${styles.navbar__link} ${styles.active_link}`
+                : styles.navbar__link
+            }
+          >
             Contact
-          </Styled.NavLink>
-        </Styled.NavItem>
-        <Styled.NavItem>
+          </Link>
+        </li>
+        <li className={styles.navbar__item}>
           <ThemeToggle />
-        </Styled.NavItem>
-      </Styled.NavMenu>
+        </li>
+      </ul>
       <BurgerMenu isActive={isActive} setActive={() => setActive(!isActive)} />
-    </Styled.Navbar>
+    </nav>
   )
 }
 

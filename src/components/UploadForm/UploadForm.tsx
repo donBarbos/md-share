@@ -1,15 +1,17 @@
-import * as Styled from './styles'
+import styles from './styles.module.css'
 
 const UploadForm = () => {
   return (
-    <Styled.Form action="/api/form" method="post">
-      <Styled.Label>
-        <Styled.DropTitle>Drag & drop file here</Styled.DropTitle>
+    <form className={styles.form} action="/api/form" method="post">
+      <label className={styles.form__label}>
+        <span className={styles.drop__title}>Drag & drop file here</span>
         or
-        <input type="file" accept=".md, .txt" required />
-      </Styled.Label>
-      <Styled.Button type="submit">SHARE</Styled.Button>
-    </Styled.Form>
+        <input className={styles.form__input} type="file" accept=".md, .txt" required />
+      </label>
+      <button className={styles.form__submit} type="submit">
+        SHARE
+      </button>
+    </form>
   )
 }
 

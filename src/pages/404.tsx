@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
-import { StatusCode, BackHomeButton } from '@styles/error'
+import styles from '@styles/error.module.css'
 import Layout from '@components/Layout'
 
 const NotFoundPage: NextPage = () => {
@@ -9,9 +9,9 @@ const NotFoundPage: NextPage = () => {
     <>
       <NextSeo title="404: Not Found" description="This page could not be found." />
       <Layout>
-        <StatusCode>404 | page not found.</StatusCode>
+        <h1 className={styles.status_code}>404 | page not found.</h1>
         <Link href="./">
-          <BackHomeButton>go back home</BackHomeButton>
+          <button className={styles.backhome}>go back home</button>
         </Link>
       </Layout>
     </>
