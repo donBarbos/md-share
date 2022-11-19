@@ -1,17 +1,17 @@
-import styled from 'styled-components'
-
-export const StatusCode = styled.h1`
+.status_code {
   line-height: 1.4;
   margin-bottom: 20px;
   font-size: 4rem;
 
   @media only screen and (max-width: 768px) {
-    margin-bottom: 16px;
-    font-size: 2rem;
+    .status_code {
+      margin-bottom: 16px;
+      font-size: 2rem;
+    }
   }
-`
+}
 
-export const BackHomeButton = styled.button`
+.backhome {
   font-family: 'Lato', sans-serif;
   font-weight: 500;
   font-size: 26px;
@@ -27,12 +27,14 @@ export const BackHomeButton = styled.button`
   background: var(--fg);
   transition: all 0.4s ease-in-out;
 
-  &:hover {
-    color: var(--fg);
-    background: var(--bg);
-  }
-
   @media only screen and (max-width: 768px) {
-    font-size: 20px;
+    .backhome {
+      font-size: 20px;
+    }
   }
-`
+}
+
+.backhome:hover {
+  color: var(--fg);
+  background: var(--bg);
+}

@@ -1,15 +1,12 @@
-import styled from 'styled-components'
-import Link from 'next/link'
-
-export const Navbar = styled.nav`
+.navbar {
   border-bottom: 1px solid #e2e8f0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-`
+}
 
-export const NavLogo = styled.a`
+.navbar__logo {
   color: inherit;
   font-weight: 700;
   font-size: 2.1rem;
@@ -26,9 +23,9 @@ export const NavLogo = styled.a`
   @media only screen and (max-width: 250px) {
     font-size: 0;
   }
-`
+}
 
-export const NavMenu = styled.ul`
+.navbar__menu {
   z-index: 999;
   list-style-type: none;
   margin: 0;
@@ -49,32 +46,37 @@ export const NavMenu = styled.ul`
     text-align: center;
     transition: left 0.3s, color 0.1s, background 0.1s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-
-    &.active {
-      left: 0;
-    }
   }
-`
+}
+.active_menu {
+  @media only screen and (max-width: 768px) {
+    left: 0;
+  }
+}
 
-export const NavItem = styled.li`
+.navbar__item {
   list-style: none;
   float: right;
 
   @media only screen and (max-width: 768px) {
     margin: 0.5rem 0;
   }
-`
+}
 
-export const NavLink = styled(Link)`
+.navbar__link {
   font-size: 18px;
   color: inherit;
   display: block;
   text-align: center;
   padding: 14px 25px;
   text-decoration: none;
-
-  &:hover,
   &.active {
     color: var(--accent-color);
   }
-`
+}
+.navbar__link:hover {
+  color: var(--accent-color);
+}
+.active_link {
+  color: var(--accent-color);
+}
