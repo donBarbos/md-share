@@ -1,23 +1,7 @@
-.toggle {
-  font-size: 0.9rem;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid;
-  padding: 5px;
-  text-align: center;
-  margin: 0;
-  cursor: pointer;
-  outline: none;
-  display: block;
-  background: var(--bg);
-}
-.toggle:hover {
-  border: 1px solid var(--accent-color);
-}
-
-.theme_toggle {
-  --size: 2rem;
+.theme-toggle {
+  --size: 1.5rem;
+  --icon-fill: hsl(210 10% 30%);
+  --icon-fill-hover: hsl(210 10% 15%);
 
   background: none;
   border: none;
@@ -43,35 +27,38 @@
     --size: 48px;
   }
 }
+[data-theme='dark'] .theme-toggle {
+  --icon-fill: hsl(210 10% 70%);
+  --icon-fill-hover: hsl(210 15% 90%);
+}
 
-.sun_and_moon {
-  & > :is(.moon, .sun, .sun_beams) {
+.sun-and-moon {
+  & > :is(.moon, .sun, .sun-beams) {
     transform-origin: center center;
   }
 
   & > :is(.moon, .sun) {
     fill: var(--icon-fill);
 
-    @nest .theme_toggle:is(:hover, :focus-visible) > & {
+    @nest .theme-toggle:is(:hover, :focus-visible) > & {
       fill: var(--icon-fill-hover);
     }
   }
 
-  & > .sun_beams {
+  & > .sun-beams {
     stroke: var(--icon-fill);
     stroke-width: 2px;
 
-    @nest .theme_toggle:is(:hover, :focus-visible) & {
+    @nest .theme-toggle:is(:hover, :focus-visible) & {
       stroke: var(--icon-fill-hover);
     }
   }
-
   @nest [data-theme='dark'] & {
     & > .sun {
       transform: scale(1.75);
     }
 
-    & > .sun_beams {
+    & > .sun-beams {
       opacity: 0;
     }
 
@@ -81,6 +68,41 @@
       @supports (cx: 1) {
         transform: translateX(0);
         cx: 17;
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sun-and-moon {
+    & > .sun {
+      transition: transform 0.5s cubic-bezier(0.5, 1.25, 0.75, 1.25);
+    }
+    & > .sun-beams {
+      transition: transform 0.5s cubic-bezier(0.5, 1.5, 0.75, 1.25),
+        opacity 0.5s cubic-bezier(0.25, 0, 0.3, 1);
+    }
+    & .moon > circle {
+      transition: transform 0.25s cubic-bezier(0, 0, 0, 1);
+    }
+    @supports (cx: 1) {
+      & .moon > circle {
+        transition: cx 0.25s cubic-bezier(0, 0, 0, 1);
+      }
+    }
+    @nest [data-theme='dark'] & {
+      & > .sun {
+        transform: scale(1.75);
+        transition-timing-function: cubic-bezier(0.25, 0, 0.3, 1);
+        transition-duration: 0.25s;
+      }
+      & > .sun-beams {
+        transform: rotate(-25deg);
+        transition-duration: 0.15s;
+      }
+      & > .moon > circle {
+        transition-delay: 0.25s;
+        transition-duration: 0.5s;
       }
     }
   }
