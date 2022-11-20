@@ -11,7 +11,9 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <a className={styles.navbar__logo}>.mdShare</a>
+      <a className={styles.navbar__logo} href="#">
+        .mdShare
+      </a>
       <ul
         className={isActive ? `${styles.navbar__menu} ${styles.active_menu}` : styles.navbar__menu}
       >
