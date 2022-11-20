@@ -18,13 +18,13 @@
   cursor: pointer;
   outline: none;
   padding: 10px 25px;
-  border: 2px solid var(--fg);
+  border: 2px solid var(--color-fg);
   display: inline-block;
   position: relative;
   margin: 0 auto;
 
-  color: var(--bg);
-  background: var(--fg);
+  color: var(--color-bg);
+  background: var(--color-fg);
   transition: all 0.4s ease-in-out;
 
   @media only screen and (max-width: 768px) {
@@ -35,6 +35,6 @@
 }
 
 .backhome:hover {
-  color: var(--fg);
-  background: var(--bg);
+  color: var(--color-fg);
+  background: var(--color-bg);
 }

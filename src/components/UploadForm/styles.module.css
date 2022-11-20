@@ -4,13 +4,10 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  transition: color 0.1s, background 0.1s;
-
-  /*
-  * {
-    transition: color 0.1s, background 0.1s;
-  }
-  */
+}
+.form * {
+  transition: color var(--default-delay), background var(--default-delay),
+    border var(--default-delay);
 }
 
 .form__label {
@@ -26,16 +23,14 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
   border-radius: 10px;
-  border: 2px dashed #555;
-  color: var(--fg);
+  border: 2px solid var(--color-border);
+  color: var(--color-fg);
+  background: var(--color-canvas);
   cursor: pointer;
-}
-.form__label:active {
-  border-color: var(--accent-color);
 }
 
 .drop__title {
-  color: var(--fg);
+  color: var(--color-fg);
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
@@ -48,16 +43,17 @@
   margin-top: 12px;
   width: 95%;
   max-width: 18rem;
-  transition: color 0.1s, background 0.1s;
+  transition: color var(--default-delay), background var(--default-delay);
 }
 .form__input::file-selector-button {
   margin-right: 1rem;
-  border: 2px solid var(--bg);
+  border: 2px solid var(--color-bg);
   padding: 10px 20px;
   border-radius: 10px;
-  color: var(--bg);
-  background: var(--fg);
-  transition: color 0.1s, background 0.1s, border 0.1s;
+  color: var(--color-bg);
+  background: var(--color-fg);
+  transition: color var(--default-delay), background var(--default-delay),
+    border var(--default-delay);
 }
 .form__input::file-selector-button:hover {
   border: 2px solid var(--accent-color);
@@ -70,12 +66,12 @@
   cursor: pointer;
   font-size: 20px;
   font-weight: bold;
-  color: var(--fg);
-  background: var(--bg);
+  color: var(--color-fg);
+  background: var(--color-bg);
   border-color: var(--accent-color);
   transition: color 0.4s ease-in-out, background 0.4s ease-in-out;
 }
 .form__submit:hover {
-  color: var(--bg);
+  color: var(--color-bg);
   background: var(--accent-color);
 }

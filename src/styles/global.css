@@ -1,25 +1,17 @@
 :root {
-  --fg: #000;
-  --bg: #fff;
+  --color-fg: #000;
+  --color-bg: #fff;
+  --color-border: #d0d7de;
+  --color-canvas: #f6f8fa;
   --accent-color: #ff4d4d;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --fg: #fff;
-    --bg: #000;
-    --accent-color: #ff4d4d;
-  }
-
-  [data-theme='light'] {
-    --fg: #000;
-    --bg: #fff;
-  }
+  --default-delay: 0.1s;
 }
 
 [data-theme='dark'] {
-  --fg: #fff;
-  --bg: #000;
+  --color-fg: #fff;
+  --color-bg: #000;
+  --color-border: #30363d;
+  --color-canvas: #0d1117;
 }
 
 * {
@@ -41,9 +33,9 @@ body {
   height: 100%;
   width: 100%;
 
-  color: var(--fg);
-  background-color: var(--bg);
+  color: var(--color-fg);
+  background-color: var(--color-bg);
 
   /* for a smooth theme change */
-  transition: color 0.1s, background 0.1s;
+  transition: color var(--default-delay), background var(--default-delay);
 }
