@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <DefaultSeo {...SEO} />
-      <ThemeProvider>
+      <ThemeProvider enableSystem={true}>
         <Component {...pageProps} />
       </ThemeProvider>
     </>
