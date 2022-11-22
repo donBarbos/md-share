@@ -1,7 +1,7 @@
-const seo = {
+export const keywords = {
   title: 'md share',
   author: 'donBarbos',
-  description: 'application for share Markdown files',
+  description: 'Best way to share your files in markdown.',
   icon: './favicon.ico',
   github: 'https://github.com/donBarbos/md-share',
   repo: 'donBarbos/md-share',
@@ -9,18 +9,18 @@ const seo = {
   lang: 'en',
 }
 
-const SEO = {
+export const SEO = {
   // if title: defined   => title would be titleTemplate
   // if title: undefined => title would be defaultTitle
-  titleTemplate: `%s | ${seo.title}`,
-  defaultTitle: seo.title,
-  description: seo.description,
-  canonical: seo.siteUrl,
+  titleTemplate: `%s | ${keywords.title}`,
+  defaultTitle: keywords.title,
+  description: keywords.description,
+  canonical: keywords.siteUrl,
   openGraph: {
     type: 'website',
-    locale: seo.lang,
-    url: seo.siteUrl,
-    siteName: seo.title,
+    locale: keywords.lang,
+    url: keywords.siteUrl,
+    siteName: keywords.title,
   },
   twitter: {
     handle: '@handle',
@@ -30,9 +30,7 @@ const SEO = {
   additionalLinkTags: [
     {
       rel: 'icon',
-      href: seo.icon,
+      href: keywords.icon,
     },
   ],
 }
-
-export default SEO
