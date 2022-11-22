@@ -23,7 +23,7 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
   border-radius: 10px;
-  border: 2px solid var(--color-border);
+  border: 2px dashed var(--color-border);
   color: var(--color-fg);
   background: var(--color-canvas);
   cursor: pointer;
