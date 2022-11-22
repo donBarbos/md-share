@@ -14,14 +14,12 @@ const Navbar = () => {
       <a className={styles.navbar__logo} href="#">
         .mdShare
       </a>
-      <ul
-        className={isActive ? `${styles.navbar__menu} ${styles.active_menu}` : styles.navbar__menu}
-      >
+      <ul className={isActive ? `${styles.navbar__menu} ${styles.active}` : styles.navbar__menu}>
         <li className={styles.navbar__item}>
           <Link
             href="/"
             className={
-              location == '/' ? `${styles.navbar__link} ${styles.active_link}` : styles.navbar__link
+              location == '/' ? `${styles.navbar__link} ${styles.active}` : styles.navbar__link
             }
           >
             Home
@@ -31,9 +29,7 @@ const Navbar = () => {
           <Link
             href="/about"
             className={
-              location == '/about'
-                ? `${styles.navbar__link} ${styles.active_link}`
-                : styles.navbar__link
+              location == '/about' ? `${styles.navbar__link} ${styles.active}` : styles.navbar__link
             }
           >
             About
@@ -44,7 +40,7 @@ const Navbar = () => {
             href="/contact"
             className={
               location == '/contact'
-                ? `${styles.navbar__link} ${styles.active_link}`
+                ? `${styles.navbar__link} ${styles.active}`
                 : styles.navbar__link
             }
           >

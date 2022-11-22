@@ -51,11 +51,10 @@
     border-bottom: 1px solid var(--color-border);
     color: var(--color-fg);
     background: var(--color-bg);
-  }
-}
-.active_menu {
-  @media only screen and (max-width: 768px) {
-    left: 0;
+
+    &.active {
+      left: 0;
+    }
   }
 }
 
@@ -75,13 +74,9 @@
   text-align: center;
   padding: 14px 25px;
   text-decoration: none;
+
+  &:hover,
   &.active {
     color: var(--accent-color);
   }
-}
-.navbar__link:hover {
-  color: var(--accent-color);
-}
-.active_link {
-  color: var(--accent-color);
 }
