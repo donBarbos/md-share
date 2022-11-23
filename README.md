@@ -1,7 +1,7 @@
 <!-- Original file: https://upload.wikimedia.org/wikipedia/commons/d/d9/Markdown.png -->
 <h1 align="center">
   <a href="https://md-share.netlify.app">
-    <img alt="Markdown" src="./public/favicon-1200x738.png" width="120" height="74" /><br/>
+    <img alt="Markdown" src="./public/favicon.ico" width="120" height="74" /><br/>
   </a>
   sharing
 </h1>
@@ -33,13 +33,6 @@ Imagine the situation, you have written a useful Markdown note and you decide to
   ```bash
   yarn dev
   ```
-
-## 🔧 Tech Stack
-
-- `TypeScript` — a strongly typed programming language that builds on JavaScript.
-- `React` — a JavaScript library for building user interfaces.
-- `Next.js` — a React framework that gives you building blocks to create web applications.
-- `Yarn` — a package manager that doubles down as project manager.
 
 ## 🤝 Contributing
 
