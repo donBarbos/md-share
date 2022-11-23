@@ -37,5 +37,5 @@ body {
   background-color: var(--color-bg);
 
   /* for a smooth theme change */
-  transition: color var(--default-delay), background var(--default-delay);
+  transition: all var(--default-delay);
 }
