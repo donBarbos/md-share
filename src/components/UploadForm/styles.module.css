@@ -70,8 +70,15 @@
   background: var(--color-bg);
   border-color: var(--accent-color);
   transition: color 0.4s ease-in-out, background 0.4s ease-in-out;
-}
-.form__submit:hover {
-  color: var(--color-bg);
-  background: var(--accent-color);
+
+  &:hover {
+    color: var(--color-bg);
+    background: var(--accent-color);
+  }
+
+  @media (hover: none) {
+    transition: all var(--default-delay);
+    color: var(--color-bg);
+    background: var(--accent-color);
+  }
 }
