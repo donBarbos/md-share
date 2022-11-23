@@ -3,7 +3,10 @@ import styles from './styles.module.css'
 
 const BurgerMenu = ({ isActive, setActive }: BurgerMenuProps) => {
   return (
-    <div className={isActive ? styles.hamburger_active : styles.hamburger} onClick={setActive}>
+    <div
+      className={isActive ? `${styles.hamburger} ${styles.active}` : styles.hamburger}
+      onClick={setActive}
+    >
       <span className={styles.bar} />
       <span className={styles.bar} />
       <span className={styles.bar} />

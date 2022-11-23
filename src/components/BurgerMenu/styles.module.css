@@ -23,21 +23,21 @@
       background var(--default-delay);
   }
 
-  .hamburger_active {
+  .hamburger.active {
     display: block;
     cursor: pointer;
   }
 
-  .hamburger_active .bar:nth-child(2) {
+  .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
 
-  .hamburger_active .bar:nth-child(1) {
+  .hamburger.active .bar:nth-child(1) {
     -webkit-transform: translateY(8px) rotate(45deg);
     transform: translateY(8px) rotate(45deg);
   }
 
-  .hamburger_active .bar:nth-child(3) {
+  .hamburger.active .bar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
   }
