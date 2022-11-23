@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
-import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import styles from '@styles/error.module.css'
+import SEO from '@components/SEO'
 import Layout from '@components/Layout'
 
 const NotFoundPage: NextPage = () => {
   return (
     <>
-      <NextSeo title="404: Not Found" description="This page could not be found." />
+      <SEO title="404: Not Found" description="This page could not be found." />
       <Layout>
         <h1 className={styles.status_code}>404 | page not found.</h1>
         <Link href="./">

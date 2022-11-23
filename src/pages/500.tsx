@@ -1,13 +1,13 @@
 import type { NextPage, GetStaticProps } from 'next'
-import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import styles from '@styles/error.module.css'
+import SEO from '@components/SEO'
 import Layout from '@components/Layout'
 
 const ServerErrorPage: NextPage = () => {
   return (
     <>
-      <NextSeo
+      <SEO
         title="500: Server Error"
         description="Sorry, we had some technical problems during your last operation."
       />

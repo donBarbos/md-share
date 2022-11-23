@@ -1,14 +1,14 @@
 import type { NextPage } from 'next'
-import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import Image from 'next/image'
 import profilePic from '@public/avatar.jpg'
+import SEO from '@components/SEO'
 import Layout from '@components/Layout'
 
 const Contact: NextPage = () => {
   return (
     <>
-      <NextSeo title="contact" />
+      <SEO title="contact" />
       <Layout>
         <h1>Contact</h1>
         <br />

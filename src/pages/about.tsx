@@ -1,12 +1,12 @@
 import type { NextPage } from 'next'
-import { NextSeo } from 'next-seo'
 import Link from 'next/link'
+import SEO from '@components/SEO'
 import Layout from '@components/Layout'
 
 const About: NextPage = () => {
   return (
     <>
-      <NextSeo title="about" />
+      <SEO title="about" />
       <Layout>
         <h1>About this site</h1>
         <br />

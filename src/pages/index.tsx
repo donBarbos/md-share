@@ -1,12 +1,12 @@
 import type { NextPage } from 'next'
-import { NextSeo } from 'next-seo'
+import SEO from '@components/SEO'
 import Layout from '@components/Layout'
 import UploadForm from '@components/UploadForm'
 
 const Home: NextPage = () => {
   return (
     <>
-      <NextSeo title="" description="" />
+      <SEO />
       <Layout>
         <h1>Just Upload Your Markdown Note</h1>
         <UploadForm />
