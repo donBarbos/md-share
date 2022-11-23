@@ -13,7 +13,7 @@ const SEO = ({
   pathname = '',
 }: SEOProps) => {
   const seo = {
-    title: `${title ? title + ` | ` : ''}${SITE_NAME}`,
+    title: `${title ? title + ' | ' : ''}${SITE_NAME}`,
     author: author,
     description: description,
     image: image,
