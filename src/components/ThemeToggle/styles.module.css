@@ -22,10 +22,6 @@
     block-size: 100%;
     stroke-linecap: round;
   }
-
-  @media (hover: none) {
-    --size: 48px;
-  }
 }
 [data-theme='dark'] .theme-toggle {
   --icon-fill: hsl(210 10% 70%);
