@@ -13,67 +13,67 @@
     {
       "src": "/icons/android-icon-192x192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x118"
     },
     {
       "src": "/icons/apple-icon-180x180.png",
       "type": "image/png",
-      "sizes": "180x180"
+      "sizes": "180x111"
     },
     {
       "src": "/icons/apple-icon-152x152.png",
       "type": "image/png",
-      "sizes": "152x152"
+      "sizes": "152x93"
     },
     {
       "src": "/icons/apple-icon-144x144.png",
       "type": "image/png",
-      "sizes": "144x144"
+      "sizes": "144x89"
     },
     {
       "src": "/icons/apple-icon-120x120.png",
       "type": "image/png",
-      "sizes": "120x120"
+      "sizes": "120x74"
     },
     {
       "src": "/icons/apple-icon-114x114.png",
       "type": "image/png",
-      "sizes": "114x114"
+      "sizes": "114x80"
     },
     {
       "src": "/icons/favicon-96x96.png",
       "type": "image/png",
-      "sizes": "96x96"
+      "sizes": "96x59"
     },
     {
       "src": "/icons/apple-icon-76x76.png",
       "type": "image/png",
-      "sizes": "76x76"
+      "sizes": "76x47"
     },
     {
       "src": "/icons/apple-icon-72x72.png",
       "type": "image/png",
-      "sizes": "72x72"
+      "sizes": "72x44"
     },
     {
       "src": "/icons/apple-icon-60x60.png",
       "type": "image/png",
-      "sizes": "60x60"
+      "sizes": "60x37"
     },
     {
       "src": "/icons/apple-icon-57x57.png",
       "type": "image/png",
-      "sizes": "57x57"
+      "sizes": "57x35"
     },
     {
       "src": "/icons/favicon-32x32.png",
       "type": "image/png",
-      "sizes": "32x32"
+      "sizes": "32x20"
     },
     {
       "src": "/icons/favicon-16x16.png",
       "type": "image/png",
-      "sizes": "16x16"
+      "sizes": "16x10"
     }
   ],
   "prefer_related_applications": false
