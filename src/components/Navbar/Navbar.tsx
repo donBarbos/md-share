@@ -5,7 +5,7 @@ import styles from './styles.module.css'
 import ThemeToggle from '@components/ThemeToggle'
 import BurgerMenu from '@components/BurgerMenu'
 
-const items = [
+const pages = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
@@ -21,18 +21,17 @@ const Navbar = () => {
         .mdShare
       </a>
       <ul className={isActive ? `${styles.navbar__menu} ${styles.active}` : styles.navbar__menu}>
-        {items.map((item) => (
-          /* Use the `active` state to conditionally style the active item. */
-          <li className={styles.navbar__item} key={item.href}>
+        {pages.map((page) => (
+          <li className={styles.navbar__item} key={page.href}>
             <Link
-              href={item.href}
+              href={page.href}
               className={
-                location === item.href
+                location === page.href
                   ? `${styles.navbar__link} ${styles.active}`
                   : styles.navbar__link
               }
             >
-              {item.label}
+              {page.label}
             </Link>
           </li>
         ))}
