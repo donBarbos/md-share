@@ -1,15 +1,15 @@
 :root {
-  --color-fg: #000;
-  --color-bg: #fff;
+  --color-fg: #333333;
+  --color-bg: #f6f8fa;
   --color-border: #d0d7de;
-  --color-canvas: #f6f8fa;
+  --color-canvas: #ffffff;
   --accent-color: #ff4d4d;
   --default-delay: 0.1s;
 }
 
 [data-theme='dark'] {
-  --color-fg: #fff;
-  --color-bg: #000;
+  --color-fg: #c9d1d9;
+  --color-bg: #010409;
   --color-border: #30363d;
   --color-canvas: #0d1117;
 }
