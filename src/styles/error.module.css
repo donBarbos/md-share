@@ -1,13 +1,12 @@
 .status_code {
   line-height: 1.4;
+  margin-top: 16vh;
   margin-bottom: 20px;
   font-size: 4rem;
 
   @media only screen and (max-width: 768px) {
-    .status_code {
-      margin-bottom: 16px;
-      font-size: 2rem;
-    }
+    margin-bottom: 16px;
+    font-size: 2rem;
   }
 }
 
@@ -27,14 +26,12 @@
   background: var(--color-fg);
   transition: all 0.4s ease-in-out;
 
-  @media only screen and (max-width: 768px) {
-    .backhome {
-      font-size: 20px;
-    }
+  &:hover {
+    color: var(--color-fg);
+    background: var(--color-bg);
   }
-}
 
-.backhome:hover {
-  color: var(--color-fg);
-  background: var(--color-bg);
+  @media only screen and (max-width: 768px) {
+    font-size: 20px;
+  }
 }
