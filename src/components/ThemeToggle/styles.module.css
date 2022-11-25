@@ -1,7 +1,6 @@
 .theme-toggle {
   --size: 1.5rem;
-  --icon-fill: hsl(210 10% 30%);
-  --icon-fill-hover: hsl(210 10% 15%);
+  --icon-fill: var(--color-fg);
 
   background: none;
   border: none;
@@ -23,10 +22,6 @@
     stroke-linecap: round;
   }
 }
-[data-theme='dark'] .theme-toggle {
-  --icon-fill: hsl(210 10% 70%);
-  --icon-fill-hover: hsl(210 15% 90%);
-}
 
 .sun-and-moon {
   & > :is(.moon, .sun, .sun-beams) {
@@ -35,19 +30,11 @@
 
   & > :is(.moon, .sun) {
     fill: var(--icon-fill);
-
-    @nest .theme-toggle:is(:hover, :focus-visible) > & {
-      fill: var(--icon-fill-hover);
-    }
   }
 
   & > .sun-beams {
     stroke: var(--icon-fill);
     stroke-width: 2px;
-
-    @nest .theme-toggle:is(:hover, :focus-visible) & {
-      stroke: var(--icon-fill-hover);
-    }
   }
   @nest [data-theme='dark'] & {
     & > .sun {
