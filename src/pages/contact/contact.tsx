@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './contact.module.css'
 import profilePic from '@public/avatar.jpg'
+import cuteCat from '@public/cat.jpg'
 import SEO from '@components/SEO'
 import Layout from '@components/Layout'
 
@@ -12,6 +13,10 @@ const Contact: NextPage = () => {
       <SEO title="contact" />
       <Layout>
         <h1>Contact</h1>
+        <h2 className={styles.person}>
+          <Image src={cuteCat} alt="" width={30} height={30} className={styles.avatar} />
+          &ensp;my cat &ndash; mastermind
+        </h2>
         <h2 className={styles.person}>
           <Image src={profilePic} alt="" width={30} height={30} className={styles.avatar} />
           &ensp;donBaros &ndash; creator

@@ -1,6 +1,17 @@
 .person {
+  margin: auto;
   margin-top: 18px;
   margin-bottom: 5px;
+  text-align: left;
+  width: 100%;
+  max-width: 300px;
+  padding-left: 12px;
+
+  @media only screen and (max-width: 300px) {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .avatar {
@@ -18,5 +29,11 @@
 
   & li {
     margin-bottom: 5px;
+  }
+
+  @media only screen and (max-width: 300px) {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
