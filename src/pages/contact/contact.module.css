@@ -1,0 +1,21 @@
+.person {
+  margin-top: 18px;
+  margin-bottom: 5px;
+}
+
+.avatar {
+  border-radius: 30px;
+  position: relative;
+  top: 5px;
+}
+
+.list {
+  margin: 20px;
+  padding-left: 20px;
+  display: inline-block;
+  text-align: left;
+
+  & li {
+    margin-bottom: 5px;
+  }
+}
