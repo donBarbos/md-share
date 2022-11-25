@@ -22,7 +22,7 @@
   height: 16rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 2px dashed var(--color-border);
   color: var(--color-fg);
   background: var(--color-canvas);
@@ -54,9 +54,10 @@
   background: var(--color-fg);
   transition: color var(--default-delay), background var(--default-delay),
     border var(--default-delay);
-}
-.form__input::file-selector-button:hover {
-  border: 2px solid var(--accent-color);
+
+  &:hover {
+    border: 2px solid var(--accent-color);
+  }
 }
 
 .form__submit {
