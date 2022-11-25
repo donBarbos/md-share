@@ -1,0 +1,20 @@
+.description {
+  margin: auto;
+  margin-top: 18px;
+  text-align: left;
+  max-width: 700px;
+  font-size: 18px;
+  font-: 18px;
+  font-weight: 600;
+}
+
+.list {
+  margin: 20px;
+  padding-left: 20px;
+  display: inline-block;
+  text-align: left;
+
+  & ol {
+    margin-bottom: 5px;
+  }
+}
