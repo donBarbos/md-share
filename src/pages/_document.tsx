@@ -11,7 +11,7 @@ const Document = () => {
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="theme-color" content="#fff" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" sizes="120x74" href="/favicon.ico" />
         <link rel="icon" type="image/png" href="/icons/favicon-32x32.png" />
         <link rel="icon" type="image/png" href="/icons/favicon-16x16.png" />
         <link rel="apple-touch-icon" href="/icons/apple-icon-152x152.png" />
