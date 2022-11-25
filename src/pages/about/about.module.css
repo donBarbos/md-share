@@ -18,3 +18,21 @@
     margin-bottom: 5px;
   }
 }
+.highlight {
+  font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 90%;
+  background: var(--color-fg);
+  color: var(--color-bg);
+  opacity: 0.7;
+  border-radius: 3px;
+
+  &:before,
+  &:after {
+    letter-spacing: -0.2em;
+    content: '\00a0';
+  }
+}

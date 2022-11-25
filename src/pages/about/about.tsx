@@ -20,7 +20,7 @@ const About: NextPage = () => {
             <b>1.</b> Go to <Link href="./">Homepage</Link>
           </ol>
           <ol>
-            <b>2.</b> Upload your `File.md`
+            <b>2.</b> Upload your <code className={styles.highlight}>note.md</code>
           </ol>
           <ol>
             <b>3.</b> Share a link to the generated page
