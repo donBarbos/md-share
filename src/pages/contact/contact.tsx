@@ -13,14 +13,7 @@ const Contact: NextPage = () => {
       <Layout>
         <h1>Contact</h1>
         <h2 className={styles.person}>
-          <Image
-            src={profilePic}
-            alt=""
-            width={30}
-            height={30}
-            objectFit="cover"
-            className={styles.avatar}
-          />
+          <Image src={profilePic} alt="" width={30} height={30} className={styles.avatar} />
           &ensp;donBaros &ndash; creator
         </h2>
         <ul className={styles.list}>
