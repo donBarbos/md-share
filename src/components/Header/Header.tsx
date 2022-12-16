@@ -1,4 +1,4 @@
-import Navbar from '@components/Navbar'
+import { Navbar } from '@components/Navbar'
 
 const Header = () => {
   return (
@@ -8,4 +8,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export { Header }

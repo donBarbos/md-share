@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
 import styles from './about.module.css'
-import SEO from '@components/SEO'
-import Layout from '@components/Layout'
+import { SEO } from '@components/SEO'
+import { Layout } from '@components/Layout'
 
 const About: NextPage = () => {
   return (

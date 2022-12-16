@@ -14,4 +14,4 @@ const BurgerMenu = ({ isActive, setActive }: BurgerMenuProps) => {
   )
 }
 
-export default BurgerMenu
+export { BurgerMenu }

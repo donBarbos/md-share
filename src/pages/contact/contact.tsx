@@ -4,8 +4,8 @@ import Image from 'next/image'
 import styles from './contact.module.css'
 import profilePic from '@public/avatar.jpg'
 import cuteCat from '@public/cat.jpg'
-import SEO from '@components/SEO'
-import Layout from '@components/Layout'
+import { SEO } from '@components/SEO'
+import { Layout } from '@components/Layout'
 
 const Contact: NextPage = () => {
   return (

@@ -1,7 +1,7 @@
 import type { LayoutProps } from './types'
+import { Header } from '@components/Header'
+import { Footer } from '@components/Footer'
 import styles from './styles.module.css'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
 
 const Layout = ({ children }: LayoutProps) => {
   return (
@@ -13,4 +13,4 @@ const Layout = ({ children }: LayoutProps) => {
   )
 }
 
-export default Layout
+export { Layout }

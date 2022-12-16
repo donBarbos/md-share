@@ -1,8 +1,14 @@
 import type { NextPage, GetStaticProps } from 'next'
 import Link from 'next/link'
 import styles from '@styles/error.module.css'
-import SEO from '@components/SEO'
-import Layout from '@components/Layout'
+import { SEO } from '@components/SEO'
+import { Layout } from '@components/Layout'
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {},
+  }
+}
 
 const ServerErrorPage: NextPage = () => {
   return (
@@ -19,12 +25,6 @@ const ServerErrorPage: NextPage = () => {
       </Layout>
     </>
   )
-}
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {},
-  }
 }
 
 export default ServerErrorPage

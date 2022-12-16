@@ -1,5 +1,5 @@
-import Head from 'next/head'
 import type { SEOProps } from './types'
+import Head from 'next/head'
 
 const SITE_NAME = 'md share'
 const SITE_URL = 'https://md-share.vercel.app'
@@ -45,4 +45,4 @@ const SEO = ({
   )
 }
 
-export default SEO
+export { SEO }
