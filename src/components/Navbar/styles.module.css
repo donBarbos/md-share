@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 5px;
 }
 
 .navbar__logo {
@@ -73,7 +73,7 @@
   color: inherit;
   display: block;
   text-align: center;
-  padding: 14px 25px;
+  padding: 10px 25px;
   text-decoration: none;
 
   &:hover,
