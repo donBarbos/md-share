@@ -1,4 +1,4 @@
 export type BurgerMenuProps = {
   isActive: boolean
-  setActive: () => void
+  setActive: (active: boolean) => void
 }

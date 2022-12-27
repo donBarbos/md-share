@@ -39,7 +39,7 @@ const Navbar = () => {
           <ThemeToggle />
         </li>
       </ul>
-      <BurgerMenu isActive={isActive} setActive={() => setActive(!isActive)} />
+      <BurgerMenu isActive={isActive} setActive={setActive} />
     </nav>
   )
 }
