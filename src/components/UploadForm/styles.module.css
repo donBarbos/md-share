@@ -76,6 +76,10 @@
     color: var(--color-bg);
     background: var(--accent-color);
   }
+  &:active {
+    color: var(--color-bg);
+    background: var(--accent-color);
+  }
 
   @media (hover: none) {
     transition: all var(--default-delay);
