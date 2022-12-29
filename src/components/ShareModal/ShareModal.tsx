@@ -26,7 +26,7 @@ const buttons = [
 
 const ShareModal = ({ isActive, setActive, slug }: ShareModalProps) => {
   const fullLink = SITE_URL + slug
-  const linkRef = useRef(null)
+  const linkRef: any = useRef(null)
 
   const copyText = () => {
     linkRef.current.select()

@@ -4,8 +4,9 @@ import styles from './styles.module.css'
 
 const UploadForm = () => {
   const [isModalActive, setModalActive] = useState(false)
+  const [slug, setSlug] = useState('')
   const [error, setError] = useState(null)
-  const fileInput = useRef(null)
+  const fileInput: any = useRef(null)
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -28,10 +29,10 @@ const UploadForm = () => {
       })
         .then((res) => res.json())
         .then((response) => {
-          if (response.message) {
-            setError(response.message)
+          if (response.success) {
+            setSlug(response.slug)
           } else {
-            setError(response.slug)
+            setError(response.message)
           }
         })
         .catch((error) => {
@@ -61,7 +62,7 @@ const UploadForm = () => {
           SHARE
         </button>
       </form>
-      <ShareModal isActive={isModalActive} setActive={setModalActive} slug={error} />
+      <ShareModal isActive={isModalActive} setActive={setModalActive} slug={slug} />
     </>
   )
 }
