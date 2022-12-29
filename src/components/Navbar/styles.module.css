@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
+  padding: 10px;
 }
 
 .navbar__logo {
@@ -41,7 +41,7 @@
   @media only screen and (max-width: 768px) {
     position: fixed;
     left: -100%;
-    top: 4rem;
+    top: 3.4rem;
     flex-direction: column;
     background: var(--color-bg);
     width: 100%;
