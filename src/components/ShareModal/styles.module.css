@@ -1,0 +1,45 @@
+.modal__text {
+  font-size: 1.5rem;
+  margin: 15px 0px;
+}
+
+.modal__link {
+  line-height: 3rem;
+  margin: 0 1rem;
+  border-bottom: none !important;
+
+  &:active {
+    top: 2px;
+    left: 2px;
+  }
+}
+
+.modal__icon {
+  fill: var(--color-fg);
+
+  &:hover {
+    fill: var(--accent-color);
+  }
+}
+
+.modal__input {
+  font-size: 1.5rem;
+  margin: 0 5px;
+  color: var(--color-fg);
+  background: var(--color-canvas);
+  border: none;
+  border-color: var(--color-canvas);
+  outline: none;
+}
+
+.modal__copy_button {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 5px;
+  color: var(--color-bg);
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  border-radius: 15px;
+  padding: 5px 25px;
+  cursor: pointer;
+}
