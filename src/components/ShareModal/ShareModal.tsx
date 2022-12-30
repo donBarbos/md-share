@@ -1,40 +1,35 @@
 import type { ShareModalProps } from './types'
-import { useRef } from 'react'
 import { Modal } from '@components/Modal'
+import { CopyLink } from '@components/CopyLink'
 import Link from 'next/link'
 import styles from './styles.module.css'
 
 const SITE_URL = process.env.SITE_URL || 'https://md-share.vercel.app/'
 
-import Facebook from '@public/social_networks/facebook.svg'
-import Messenger from '@public/social_networks/facebook-messenger.svg'
-import Twitter from '@public/social_networks/twitter.svg'
-import Instagram from '@public/social_networks/instagram.svg'
-import Telegram from '@public/social_networks/telegram.svg'
-import Whatsapp from '@public/social_networks/whatsapp.svg'
-import Email from '@public/social_networks/envelope-solid.svg'
+import Facebook from '@public/svgs/facebook.svg'
+import Linkedin from '@public/svgs/linkedin.svg'
+import Twitter from '@public/svgs/twitter.svg'
+import Instagram from '@public/svgs/instagram.svg'
+import Telegram from '@public/svgs/telegram.svg'
+import Whatsapp from '@public/svgs/whatsapp.svg'
+import Email from '@public/svgs/envelope-solid.svg'
 
 const buttons = [
   { href: 'https://www.facebook.com/sharer/sharer.php?u=', title: 'Facebook', svg: Facebook },
-  { href: 'fb-messenger://share?link=', title: 'Messenger', svg: Messenger },
   { href: 'https://twitter.com/intent/tweet?text=', title: 'Twitter', svg: Twitter },
+  {
+    href: 'https://www.linkedin.com/sharing/share-offsite/?url=',
+    title: 'LinkedIn',
+    svg: Linkedin,
+  },
   { href: 'https://www.instagram.com/?url=', title: 'Instagram', svg: Instagram },
   { href: 'https://t.me/share/url?url=', title: 'Telegram', svg: Telegram },
-  { href: 'whatsapp://send?text=', title: 'WhatsApp', svg: Whatsapp },
+  { href: 'https://api.whatsapp.com/send?text=', title: 'WhatsApp', svg: Whatsapp },
   { href: 'mailto:?body=', title: 'Email', svg: Email },
 ]
 
 const ShareModal = ({ isActive, setActive, slug }: ShareModalProps) => {
   const fullLink = SITE_URL + slug
-  const linkRef: any = useRef(null)
-
-  const copyText = () => {
-    linkRef.current.select()
-    document.execCommand('copy')
-    linkRef.current.blur()
-  }
-
-  // TODO: recreate component <CopiedInput href="https://md-share.vercel.app/about" text="about" />
 
   return (
     <Modal isActive={isActive} setActive={setActive}>
@@ -52,10 +47,7 @@ const ShareModal = ({ isActive, setActive, slug }: ShareModalProps) => {
         ))}
       </ul>
       <p className={styles.modal__text}>Or copy link:</p>
-      <input className={styles.modal__input} type="text" value={fullLink} ref={linkRef} readOnly />
-      <button className={styles.modal__copy_button} onClick={copyText}>
-        copy
-      </button>
+      <CopyLink link={fullLink} />
     </Modal>
   )
 }
