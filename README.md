@@ -11,8 +11,8 @@
 </h3>
 
 <p align="center">
-  <a href="https://github.com/donBarbos/md-share/actions/workflows/lint.yml"><img alt="Linter Status" src="https://img.shields.io/github/workflow/status/donBarbos/md-share/Lint?label=lint"></a>
-  <a href="https://github.com/donBarbos/md-share/actions/workflows/build.yml"><img alt="Build Status" src="https://img.shields.io/github/workflow/status/donBarbos/md-share/Build?label=build"></a>
+  <a href="https://github.com/donBarbos/md-share/actions/workflows/lint.yml"><img alt="Linter Status" src="https://img.shields.io/github/actions/workflow/status/donBarbos/md-share/lint.yml?label=lint"></a>
+  <a href="https://github.com/donBarbos/md-share/actions/workflows/build.yml"><img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/donBarbos/md-share/build.yml?label=build"></a>
   <a href="http://commitizen.github.io/cz-cli/"><img alt="Commitizen friendly" src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg"></a>
   <a href="https://github.com/donBarbos/md-share/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-AGPL_v3-blue.svg" alt="License"></a>
 </p>
