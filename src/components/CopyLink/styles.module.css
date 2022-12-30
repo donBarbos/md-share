@@ -1,0 +1,45 @@
+.copy_link {
+  --color-success: var(--accent-color);
+
+  display: table;
+  width: 100%;
+}
+
+.copy_link__input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border: 1px solid var(--color-fg);
+  width: calc(100% - 52px);
+  display: table-cell;
+  position: relative;
+
+  font-size: 1.3rem;
+  padding: 5px 15px;
+  color: var(--color-fg);
+  background: var(--color-canvas);
+}
+
+.copy_link__button {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: 1px solid var(--color-fg);
+  font-size: 1.3rem;
+  padding: 5px 15px;
+  cursor: pointer;
+
+  &.active {
+    border-color: var(--color-success);
+  }
+}
+
+.clipboard_copy_icon {
+  fill: var(--color-fg);
+}
+
+.clipboard_check_icon {
+  fill: var(--color-success);
+}
