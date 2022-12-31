@@ -1,0 +1,17 @@
+.modal__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 15px 0px;
+}
+
+.modal__subtitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 10px 0px;
+}
+
+.modal__description {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 20px 0px;
+}
