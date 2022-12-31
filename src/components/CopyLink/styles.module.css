@@ -11,6 +11,7 @@
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   border: 1px solid var(--color-fg);
+  border-right-color: rgba(0, 0, 0, 1);
   width: calc(100% - 52px);
   display: table-cell;
   position: relative;

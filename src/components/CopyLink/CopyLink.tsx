@@ -16,7 +16,7 @@ const CopyLink = ({ link }: CopyLinkProps) => {
     setCopied(true)
     setTimeout(() => {
       setCopied(false)
-    }, 2500)
+    }, 2100)
   }
 
   return (
