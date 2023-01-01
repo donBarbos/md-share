@@ -39,3 +39,16 @@ body {
   /* for a smooth theme change */
   transition: all var(--default-delay);
 }
+
+::-moz-selection {
+  background-color: var(--color-fg);
+  color: var(--color-bg);
+}
+::selection {
+  background-color: var(--color-fg);
+  color: var(--color-bg);
+}
+::moz-selection {
+  background-color: var(--color-fg);
+  color: var(--color-bg);
+}
