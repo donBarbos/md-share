@@ -21,13 +21,13 @@
 
 .modal__content {
   color: var(--color-fg);
-  background: var(--color-bg);
+  background-color: var(--color-bg);
   padding: 20px;
   margin-right: 1px;
   top: 50%;
   left: 50%;
   transform: scale(0.4);
-  transition: color var(--default-delay), background var(--default-delay),
+  transition: color var(--default-delay), background-color var(--default-delay),
     border var(--default-delay), transform 0.4s;
   border-radius: 20px;
   border: 1px solid var(--accent-color);

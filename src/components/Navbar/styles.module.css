@@ -43,15 +43,15 @@
     left: -100%;
     top: 3.4rem;
     flex-direction: column;
-    background: var(--color-bg);
+    background-color: var(--color-bg);
     width: 100%;
     text-align: center;
-    transition: left 0.3s, color var(--default-delay), background var(--default-delay);
+    transition: left 0.3s, color var(--default-delay), background-color var(--default-delay);
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     padding-bottom: 20px;
     border-bottom: 1px solid var(--color-border);
     color: var(--color-fg);
-    background: var(--color-bg);
+    background-color: var(--color-bg);
 
     &.active {
       left: 0;

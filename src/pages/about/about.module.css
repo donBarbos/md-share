@@ -25,7 +25,7 @@
   padding-bottom: 0.2em;
   margin: 0;
   font-size: 90%;
-  background: var(--color-fg);
+  background-color: var(--color-fg);
   color: var(--color-bg);
   opacity: 0.7;
   border-radius: 3px;

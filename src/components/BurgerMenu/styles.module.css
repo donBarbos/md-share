@@ -13,14 +13,14 @@
   }
 
   .bar {
-    background: var(--color-fg);
+    background-color: var(--color-fg);
     display: block;
     border-radius: 6px;
     width: 25px;
     height: 3px;
     margin: 5px auto;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, color var(--default-delay),
-      background var(--default-delay);
+      background-color var(--default-delay);
   }
 
   .hamburger.active {

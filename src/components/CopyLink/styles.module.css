@@ -19,7 +19,7 @@
   font-size: 1.3rem;
   padding: 5px 15px;
   color: var(--color-fg);
-  background: var(--color-canvas);
+  background-color: var(--color-canvas);
 }
 
 .copy_link__button {
