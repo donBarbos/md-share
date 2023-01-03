@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { GlowButton } from '@components/GlowButton'
 import { ShareModal } from '@components/ShareModal'
 import styles from './styles.module.css'
 
@@ -58,9 +59,7 @@ const UploadForm = () => {
             ref={fileInput}
           />
         </label>
-        <button className={styles.form__submit} type="submit">
-          SHARE
-        </button>
+        <GlowButton title="SHARE" type="submit" />
       </form>
       <ShareModal isActive={isModalActive} setActive={setModalActive} slug={slug} />
     </>
