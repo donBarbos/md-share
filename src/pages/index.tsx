@@ -8,7 +8,7 @@ const Home: NextPage = () => {
     <>
       <SEO />
       <Layout>
-        <h1>Just Upload Your Markdown Note</h1>
+        <h1>Just Upload Markdown File</h1>
         <UploadForm />
       </Layout>
     </>
