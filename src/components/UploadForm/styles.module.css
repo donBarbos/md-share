@@ -16,7 +16,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 4rem;
+  min-width: 5rem;
   width: 100%;
   max-width: 50rem;
   height: 16rem;
@@ -57,33 +57,5 @@
 
   &:hover {
     border: 2px solid var(--accent-color);
-  }
-}
-
-.form__submit {
-  width: 10rem;
-  height: 3rem;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--color-fg);
-  background-color: var(--color-bg);
-  border-color: var(--accent-color);
-  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
-
-  &:hover {
-    color: var(--color-bg);
-    background-color: var(--accent-color);
-  }
-  &:active {
-    color: var(--color-bg);
-    background-color: var(--accent-color);
-  }
-
-  @media (hover: none) {
-    transition: all var(--default-delay);
-    color: var(--color-bg);
-    background-color: var(--accent-color);
   }
 }
