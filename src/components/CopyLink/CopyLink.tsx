@@ -5,9 +5,9 @@ import styles from './styles.module.css'
 import Check from '@public/svgs/check-solid.svg'
 import Copy from '@public/svgs/copy-regular.svg'
 
-const CopyLink = ({ link }: CopyLinkProps) => {
+const CopyLink = ({ link, id = 'copylink' }: CopyLinkProps) => {
   const linkRef: any = useRef(null)
-  const [isCopied, setCopied] = useState(false)
+  const [isCopied, setCopied] = useState<boolean>(false)
 
   const copyText = () => {
     linkRef.current.select()
@@ -21,7 +21,15 @@ const CopyLink = ({ link }: CopyLinkProps) => {
 
   return (
     <div className={styles.copy_link}>
-      <input className={styles.copy_link__input} type="text" value={link} ref={linkRef} readOnly />
+      <input
+        className={styles.copy_link__input}
+        type="text"
+        id={id}
+        aria-label="copying field"
+        value={link}
+        ref={linkRef}
+        readOnly
+      />
       <button
         className={
           isCopied ? `${styles.copy_link__button} ${styles.active}` : styles.copy_link__button
