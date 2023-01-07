@@ -59,7 +59,7 @@ const UploadForm = () => {
             ref={fileInput}
           />
         </label>
-        <GlowButton text="SHARE" type="submit" title="share selected file" formMethod="post" />
+        <GlowButton text="SHARE" type="submit" title="Share selected file" formMethod="post" />
       </form>
       {result ? (
         result.success ? (
