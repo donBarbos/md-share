@@ -1,4 +1,6 @@
 export type PushButtonProps = {
+  text?: string
+  type?: 'button' | 'submit' | 'reset'
   title?: string
-  type: 'button' | 'submit' | 'reset' | undefined
+  formMethod?: 'get' | 'post'
 }
