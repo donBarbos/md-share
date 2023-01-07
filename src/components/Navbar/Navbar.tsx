@@ -12,8 +12,8 @@ const pages = [
 ]
 
 const Navbar = () => {
-  const location = useRouter().pathname.toString()
-  const [isActive, setActive] = useState(false)
+  const location: string = useRouter().pathname.toString()
+  const [isActive, setActive] = useState<boolean>(false)
 
   return (
     <nav className={styles.navbar}>
