@@ -41,7 +41,7 @@ const ThemeToggle = () => {
     <button
       className={styles['theme-toggle']}
       id="theme-toggle"
-      title="Toggles light & dark"
+      title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
       aria-label="auto"
       aria-live="polite"
       onClick={() => {
