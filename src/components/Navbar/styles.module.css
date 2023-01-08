@@ -41,7 +41,7 @@
   @media only screen and (max-width: 768px) {
     position: fixed;
     left: -100%;
-    top: 3.4rem;
+    top: 4rem;
     flex-direction: column;
     background-color: var(--color-bg);
     width: 100%;
