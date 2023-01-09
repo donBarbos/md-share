@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 const Document = () => {
   return (
-    <Html>
+    <Html lang="en">
       <Head>
         <meta name="application-name" content="md share" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
