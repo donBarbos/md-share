@@ -4,7 +4,7 @@
   --color-border: #d0d7de;
   --color-canvas: #ffffff;
   --accent-color: #E00000;
-  --default-delay: 0.1s;
+  --default-delay: 0.5s;
 }
 
 [data-theme='dark'] {
