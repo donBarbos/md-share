@@ -3,7 +3,7 @@
   <a href="https://md-share.vercel.app">
     <img alt="Markdown" src="./public/favicon.png" width="140" height="140" /><br/>
   </a>
-  sharing
+  .mdShare
 </h1>
 
 <h3 align="center">
