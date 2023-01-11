@@ -1,0 +1,25 @@
+.backhome_button {
+  font-size: 2rem;
+  font-style: normal !important;
+  cursor: pointer;
+  outline: none;
+  padding: 10px 25px;
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+
+  color: var(--color-bg) !important;
+  background-color: var(--color-fg) !important;
+  border: 2px solid var(--color-fg) !important;
+  transition: all var(--default-delay) ease-in-out !important;
+
+  &:hover {
+    color: var(--color-fg) !important;
+    background-color: var(--color-bg) !important;
+    border: 2px solid var(--color-fg) !important;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1.3rem;
+  }
+}
