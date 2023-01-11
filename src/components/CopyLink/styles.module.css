@@ -1,6 +1,4 @@
 .copy_link {
-  --color-success: var(--accent-color);
-
   display: table;
   width: 100%;
 }
@@ -11,7 +9,7 @@
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   border: 1px solid var(--color-border);
-  border-right-color: rgba(0, 0, 0, 1);
+  border-right-color: rgba(0, 0, 0, 0);
   width: calc(100% - 52px);
   display: table-cell;
   position: relative;
@@ -20,6 +18,7 @@
   padding: 5px 15px;
   color: var(--color-fg);
   background-color: var(--color-canvas);
+  transition: all var(--default-delay);
 }
 
 .copy_link__button {
@@ -37,7 +36,7 @@
   }
 
   &.active {
-    border-color: var(--color-success);
+    border-color: var(--accent-color);
   }
 }
 
@@ -46,5 +45,5 @@
 }
 
 .clipboard_check_icon {
-  fill: var(--color-success);
+  fill: var(--accent-color);
 }
