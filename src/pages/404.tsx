@@ -3,16 +3,18 @@ import Link from 'next/link'
 import styles from '@styles/error.module.css'
 import { SEO } from '@components/SEO'
 import { Layout } from '@components/Layout'
+import { BackHomeButton } from '@components/BackHomeButton'
+import { Inter } from '@next/font/google'
+
+const inter = Inter({ weight: ['900'], subsets: ['latin'] })
 
 const NotFoundPage: NextPage = () => {
   return (
     <>
       <SEO title="404: Not Found" description="This page could not be found." />
       <Layout>
-        <h1 className={styles.status_code}>404 | page not found.</h1>
-        <Link href="./">
-          <button className={styles.backhome}>go back home</button>
-        </Link>
+        <h1 className={`${styles.status_code} ${inter.className}`}>404 | page not found.</h1>
+        <BackHomeButton />
       </Layout>
     </>
   )
