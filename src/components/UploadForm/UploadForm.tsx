@@ -5,7 +5,7 @@ import { ShareModal } from '@components/ShareModal'
 import { ErrorModal } from '@components/ErrorModal'
 import styles from './styles.module.css'
 
-const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:8000/'
+const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:8000'
 const API_KEY = process.env.API_KEY || ''
 
 const UploadForm = () => {
@@ -22,7 +22,7 @@ const UploadForm = () => {
     reader.readAsText(file)
 
     reader.onload = async () => {
-      await fetch(API_BASE_URL + 'api/v1/pages/', {
+      await fetch(`${API_BASE_URL}/api/v1/pages/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

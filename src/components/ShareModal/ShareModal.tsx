@@ -4,7 +4,7 @@ import { CopyLink } from '@components/CopyLink'
 import Link from 'next/link'
 import styles from './styles.module.css'
 
-const SITE_URL = process.env.SITE_URL || 'https://md-share.vercel.app/'
+const APP_URL = process.env.APP_URL || 'https://md-share.vercel.app'
 
 import Facebook from '@public/svgs/facebook.svg'
 import Linkedin from '@public/svgs/linkedin.svg'
@@ -29,7 +29,7 @@ const buttons = [
 ]
 
 const ShareModal = ({ isActive, setActive, slug }: ShareModalProps) => {
-  const fullLink = SITE_URL + slug
+  const fullLink = `${APP_URL}/${slug}`
 
   return (
     <Modal isActive={isActive} setActive={setActive}>
