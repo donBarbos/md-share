@@ -12,7 +12,7 @@ const BackHomeButton = ({
 }: BackHomeButtonProps) => {
   return (
     <>
-      <Link href={href} className={`${styles.backhome_button} ${lato.className}`}>
+      <Link href={href} className={`${styles.backhome_button} ${lato.className}`} title={title}>
         {text}
       </Link>
     </>
