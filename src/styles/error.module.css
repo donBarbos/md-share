@@ -1,37 +1,10 @@
 .status_code {
-  line-height: 1.4;
   margin-top: 16vh;
-  margin-bottom: 20px;
+  margin-bottom: 3rem;
   font-size: 4rem;
 
   @media only screen and (max-width: 768px) {
-    margin-bottom: 16px;
+    margin-bottom: 2rem;
     font-size: 2rem;
-  }
-}
-
-.backhome {
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  font-size: 26px;
-  cursor: pointer;
-  outline: none;
-  padding: 10px 25px;
-  border: 2px solid var(--color-fg);
-  display: inline-block;
-  position: relative;
-  margin: 0 auto;
-
-  color: var(--color-bg);
-  background-color: var(--color-fg);
-  transition: all 0.4s ease-in-out;
-
-  &:hover {
-    color: var(--color-fg);
-    background-color: var(--color-bg);
-  }
-
-  @media only screen and (max-width: 768px) {
-    font-size: 20px;
   }
 }
