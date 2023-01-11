@@ -12,6 +12,9 @@
     "dev": "next dev",
     "dev:turbo": "next dev --turbo",
     "build": "next build",
+    "analyze": "cross-env ANALYZE=true next build",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
     "export": "next export",
     "start": "next start",
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
@@ -23,22 +26,14 @@
     "commit": "cz"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "prettier --config ./.prettierrc --write",
-      "yarn lint:fix"
-    ],
-    "*.scss": [
-      "prettier --config ./.prettierrc --write",
-      "stylelint --fix"
-    ],
-    "{*.{json,md}}": [
-      "prettier --config ./.prettierrc --write"
-    ]
+    "*.{js,jsx,ts,tsx}": ["prettier --config ./.prettierrc --write", "yarn lint:fix"],
+    "*.scss": ["prettier --config ./.prettierrc --write", "stylelint --fix"],
+    "{*.{json,md}}": ["prettier --config ./.prettierrc --write"]
   },
   "dependencies": {
     "@next/font": "^13.1.1",
     "@svgr/webpack": "^6.5.1",
-    "next": "^13.0.0",
+    "next": "^13.1.1",
     "next-pwa": "^5.6.0",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
@@ -46,11 +41,13 @@
     "sharp": "^0.31.3"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^13.1.1",
     "@types/node": "18.11.15",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "commitizen": "^4.2.5",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "8.26.0",
     "eslint-config-next": "^13.0.0",
@@ -75,15 +72,7 @@
     }
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "last 3 versions"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "production": [">0.2%", "not dead", "last 3 versions"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   }
 }
