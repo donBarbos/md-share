@@ -67,9 +67,7 @@ const UploadForm = () => {
         ) : (
           <ErrorModal isActive={isModalActive} setActive={setModalActive} error={result.message} />
         )
-      ) : (
-        <ErrorModal isActive={isModalActive} setActive={setModalActive} error="result is empty" />
-      )}
+      ) : null}
     </>
   )
 }
