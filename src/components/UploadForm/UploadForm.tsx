@@ -1,8 +1,9 @@
 import type { IPostPageResponse, IErrorResponse } from '@types'
 import { useState, useRef } from 'react'
 import { GlowButton } from '@components/GlowButton'
-import { ShareModal } from '@components/ShareModal'
-import { ErrorModal } from '@components/ErrorModal'
+import { ShareContent } from '@components/ShareContent'
+import { ErrorContent } from '@components/ErrorContent'
+import { Modal } from '@components/Modal'
 import styles from './styles.module.css'
 
 const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:8000'
@@ -61,13 +62,15 @@ const UploadForm = () => {
         </label>
         <GlowButton text="SHARE" type="submit" title="Share selected file" formMethod="post" />
       </form>
-      {result ? (
-        result.success ? (
-          <ShareModal isActive={isModalActive} setActive={setModalActive} slug={result.slug} />
-        ) : (
-          <ErrorModal isActive={isModalActive} setActive={setModalActive} error={result.message} />
-        )
-      ) : null}
+      <Modal isActive={isModalActive} setActive={setModalActive}>
+        {result ? (
+          result.success ? (
+            <ShareContent slug={result.slug} />
+          ) : (
+            <ErrorContent error={result.message} />
+          )
+        ) : undefined}
+      </Modal>
     </>
   )
 }
