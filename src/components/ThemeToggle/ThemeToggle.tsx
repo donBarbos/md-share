@@ -37,11 +37,11 @@ const ThemeToggle = () => {
     </svg>
   )
 
-  const button = (
+  return (
     <button
       className={styles['theme-toggle']}
       id="theme-toggle"
-      title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
+      title="Toggles light & dark"
       aria-label="auto"
       aria-live="polite"
       onClick={() => {
@@ -51,8 +51,6 @@ const ThemeToggle = () => {
       {icon}
     </button>
   )
-
-  return button
 }
 
 export { ThemeToggle }
