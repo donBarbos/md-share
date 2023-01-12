@@ -2,6 +2,7 @@
   margin-top: 16vh;
   margin-bottom: 3rem;
   font-size: 4rem;
+  font-weight: 900;
 
   @media only screen and (max-width: 768px) {
     margin-bottom: 2rem;
