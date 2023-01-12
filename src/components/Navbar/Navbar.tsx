@@ -3,10 +3,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { ThemeToggle } from '@components/ThemeToggle'
 import { BurgerMenu } from '@components/BurgerMenu'
-import { Inter } from '@next/font/google'
 import styles from './styles.module.css'
-
-const inter = Inter({ weight: ['700', '900'], subsets: ['latin'] })
 
 const pages = [
   { href: '/', label: 'Home' },
@@ -19,7 +16,7 @@ const Navbar = () => {
   const [isActive, setActive] = useState<boolean>(false)
 
   return (
-    <nav className={`${styles.navbar} ${inter.className}`}>
+    <nav className={styles.navbar}>
       <a className={styles.navbar__logo} href="#">
         .mdShare
       </a>
