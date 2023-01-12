@@ -1,5 +1,4 @@
-import type { ShareModalProps } from './types'
-import { Modal } from '@components/Modal'
+import type { ShareContentProps } from './types'
 import { CopyLink } from '@components/CopyLink'
 import Link from 'next/link'
 import styles from './styles.module.css'
@@ -28,28 +27,28 @@ const buttons = [
   { href: 'mailto:?body=', title: 'Email', svg: Email },
 ]
 
-const ShareModal = ({ isActive, setActive, slug }: ShareModalProps) => {
+const ShareContent = ({ slug }: ShareContentProps) => {
   const fullLink = `${APP_URL}/${slug}`
 
   return (
-    <Modal isActive={isActive} setActive={setActive}>
-      <p className={styles.modal__text}>Share this link via:</p>
+    <>
+      <p className={styles.content__text}>Share this link via:</p>
       <ul>
         {buttons.map((button) => (
           <Link
-            className={styles.modal__link}
+            className={styles.content__link}
             title={button.title}
             href={button.href + fullLink}
             key={button.href}
           >
-            <button.svg height={30} width={30} className={styles.modal__icon} />
+            <button.svg height={30} width={30} className={styles.content__icon} />
           </Link>
         ))}
       </ul>
-      <p className={styles.modal__text}>Or copy link:</p>
+      <p className={styles.content__text}>Or copy link:</p>
       <CopyLink link={fullLink} />
-    </Modal>
+    </>
   )
 }
 
-export { ShareModal }
+export { ShareContent }
