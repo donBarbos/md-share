@@ -3,7 +3,7 @@
   --color-bg: #f6f8fa;
   --color-border: #d0d7de;
   --color-canvas: #ffffff;
-  --accent-color: #E00000;
+  --accent-color: #e00000;
   --default-delay: 0.5s;
 }
 
@@ -52,4 +52,12 @@ body {
 ::moz-selection {
   background-color: var(--color-fg);
   color: var(--color-bg);
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+.js-focus-visible .focus-visible {
+  outline: none;
+  border: 3px solid var(--accent-color);
 }

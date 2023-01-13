@@ -10,7 +10,7 @@
   border-bottom-left-radius: 8px;
   border: 1px solid var(--color-border);
   border-right-color: rgba(0, 0, 0, 0);
-  width: calc(100% - 52px);
+  width: calc(100% - 56px);
   display: table-cell;
   position: relative;
 
