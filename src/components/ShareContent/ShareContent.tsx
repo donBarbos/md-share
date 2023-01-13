@@ -37,9 +37,11 @@ const ShareContent = ({ slug }: ShareContentProps) => {
         {buttons.map((button) => (
           <Link
             className={styles.content__link}
-            title={button.title}
+            title={`Share link via ${button.title}`}
             href={button.href + fullLink}
             key={button.href}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <button.svg height={30} width={30} className={styles.content__icon} />
           </Link>
