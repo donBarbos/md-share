@@ -58,6 +58,5 @@ body {
   outline: none;
 }
 .js-focus-visible .focus-visible {
-  outline: none;
-  border: 3px solid var(--accent-color);
+  outline: 3px solid var(--accent-color);
 }
