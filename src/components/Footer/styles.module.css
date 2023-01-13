@@ -11,9 +11,7 @@
   & a {
     color: inherit;
   }
-  & a:hover {
-    color: var(--accent-color);
-  }
+  & a:hover,
   & a:active {
     color: var(--accent-color);
   }
