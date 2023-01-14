@@ -1,20 +1,15 @@
 // type for page
 export interface IPage {
-  slug: string // a.k.a. `_id`
+  _id: string // a.k.a. `slug`
   title?: string
   author?: string
   text: string
 }
 
-// type for array of pages
-export interface IPages {
-  pages: IPage[]
-}
-
 // type of success response after GET:/api/v1/pages/ request
 export interface IGetPagesResponse {
   success: true
-  pages: IPages
+  pages: IPage[]
 }
 
 // type of success response after GET:/api/v1/pages/:id request
