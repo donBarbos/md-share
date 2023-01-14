@@ -1,6 +1,5 @@
-import type { IPage, IGetPagesResponse, IGetPageResponse, IErrorResponse } from '@types'
+import type { IPage, IGetPageResponse, IErrorResponse } from '@types'
 import type { GetServerSideProps } from 'next'
-import { ParsedUrlQuery } from 'querystring'
 import { Layout } from '@components/Layout'
 import { SEO } from '@components/SEO'
 import styles from './markdown.module.css'
