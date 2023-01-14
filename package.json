@@ -42,6 +42,7 @@
     "@next/font": "^13.1.1",
     "@svgr/webpack": "^6.5.1",
     "focus-visible": "^5.2.0",
+    "markdown-it": "^13.0.1",
     "next": "^13.1.1",
     "next-pwa": "^5.6.0",
     "next-themes": "^0.2.1",
@@ -51,6 +52,7 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^13.1.1",
+    "@types/markdown-it": "^12.2.3",
     "@types/node": "18.11.15",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
