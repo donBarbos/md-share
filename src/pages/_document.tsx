@@ -10,7 +10,8 @@ const Document = () => {
         <meta name="apple-mobile-web-app-title" content="md share" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="theme-color" content="#f6f8fa" />
+        <meta name="theme-color" content="#f6f8fa" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#010409" media="(prefers-color-scheme: dark)" />
         <link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
