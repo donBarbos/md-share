@@ -36,4 +36,9 @@
     top: 2px;
     left: 2px;
   }
+
+  & section {
+    margin: 0 auto;
+    max-width: 768px;
+  }
 }

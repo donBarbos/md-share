@@ -38,7 +38,7 @@ export default function PostPage({ page }: { page: IPage }) {
     <div>
       <SEO title={title} author={author} />
       <Layout>
-        <div
+        <section
           className={styles.markdown__body}
           dangerouslySetInnerHTML={{ __html: md().render(text) }}
         />
