@@ -3,8 +3,6 @@
   background: var(--color-bg);
   transition: color var(--default-delay), background-color var(--default-delay),
     border var(--default-delay);
-  font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   line-height: 1.6;
   word-wrap: break-word;
   padding: 0px 45px;
@@ -135,7 +133,9 @@
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
-    background-color: var(--color-bg);
+    background-color: var(--color-canvas);
+    transition: color var(--default-delay), background-color var(--default-delay),
+      border var(--default-delay);
     -webkit-border-radius: 3px;
     border-radius: 3px;
   }
@@ -152,7 +152,7 @@
     border: 0;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    background-color: transparent;
+    background-color: var(--color-canvas);
   }
   & pre code:before,
   & pre code:after {
