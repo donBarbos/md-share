@@ -17,8 +17,10 @@
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
     "export": "next export",
     "start": "next start",
-    "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
-    "lint:fix": "yarn lint --fix",
+    "lint:js": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
+    "lint:js:fix": "yarn lint --fix",
+    "lint:css": "stylelint src/**/*.{scss,css}",
+    "lint:css:fix": "yarn lint:css --fix",
     "prettier": "prettier --write src/**/*.{js,jsx,ts,tsx,json} *.{js,ts,json,md} .eslintrc .prettierrc .stylelintrc",
     "prettier:check": "yarn prettier --check",
     "typecheck": "tsc --noEmit",
@@ -75,6 +77,9 @@
     "postcss-svgo": "^5.1.0",
     "prettier": "^2.7.1",
     "semantic-release": "^19.0.5",
+    "stylelint": "^14.16.1",
+    "stylelint-checkstyle-formatter": "^0.1.2",
+    "stylelint-config-standard": "^29.0.0",
     "typescript": "4.8.4"
   },
   "config": {

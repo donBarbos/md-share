@@ -27,6 +27,7 @@ jobs:
 
       - name: Run lint
         run: |
-          yarn lint
+          yarn lint:js
+          yarn lint:css
           yarn prettier:check
           yarn typecheck

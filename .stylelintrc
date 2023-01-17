@@ -1,0 +1,7 @@
+{
+  "extends": "stylelint-config-standard",
+  "formatter": "stylelint-checkstyle-formatter",
+  "rules": {
+    "string-quotes": "double"
+  }
+}
