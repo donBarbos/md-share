@@ -1,7 +1,23 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": ["stylelint-config-standard", "stylelint-config-idiomatic-order"],
   "formatter": "stylelint-checkstyle-formatter",
+  "plugins": ["stylelint-a11y", "stylelint-order", "stylelint-color-format"],
   "rules": {
-    "string-quotes": "double"
+    "string-quotes": "single",
+    "selector-class-pattern": null,
+    "color-format/format": {
+      "format": "rgb"
+    },
+    "a11y/media-prefers-reduced-motion": null,
+    "a11y/no-outline-none": true,
+    "a11y/selector-pseudo-class-focus": true,
+    "order/order": ["custom-properties", "declarations"],
+    "order/properties-order": ["width", "height"],
+    "declaration-empty-line-before": [
+      "always",
+      {
+        "ignore": ["after-comment", "after-declaration", "first-nested", "inside-single-line-block"]
+      }
+    ]
   }
 }
