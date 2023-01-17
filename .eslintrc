@@ -30,11 +30,7 @@
       }
     }
   },
-  "plugins": [
-    "jsx-a11y",
-    "@typescript-eslint",
-    "prettier"
-  ],
+  "plugins": ["jsx-a11y", "@typescript-eslint", "prettier"],
   "rules": {
     "prettier/prettier": ["error"],
     "react/prop-types": "off",

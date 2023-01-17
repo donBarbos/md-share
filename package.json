@@ -19,7 +19,7 @@
     "start": "next start",
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
     "lint:fix": "yarn lint --fix",
-    "prettier": "prettier --write src/**/*.{js,jsx,ts,tsx,json} *.{js,ts,json,md}",
+    "prettier": "prettier --write src/**/*.{js,jsx,ts,tsx,json} *.{js,ts,json,md} .eslintrc .prettierrc .stylelintrc",
     "prettier:check": "yarn prettier --check",
     "typecheck": "tsc --noEmit",
     "prepare": "husky install",

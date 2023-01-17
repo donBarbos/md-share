@@ -9,3 +9,6 @@
 !*.yml
 !*.css
 !*.scss
+!.eslintrc
+!.prettierrc
+!.stylelintrc
