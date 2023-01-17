@@ -30,11 +30,11 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --config ./.prettierrc --write",
-      "yarn lint:fix"
+      "yarn lint:js:fix"
     ],
-    "*.scss": [
+    "*.{scss,css}": [
       "prettier --config ./.prettierrc --write",
-      "stylelint --fix"
+      "yarn lint:css:fix"
     ],
     "{*.{json,md}}": [
       "prettier --config ./.prettierrc --write"
