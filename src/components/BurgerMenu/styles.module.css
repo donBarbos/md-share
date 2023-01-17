@@ -19,7 +19,10 @@
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, color var(--default-delay),
+    transition:
+      opacity 0.3s ease-in-out,
+      transform 0.3s ease-in-out,
+      color var(--default-delay),
       background-color var(--default-delay);
   }
 
@@ -33,12 +36,10 @@
   }
 
   .hamburger.active .bar:nth-child(1) {
-    -webkit-transform: translateY(8px) rotate(45deg);
     transform: translateY(8px) rotate(45deg);
   }
 
   .hamburger.active .bar:nth-child(3) {
-    -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
   }
 }

@@ -2,7 +2,7 @@
   min-width: 5rem;
   max-width: 50rem;
   width: 100%;
-  padding: 12px 0px;
+  padding: 12px 0;
   border: none;
   outline: none;
   color: var(--color-fg);
@@ -15,20 +15,21 @@
   border-radius: 12px;
 }
 
-.glow_button:before {
+.glow_button::before {
   content: '';
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
+  background:
+    linear-gradient(
+      45deg,
+      rgb(255 0 0),
+      rgb(255 115 0),
+      rgb(255 251 0),
+      rgb(72 255 0),
+      rgb(0 255 213),
+      rgb(0 43 255),
+      rgb(122 0 255),
+      rgb(255 0 200),
+      rgb(255 0 0)
+    );
   position: absolute;
   top: -2px;
   left: -2px;
@@ -39,25 +40,14 @@
   height: calc(100% + 4px);
   animation: glowing 20s linear infinite;
   opacity: 0;
-  transition: color var(--default-delay), background-color var(--default-delay),
+  transition:
+    color var(--default-delay),
+    background-color var(--default-delay),
     opacity 0.3s ease-in-out;
   border-radius: 12px;
 }
 
-.glow_button:active {
-  color: var(--color-bg);
-}
-
-.glow_button:active:after {
-  background: transparent;
-}
-
-.glow_button:before {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.glow_button:after {
+.glow_button::after {
   z-index: -1;
   content: '';
   position: absolute;
@@ -70,13 +60,29 @@
   transition: color var(--default-delay), background-color var(--default-delay);
 }
 
+/* stylelint-disable-next-line */
+.glow_button::before {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.glow_button:active {
+  color: var(--color-bg);
+}
+
+.glow_button:active::after {
+  background: transparent;
+}
+
 @keyframes glowing {
   0% {
     background-position: 0 0;
   }
+
   50% {
     background-position: 400% 0;
   }
+
   100% {
     background-position: 0 0;
   }

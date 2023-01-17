@@ -4,7 +4,6 @@
   text-align: left;
   max-width: 700px;
   font-size: 18px;
-  font-: 18px;
   font-weight: 600;
 }
 
@@ -18,6 +17,7 @@
     margin-bottom: 5px;
   }
 }
+
 .highlight {
   font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   padding: 0;
@@ -30,8 +30,8 @@
   opacity: 0.7;
   border-radius: 3px;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     letter-spacing: -0.2em;
     content: '\00a0';
   }

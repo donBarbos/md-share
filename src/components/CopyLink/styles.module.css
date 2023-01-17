@@ -4,12 +4,9 @@
 }
 
 .copy_link__input {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-radius: 8px 0 0 8px;
   border: 1px solid var(--color-border);
-  border-right-color: rgba(0, 0, 0, 0);
+  border-right-color: rgb(0 0 0 / 0%);
   width: calc(100% - 56px);
   display: table-cell;
   position: relative;
@@ -22,16 +19,14 @@
 }
 
 .copy_link__button {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-radius: 0 8px 8px 0;
   border: 1px solid var(--color-border);
   font-size: 1.3rem;
   padding: 5px 15px;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: var(--color-fg);
   }
 

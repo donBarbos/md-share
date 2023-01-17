@@ -1,18 +1,18 @@
 :root {
-  --color-fg: #0d1117;
-  --color-bg: #f6f8fa;
-  --color-border: #d0d7de;
-  --color-canvas: #ffffff;
-  --accent-color: #e00000;
+  --color-fg: rgb(13 17 23);
+  --color-bg: rgb(246 248 250);
+  --color-border: rgb(208 215 222);
+  --color-canvas: rgb(255 255 255);
+  --accent-color: rgb(224 0 0);
   --default-delay: 0.5s;
 }
 
 [data-theme='dark'] {
-  --color-fg: #c9d1d9;
-  --color-bg: #010409;
-  --color-border: #30363d;
-  --color-canvas: #0d1117;
-  --accent-color: #ff4d4d;
+  --color-fg: rgb(201 209 217);
+  --color-bg: rgb(1 4 9);
+  --color-border: rgb(48 54 61);
+  --color-canvas: rgb(13 17 23);
+  --accent-color: rgb(255 77 77);
 }
 
 * {
@@ -23,15 +23,15 @@
 
 html,
 body {
+  width: 100%;
+
+  height: 100%;
   font-family: var(--font-base);
   font-size: 16px;
   font-weight: 500;
 
   text-align: center;
   text-rendering: optimizelegibility;
-
-  height: 100%;
-  width: 100%;
 
   color: var(--color-fg);
   background-color: var(--color-bg);
@@ -40,22 +40,16 @@ body {
   transition: all var(--default-delay);
 }
 
-::-moz-selection {
-  background-color: var(--color-fg);
-  color: var(--color-bg);
-}
 ::selection {
   background-color: var(--color-fg);
   color: var(--color-bg);
 }
-::moz-selection {
-  background-color: var(--color-fg);
-  color: var(--color-bg);
-}
 
+/* stylelint-disable-next-line */
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
+
 .js-focus-visible .focus-visible {
   outline: 3px solid var(--accent-color);
 }

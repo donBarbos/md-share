@@ -26,9 +26,12 @@
     color: inherit;
     font-style: italic;
   }
-  & a:hover {
+
+  & a:hover,
+  & a:focus {
     color: var(--accent-color);
   }
+
   & a:active {
     color: var(--accent-color);
     text-decoration: none;

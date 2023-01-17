@@ -12,12 +12,8 @@
   font-weight: 900;
   font-size: 2.1rem;
   text-decoration: none;
-  cursor: default;
-  user-select: none; /* supported by Chrome and Opera */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
+  cursor: default; /* supported by Chrome and Opera, Safari, Konqueror HTML, Firefox */
+  user-select: none; /* Internet Explorer, Edge */
 
   @media only screen and (max-width: 768px) {
     font-size: 1.8rem;
@@ -45,9 +41,12 @@
     flex-direction: column;
     width: 100%;
     text-align: center;
-    transition: left 0.3s, color var(--default-delay), background-color var(--default-delay),
+    transition:
+      left 0.3s,
+      color var(--default-delay),
+      background-color var(--default-delay),
       border var(--default-delay);
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 27px rgb(0 0 0 / 5%);
     padding-bottom: 20px;
     border-bottom: 1px solid var(--color-border);
     color: var(--color-fg);
@@ -79,6 +78,7 @@
   text-decoration: none;
 
   &:hover,
+  &:focus,
   &.active {
     color: var(--accent-color);
   }

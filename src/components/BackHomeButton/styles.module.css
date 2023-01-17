@@ -11,11 +11,14 @@
   color: var(--color-bg) !important;
   background-color: var(--color-fg) !important;
   border: 2px solid var(--color-fg) !important;
-  transition: color var(--default-delay) ease-in-out,
-    background-color var(--default-delay) ease-in-out, border var(--default-delay) ease-in-out !important;
+  transition:
+    color var(--default-delay) ease-in-out,
+    background-color var(--default-delay) ease-in-out,
+    border var(--default-delay) ease-in-out !important;
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--color-fg) !important;
     background-color: var(--color-bg) !important;
     border: 2px solid var(--color-fg) !important;

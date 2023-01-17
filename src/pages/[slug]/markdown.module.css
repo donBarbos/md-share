@@ -1,28 +1,31 @@
 .markdown__body {
   color: var(--color-fg);
   background: var(--color-bg);
-  transition: color var(--default-delay), background-color var(--default-delay),
+  transition:
+    color var(--default-delay),
+    background-color var(--default-delay),
     border var(--default-delay);
   line-height: 1.6;
   word-wrap: break-word;
-  padding: 0px 45px;
+  padding: 0 45px;
   text-align: left;
 
   @media only screen and (max-width: 768px) {
-    padding: 0px;
+    padding: 0;
+  }
+
+  & * {
+    box-sizing: border-box;
   }
 
   & > *:first-child {
     margin-top: 0 !important;
   }
+
   & > *:last-child {
     margin-bottom: 0 !important;
   }
-  & * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
+
   & h1,
   & h2,
   & h3,
@@ -34,6 +37,7 @@
     font-weight: bold;
     line-height: 1.4;
   }
+
   & p,
   & blockquote,
   & ul,
@@ -59,6 +63,7 @@
     font-size: 1.5em;
     line-height: 1.43;
   }
+
   & h4 {
     font-size: 1.25em;
   }
@@ -71,6 +76,10 @@
     font-size: 1em;
   }
 
+  & ol {
+    list-style-type: decimal;
+  }
+
   & ul {
     list-style-type: disc;
   }
@@ -79,33 +88,34 @@
   & ul {
     padding-left: 2em;
   }
+
   & ol ol,
   & ul ol {
     list-style-type: lower-roman;
   }
+
   & ol ul,
   & ul ul {
     list-style-type: circle;
   }
+
   & ol ul ul,
   & ul ul ul {
     list-style-type: square;
   }
-  & ol {
-    list-style-type: decimal;
-  }
-  & ul {
-    list-style-type: disc;
-  }
+
   & blockquote {
     margin-left: 0;
     margin-right: 0;
     padding: 0 15px;
     color: var(--color-fg);
     border-left: 4px solid var(--color-border);
-    transition: color var(--default-delay), background-color var(--default-delay),
+    transition:
+      color var(--default-delay),
+      background-color var(--default-delay),
       border var(--default-delay);
   }
+
   & table {
     display: block;
     width: 100%;
@@ -115,18 +125,22 @@
     border-collapse: collapse;
     border-spacing: 0;
   }
+
   & table tr {
     background-color: var(--color-bg);
     border-top: 1px solid var(--color-border);
   }
+
   & table tr:nth-child(2n) {
     background-color: var(--color-bg);
   }
+
   & table th,
   & table td {
     padding: 6px 13px;
     border: 1px solid var(--color-border);
   }
+
   & pre {
     word-wrap: normal;
     padding: 16px;
@@ -134,11 +148,28 @@
     font-size: 85%;
     line-height: 1.45;
     background-color: var(--color-canvas);
-    transition: color var(--default-delay), background-color var(--default-delay),
+    transition:
+      color var(--default-delay),
+      background-color var(--default-delay),
       border var(--default-delay);
-    -webkit-border-radius: 3px;
     border-radius: 3px;
   }
+
+  & code {
+    font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    padding: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin: 0;
+    font-size: 85%;
+    background-color: var(--color-canvas);
+    border-radius: 3px;
+    transition:
+      color var(--default-delay),
+      background-color var(--default-delay),
+      border var(--default-delay);
+  }
+
   & pre code {
     display: inline;
     max-width: initial;
@@ -150,46 +181,36 @@
     word-wrap: normal;
     white-space: pre;
     border: 0;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
     background-color: var(--color-canvas);
   }
-  & pre code:before,
-  & pre code:after {
-    content: normal;
-  }
-  & code {
-    font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-    padding: 0;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    margin: 0;
-    font-size: 85%;
-    background-color: var(--color-canvas);
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    transition: color var(--default-delay), background-color var(--default-delay),
-      border var(--default-delay);
-  }
-  & code:before,
-  & code:after {
+
+  & code::before,
+  & code::after {
     letter-spacing: -0.2em;
     content: '\00a0';
   }
+
+  & pre code::before,
+  & pre code::after {
+    content: normal;
+  }
+
   & img {
     max-width: 100%;
     max-height: 100%;
-    -webkit-border-radius: 4px;
     border-radius: 4px;
-    -webkit-box-shadow: 0 0 10px var(--color-fg);
     box-shadow: 0 0 10px var(--color-fg);
   }
+
   & strong {
     font-weight: bold;
   }
+
   & em {
     font-style: italic;
   }
+
   & del {
     text-decoration: line-through;
   }
