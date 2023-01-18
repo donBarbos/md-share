@@ -51,7 +51,7 @@
 
 .form__input::file-selector-button {
   margin-right: 1rem;
-  border: 2px solid var(--color-bg);
+  border: 3px solid var(--color-bg);
   padding: 10px 20px;
   border-radius: 10px;
   color: var(--color-bg);
@@ -63,6 +63,6 @@
 
   &:hover,
   &:focus {
-    border: 2px solid var(--accent-color);
+    border: 3px solid var(--accent-color);
   }
 }
