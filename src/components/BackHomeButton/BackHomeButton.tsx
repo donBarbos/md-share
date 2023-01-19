@@ -11,11 +11,9 @@ const BackHomeButton = ({
   href = './',
 }: BackHomeButtonProps) => {
   return (
-    <>
-      <Link href={href} className={`${styles.backhome_button} ${lato.className}`} title={title}>
-        {text}
-      </Link>
-    </>
+    <Link href={href} className={`${styles.backhome_button} ${lato.className}`} title={title}>
+      {text}
+    </Link>
   )
 }
 
