@@ -22,7 +22,8 @@
   min-width: 5rem;
   width: 100%;
   max-width: 50rem;
-  height: 16rem;
+  min-height: 10rem;
+  height: 40vh;
   margin-top: 2rem;
   margin-bottom: 1rem;
   border-radius: 12px;
