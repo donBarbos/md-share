@@ -35,10 +35,9 @@
       "yarn lint:js:fix"
     ],
     "*.{scss,css}": [
-      "prettier --config ./.prettierrc --write",
       "yarn lint:css:fix"
     ],
-    "{*.{json,md}}": [
+    "*.{json,md}": [
       "prettier --config ./.prettierrc --write"
     ]
   },
