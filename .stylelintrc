@@ -92,7 +92,14 @@
       {
         "emptyLineBefore": "always",
         "noEmptyLineBetween": true,
-        "properties": ["background", "background-color", "background-size", "cursor", "user-select", "pointer-events"]
+        "properties": [
+          "background",
+          "background-color",
+          "background-size",
+          "cursor",
+          "user-select",
+          "pointer-events"
+        ]
       },
       {
         "emptyLineBefore": "always",

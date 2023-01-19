@@ -1,14 +1,17 @@
 .markdown__body {
-  color: var(--color-fg);
-  background: var(--color-bg);
   transition:
     color var(--default-delay),
     background-color var(--default-delay),
     border var(--default-delay);
-  line-height: 1.6;
-  word-wrap: break-word;
+
   padding: 0 45px;
+
+  background: var(--color-bg);
+
+  line-height: 1.6;
   text-align: left;
+  color: var(--color-fg);
+  word-wrap: break-word;
 
   @media only screen and (max-width: 768px) {
     padding: 0;
@@ -34,8 +37,9 @@
   & h6 {
     margin-top: 1em;
     margin-bottom: 16px;
-    font-weight: bold;
+
     line-height: 1.4;
+    font-weight: bold;
   }
 
   & p,
@@ -105,21 +109,25 @@
   }
 
   & blockquote {
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0 15px;
-    color: var(--color-fg);
-    border-left: 4px solid var(--color-border);
     transition:
       color var(--default-delay),
       background-color var(--default-delay),
       border var(--default-delay);
+
+    margin-right: 0;
+    margin-left: 0;
+    border-left: 4px solid var(--color-border);
+    padding: 0 15px;
+
+    color: var(--color-fg);
   }
 
   & table {
     display: block;
-    width: 100%;
+
     overflow: auto;
+
+    width: 100%;
     word-break: normal;
     word-break: keep-all;
     border-collapse: collapse;
@@ -127,8 +135,9 @@
   }
 
   & table tr {
-    background-color: var(--color-bg);
     border-top: 1px solid var(--color-border);
+
+    background-color: var(--color-bg);
   }
 
   & table tr:nth-child(2n) {
@@ -137,57 +146,69 @@
 
   & table th,
   & table td {
-    padding: 6px 13px;
     border: 1px solid var(--color-border);
+    padding: 6px 13px;
   }
 
   & pre {
-    word-wrap: normal;
-    padding: 16px;
     overflow: auto;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: var(--color-canvas);
+
     transition:
       color var(--default-delay),
       background-color var(--default-delay),
       border var(--default-delay);
+
     border-radius: 3px;
+    padding: 16px;
+
+    background-color: var(--color-canvas);
+
+    font-size: 85%;
+    line-height: 1.45;
+    word-wrap: normal;
   }
 
   & code {
-    font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-    padding: 0;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    margin: 0;
-    font-size: 85%;
-    background-color: var(--color-canvas);
-    border-radius: 3px;
     transition:
       color var(--default-delay),
       background-color var(--default-delay),
       border var(--default-delay);
+
+    margin: 0;
+    border-radius: 3px;
+    padding: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+
+    background-color: var(--color-canvas);
+
+    font-size: 85%;
+    font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   }
 
   & pre code {
     display: inline;
+
+    overflow: initial;
+
+    margin: 0;
+    border: 0;
+    border-radius: 3px;
     max-width: initial;
     padding: 0;
-    margin: 0;
-    overflow: initial;
+
+    background-color: var(--color-canvas);
+
     font-size: 100%;
     line-height: inherit;
     word-wrap: normal;
     white-space: pre;
-    border: 0;
-    border-radius: 3px;
-    background-color: var(--color-canvas);
   }
 
   & code::before,
   & code::after {
     letter-spacing: -0.2em;
+
     content: '\00a0';
   }
 
@@ -197,10 +218,10 @@
   }
 
   & img {
+    box-shadow: 0 0 10px var(--color-fg);
+    border-radius: 4px;
     max-width: 100%;
     max-height: 100%;
-    border-radius: 4px;
-    box-shadow: 0 0 10px var(--color-fg);
   }
 
   & strong {

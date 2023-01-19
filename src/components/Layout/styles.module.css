@@ -1,9 +1,12 @@
 .wrapper {
-  overflow: hidden;
-  display: flex;
   flex-direction: column;
-  min-height: 100vh;
   justify-content: space-between;
+
+  display: flex;
+
+  overflow: hidden;
+
+  min-height: 100vh;
   padding: 0 2rem;
 
   @media only screen and (max-width: 768px) {
@@ -15,6 +18,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   padding: 2rem 4rem;
 
   @media only screen and (max-width: 768px) {
@@ -23,8 +27,8 @@
 
   /* Link styles */
   & a {
-    color: inherit;
     font-style: italic;
+    color: inherit;
   }
 
   & a:hover,
@@ -33,11 +37,12 @@
   }
 
   & a:active {
-    color: var(--accent-color);
-    text-decoration: none;
     position: relative;
     top: 2px;
     left: 2px;
+
+    text-decoration: none;
+    color: var(--accent-color);
   }
 
   & section {

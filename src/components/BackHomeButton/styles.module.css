@@ -1,27 +1,33 @@
 .backhome_button {
-  font-size: 2rem;
-  font-style: normal !important;
-  cursor: pointer;
-  outline: none;
-  padding: 10px 25px;
-  display: inline-block;
   position: relative;
-  margin: 0 auto;
 
-  color: var(--color-bg) !important;
-  background-color: var(--color-fg) !important;
-  border: 2px solid var(--color-fg) !important;
+  display: inline-block;
+
   transition:
     color var(--default-delay) ease-in-out,
     background-color var(--default-delay) ease-in-out,
     border var(--default-delay) ease-in-out !important;
+
+  outline: none;
+  margin: 0 auto;
+  border: 2px solid var(--color-fg) !important;
+  padding: 10px 25px;
+
+  background-color: var(--color-fg) !important;
+  cursor: pointer;
+
+  font-size: 2rem;
+  font-style: normal !important;
   text-decoration: none;
+  color: var(--color-bg) !important;
 
   &:hover,
   &:focus {
-    color: var(--color-fg) !important;
-    background-color: var(--color-bg) !important;
     border: 2px solid var(--color-fg) !important;
+
+    background-color: var(--color-bg) !important;
+
+    color: var(--color-fg) !important;
   }
 
   @media only screen and (max-width: 768px) {

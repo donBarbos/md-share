@@ -1,14 +1,16 @@
 .content__text {
+  margin: 15px 0;
+
   font-size: 1.5rem;
   font-weight: 600;
-  margin: 15px 0;
 }
 
 .content__link {
-  line-height: 3rem;
-  margin: 1rem;
   outline-offset: 1rem;
+  margin: 1rem;
   border-bottom: none;
+
+  line-height: 3rem;
 
   &:active {
     top: 2px;

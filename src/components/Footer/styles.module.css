@@ -1,9 +1,11 @@
 .footer {
-  font-size: 1rem;
   transition: border var(--default-delay);
+
+  margin-top: auto;
   border-top: 1px solid var(--color-border);
   padding: 20px;
-  margin-top: auto;
+
+  font-size: 1rem;
 
   & a {
     color: inherit;

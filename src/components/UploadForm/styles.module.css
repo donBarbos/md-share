@@ -1,9 +1,10 @@
 .form {
   position: relative;
-  display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+
+  display: flex;
 }
 
 .form * {
@@ -15,52 +16,70 @@
 
 .form__label {
   position: relative;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  display: flex;
+
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border: 2px dashed var(--color-border);
+  border-radius: 12px;
   min-width: 5rem;
   width: 100%;
   max-width: 50rem;
   min-height: 10rem;
   height: 40vh;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  border-radius: 12px;
-  border: 2px dashed var(--color-border);
-  color: var(--color-fg);
+  max-height: 30rem;
+
   background-color: var(--color-canvas);
   cursor: pointer;
+
+  color: var(--color-fg);
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-fg);
+  }
 }
 
 .drop__title {
-  color: var(--color-fg);
+  margin-bottom: 20px;
+
+  cursor: pointer;
+
   font-size: 20px;
   font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 20px;
+  color: var(--color-fg);
 }
 
 .form__input {
-  font-size: 16px;
-  cursor: pointer;
+  transition: color var(--default-delay), background-color var(--default-delay);
+
   margin-top: 12px;
   width: 95%;
   max-width: 18rem;
-  transition: color var(--default-delay), background-color var(--default-delay);
+
+  cursor: pointer;
+
+  font-size: 16px;
 }
 
 .form__input::file-selector-button {
-  margin-right: 1rem;
-  border: 3px solid var(--color-canvas);
-  padding: 10px 20px;
-  border-radius: 10px;
-  color: var(--color-bg);
-  background-color: var(--color-fg);
   transition:
     color var(--default-delay),
     background-color var(--default-delay),
     border var(--default-delay);
+
+  margin-right: 1rem;
+  border: 3px solid var(--color-canvas);
+  border-radius: 10px;
+  padding: 10px 20px;
+
+  background-color: var(--color-fg);
+
+  color: var(--color-bg);
 
   &:hover,
   &:focus {

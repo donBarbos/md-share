@@ -2,29 +2,33 @@
   margin: auto;
   margin-top: 18px;
   margin-bottom: 5px;
-  text-align: left;
   width: 100%;
   max-width: 300px;
   padding-left: 12px;
 
+  text-align: left;
+
   @media only screen and (max-width: 300px) {
-    padding: 0;
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
+    padding: 0;
   }
 }
 
 .avatar {
-  border-radius: 30px;
   position: relative;
   top: 5px;
+
+  border-radius: 30px;
   object-fit: cover;
 }
 
 .list {
+  display: inline-block;
+
   margin: 20px;
   padding-left: 20px;
-  display: inline-block;
+
   text-align: left;
 
   & li {
@@ -32,8 +36,8 @@
   }
 
   @media only screen and (max-width: 300px) {
-    padding: 0;
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
+    padding: 0;
   }
 }

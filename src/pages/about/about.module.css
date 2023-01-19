@@ -1,16 +1,19 @@
 .description {
   margin: auto;
   margin-top: 18px;
-  text-align: left;
   max-width: 700px;
+
   font-size: 18px;
   font-weight: 600;
+  text-align: left;
 }
 
 .list {
+  display: inline-block;
+
   margin: 20px;
   padding-left: 20px;
-  display: inline-block;
+
   text-align: left;
 
   & ol {
@@ -19,20 +22,24 @@
 }
 
 .highlight {
-  font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  opacity: 0.7;
+
+  margin: 0;
+  border-radius: 3px;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
-  margin: 0;
-  font-size: 90%;
+
   background-color: var(--color-fg);
+
+  font-size: 90%;
+  font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   color: var(--color-bg);
-  opacity: 0.7;
-  border-radius: 3px;
 
   &::before,
   &::after {
     letter-spacing: -0.2em;
+
     content: '\00a0';
   }
 }

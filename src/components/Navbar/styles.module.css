@@ -1,19 +1,23 @@
 .navbar {
-  transition: border var(--default-delay);
-  border-bottom: 1px solid var(--color-border);
-  display: flex;
   justify-content: space-between;
   align-items: center;
+
+  display: flex;
+
+  transition: border var(--default-delay);
+
+  border-bottom: 1px solid var(--color-border);
   padding: 8px;
 }
 
 .navbar__logo {
-  color: inherit;
-  font-weight: 900;
-  font-size: 2.1rem;
-  text-decoration: none;
   cursor: default; /* supported by Chrome and Opera, Safari, Konqueror HTML, Firefox */
   user-select: none; /* Internet Explorer, Edge */
+
+  font-size: 2.1rem;
+  font-weight: 900;
+  text-decoration: none;
+  color: inherit;
 
   @media only screen and (max-width: 768px) {
     font-size: 1.8rem;
@@ -26,31 +30,38 @@
 
 .navbar__menu {
   z-index: 999;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 
+  display: flex;
+
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
   @media only screen and (max-width: 768px) {
     position: fixed;
-    left: -100%;
     top: 4rem;
+    left: -100%;
     flex-direction: column;
-    width: 100%;
-    text-align: center;
+
     transition:
       left 0.3s,
       color var(--default-delay),
       background-color var(--default-delay),
       border var(--default-delay);
+
     box-shadow: 0 10px 27px rgb(0 0 0 / 5%);
-    padding-bottom: 20px;
     border-bottom: 1px solid var(--color-border);
-    color: var(--color-fg);
+    width: 100%;
+    padding-bottom: 20px;
+
     background-color: var(--color-bg);
+
+    text-align: center;
+    color: var(--color-fg);
 
     &.active {
       left: 0;
@@ -60,6 +71,7 @@
 
 .navbar__item {
   list-style: none;
+
   float: right;
 
   @media only screen and (max-width: 768px) {
@@ -68,14 +80,16 @@
 }
 
 .navbar__link {
+  display: block;
+
+  outline-offset: -3px;
+  padding: 10px 25px;
+
   font-size: 1.2rem;
   font-weight: 700;
-  color: inherit;
-  display: block;
-  outline-offset: -3px;
   text-align: center;
-  padding: 10px 25px;
   text-decoration: none;
+  color: inherit;
 
   &:hover,
   &:focus,

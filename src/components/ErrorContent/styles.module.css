@@ -1,17 +1,20 @@
 .content__title {
+  margin: 15px 0;
+
   font-size: 2rem;
   font-weight: 700;
-  margin: 15px 0;
 }
 
 .content__subtitle {
+  margin: 10px 0;
+
   font-size: 1.4rem;
   font-weight: 500;
-  margin: 10px 0;
 }
 
 .content__description {
+  margin: 20px 0;
+
   font-size: 1rem;
   font-style: italic;
-  margin: 20px 0;
 }
