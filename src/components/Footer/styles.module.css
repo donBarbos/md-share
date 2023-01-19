@@ -2,9 +2,6 @@
   font-size: 1rem;
   transition: border var(--default-delay);
   border-top: 1px solid var(--color-border);
-  flex: 0 0 auto;
-  justify-content: center;
-  align-items: center;
   padding: 20px;
   margin-top: auto;
 
