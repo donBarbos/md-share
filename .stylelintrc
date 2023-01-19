@@ -12,7 +12,106 @@
     "a11y/no-outline-none": true,
     "a11y/selector-pseudo-class-focus": true,
     "order/order": ["custom-properties", "declarations"],
-    "order/properties-order": ["width", "height"],
+    "order/properties-order": [
+      {
+        "emptyLineBefore": "always",
+        "noEmptyLineBetween": true,
+        "properties": ["content"]
+      },
+      {
+        "emptyLineBefore": "always",
+        "noEmptyLineBetween": true,
+        "properties": [
+          "position",
+          "z-index",
+          "top",
+          "bottom",
+          "left",
+          "right",
+          "flex-direction",
+          "flex-wrap",
+          "flex-flow",
+          "justify-content",
+          "align-items",
+          "align-content",
+          "float",
+          "clear"
+        ]
+      },
+      {
+        "emptyLineBefore": "always",
+        "noEmptyLineBetween": true,
+        "properties": ["display", "opacity", "transform", "filter"]
+      },
+      {
+        "emptyLineBefore": "always",
+        "noEmptyLineBetween": true,
+        "properties": ["overflow", "clip"]
+      },
+      {
+        "emptyLineBefore": "always",
+        "noEmptyLineBetween": true,
+        "properties": ["animation", "transition"]
+      },
+      {
+        "emptyLineBefore": "always",
+        "noEmptyLineBetween": true,
+        "properties": [
+          "outline",
+          "outline-offset",
+          "outline-width",
+          "outline-color",
+          "outline-style",
+          "margin",
+          "margin-top",
+          "margin-bottom",
+          "margin-right",
+          "margin-left",
+          "box-shadow",
+          "border",
+          "border-top",
+          "border-bottom",
+          "border-right",
+          "border-left",
+          "border-right-color",
+          "border-radius",
+          "box-sizing",
+          "min-width",
+          "width",
+          "max-width",
+          "min-height",
+          "height",
+          "max-height",
+          "padding",
+          "padding-top",
+          "padding-bottom",
+          "padding-right",
+          "padding-left"
+        ]
+      },
+      {
+        "emptyLineBefore": "always",
+        "noEmptyLineBetween": true,
+        "properties": ["background", "background-color", "background-size", "cursor", "user-select", "pointer-events"]
+      },
+      {
+        "emptyLineBefore": "always",
+        "noEmptyLineBetween": true,
+        "properties": [
+          "font-size",
+          "line-height",
+          "font-family",
+          "font-weight",
+          "font-style",
+          "text-align",
+          "text-transform",
+          "text-decoration",
+          "text-rendering",
+          "word-spacing",
+          "color"
+        ]
+      }
+    ],
     "declaration-empty-line-before": [
       "always",
       {
