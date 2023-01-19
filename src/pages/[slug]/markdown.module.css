@@ -135,6 +135,11 @@
   }
 
   & table tr {
+    transition:
+      color var(--default-delay),
+      background-color var(--default-delay),
+      border var(--default-delay);
+
     border-top: 1px solid var(--color-border);
 
     background-color: var(--color-bg);
@@ -146,6 +151,11 @@
 
   & table th,
   & table td {
+    transition:
+      color var(--default-delay),
+      background-color var(--default-delay),
+      border var(--default-delay);
+
     border: 1px solid var(--color-border);
     padding: 6px 13px;
   }
