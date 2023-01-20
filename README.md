@@ -7,7 +7,7 @@
 </h1>
 
 <h3 align="center">
-  application for share Markdown files
+  Best way to share your files in markdown.
 </h3>
 
 <p align="center">
