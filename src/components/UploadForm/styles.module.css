@@ -80,9 +80,4 @@
   background-color: var(--color-fg);
 
   color: var(--color-bg);
-
-  &:hover,
-  &:focus {
-    border-color: var(--accent-color);
-  }
 }
