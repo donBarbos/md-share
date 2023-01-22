@@ -36,7 +36,7 @@ const CopyLink = ({ link, id = 'copylink' }: CopyLinkProps) => {
         }
         type="button"
         onClick={copyText}
-        title="copy to clipboard"
+        title="Copy to Clipboard"
       >
         {isCopied ? (
           <Check height={20} width={20} className={styles.clipboard_check_icon} />
