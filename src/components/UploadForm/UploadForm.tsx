@@ -1,6 +1,7 @@
 import type { IPostPageResponse, IErrorResponse } from '@types'
 import { useState, useRef } from 'react'
 import { GlowButton } from '@components/GlowButton'
+import { Spinner } from '@components/Spinner'
 import { ShareContent } from '@components/ShareContent'
 import { ErrorContent } from '@components/ErrorContent'
 import { Modal } from '@components/Modal'
@@ -10,6 +11,7 @@ const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:8000'
 const API_KEY = process.env.API_KEY || ''
 
 const UploadForm = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(false)
   const [isModalActive, setModalActive] = useState<boolean>(false)
   const [result, setResult] = useState<IPostPageResponse | IErrorResponse | null>(null)
   const fileInput = useRef<any>(null)
@@ -35,14 +37,16 @@ const UploadForm = () => {
       })
         .then((response) => response.json())
         .then((response) => {
+          setIsLoading(false)
           setResult(response)
+          setModalActive(true)
         })
         .catch((error) => {
           setResult({ success: false, message: error.message })
         })
     }
 
-    setModalActive(true)
+    setIsLoading(true)
   }
 
   return (
@@ -62,6 +66,7 @@ const UploadForm = () => {
         </label>
         <GlowButton text="SHARE" type="submit" title="Share selected file" formMethod="post" />
       </form>
+      {isLoading ? <Spinner /> : <></>}
       <Modal isActive={isModalActive} setActive={setModalActive}>
         {result ? (
           result.success ? (
@@ -69,7 +74,9 @@ const UploadForm = () => {
           ) : (
             <ErrorContent error={result.message} />
           )
-        ) : undefined}
+        ) : (
+          <></>
+        )}
       </Modal>
     </>
   )
