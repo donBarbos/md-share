@@ -199,12 +199,8 @@
   & pre code {
     display: inline;
 
-    overflow: initial;
-
-    margin: 0;
     border: 0;
     border-radius: 3px;
-    max-width: initial;
     padding: 0;
 
     background-color: var(--color-canvas);
