@@ -1,7 +1,13 @@
 {
   "extends": ["stylelint-config-standard", "stylelint-config-idiomatic-order"],
   "formatter": "stylelint-checkstyle-formatter",
-  "plugins": ["stylelint-a11y", "stylelint-order", "stylelint-color-format"],
+  "plugins": [
+    "stylelint-a11y",
+    "stylelint-order",
+    "stylelint-color-format",
+    "stylelint-declaration-block-no-ignored-properties",
+    "stylelint-no-indistinguishable-colors"
+  ],
   "rules": {
     "string-quotes": "single",
     "selector-class-pattern": null,
@@ -12,6 +18,8 @@
     "a11y/no-outline-none": true,
     "a11y/selector-pseudo-class-focus": true,
     "order/order": ["custom-properties", "declarations"],
+    "plugin/declaration-block-no-ignored-properties": true,
+    "plugin/stylelint-no-indistinguishable-colors": true,
     "order/properties-order": [
       {
         "emptyLineBefore": "always",
