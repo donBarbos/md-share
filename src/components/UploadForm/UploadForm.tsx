@@ -42,7 +42,9 @@ const UploadForm = () => {
           setModalActive(true)
         })
         .catch((error) => {
+          setIsLoading(false)
           setResult({ success: false, message: error.message })
+          setModalActive(true)
         })
     }
 
