@@ -49,7 +49,14 @@ const ShareContent = ({ slug }: ShareContentProps) => {
       </ul>
       <p className={styles.content__text}>Or copy link:</p>
       <CopyLink link={fullLink} />
-      <Link href={fullLink} target="_blank" className={styles.open_button} prefetch withData>
+      <Link
+        className={styles.open_button}
+        title="Open Link in New Tab"
+        href={fullLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        prefetch
+      >
         open →
       </Link>
     </>
