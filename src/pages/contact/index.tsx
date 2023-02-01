@@ -14,11 +14,25 @@ const Contact: NextPage = () => {
       <Layout>
         <h1>Contact</h1>
         <h2 className={styles.person}>
-          <Image src={cuteCat} alt="" width={30} height={30} className={styles.avatar} />
+          <Image
+            src={cuteCat}
+            alt=""
+            width={30}
+            height={30}
+            className={styles.avatar}
+            placeholder="blur"
+          />
           &ensp;my cat &ndash; mastermind
         </h2>
         <h2 className={styles.person}>
-          <Image src={profilePic} alt="" width={30} height={30} className={styles.avatar} />
+          <Image
+            src={profilePic}
+            alt=""
+            width={30}
+            height={30}
+            className={styles.avatar}
+            placeholder="blur"
+          />
           &ensp;donBaros &ndash; creator
         </h2>
         <ul className={styles.list}>
