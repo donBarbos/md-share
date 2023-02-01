@@ -8,10 +8,7 @@ module.exports = {
         flexbox: 'no-2009',
         grid: 'autoplace',
       },
-      stage: 3,
-      features: {
-        'custom-properties': false,
-      },
+      stage: 4,
     },
   },
 }

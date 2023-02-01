@@ -99,9 +99,10 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
+      ">0.1%",
       "not dead",
-      "last 3 versions"
+      "last 10 versions",
+      "since 2015"
     ],
     "development": [
       "last 1 chrome version",
