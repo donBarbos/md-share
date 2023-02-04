@@ -21,6 +21,7 @@ export interface IGetPageResponse {
 // type of success response after POST:/api/v1/pages/ request
 export interface IPostPageResponse {
   success: true
+  status: string
   slug: string
 }
 
