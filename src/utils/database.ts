@@ -17,6 +17,6 @@ if (MONGO_USER && MONGO_PASSWD) {
 
 db.set('strictQuery', false)
 
-db.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+db.connect(MONGO_URI)
 
 export default db
