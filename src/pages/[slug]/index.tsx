@@ -5,12 +5,11 @@ import { SEO } from '@components/SEO'
 import styles from './markdown.module.css'
 import md from 'markdown-it'
 
-const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:8000'
-const API_KEY = process.env.API_KEY || ''
+const APP_URL = process.env.APP_URL || 'http://localhost:3000'
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { slug } = context.query
-  const res = await fetch(`${API_BASE_URL}/api/v1/pages/${slug}`)
+  const res = await fetch(`${APP_URL}/api/v1/pages/${slug}`)
   const pageData: IGetPageResponse | IErrorResponse = await res.json()
 
   if (!res.ok || pageData.success === false) {

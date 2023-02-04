@@ -7,9 +7,6 @@ import { ErrorContent } from '@components/ErrorContent'
 import { Modal } from '@components/Modal'
 import styles from './styles.module.css'
 
-const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:8000'
-const API_KEY = process.env.API_KEY || ''
-
 const UploadForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [isModalActive, setModalActive] = useState<boolean>(false)
@@ -25,7 +22,7 @@ const UploadForm = () => {
     reader.readAsText(file)
 
     reader.onload = async () => {
-      await fetch(`${API_BASE_URL}/api/v1/pages/`, {
+      await fetch('/api/v1/pages/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
