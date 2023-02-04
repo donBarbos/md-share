@@ -1,5 +1,7 @@
+import mongoose from 'mongoose'
+
 // type for page
-export interface IPage {
+export interface IPage extends mongoose.Document {
   _id: string // a.k.a. `slug`
   title?: string
   author?: string

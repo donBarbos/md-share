@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
+import type { IPage } from '@types'
 import Page from '@models/pageModel'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -9,7 +10,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     try {
       const { slug } = req.query
-      const page = await Page.findById(slug).exec()
+      const page: IPage = await Page.findById(slug).exec()
 
       if (page) {
         res.status(200).json({ success: true, page: page })

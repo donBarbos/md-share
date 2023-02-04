@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
+import type { IPage } from '@types'
 import Page from '@models/pageModel'
 import generateUniqueSlug from '@utils/generateUniqueSlug'
 
@@ -10,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     try {
       // get all pages
-      const pages = await Page.find()
+      const pages: IPage[] = await Page.find()
 
       // check if pages is empty
       if (JSON.stringify(pages)[2]) {
@@ -32,7 +33,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const { created, slug } = await generateUniqueSlug(req, fileName)
 
       if (!created) {
-        const page = new Page({ _id: slug, title: fileName, text: text })
+        const page: IPage = new Page({ _id: slug, title: fileName, text: text })
         await page.save()
         res.status(201).json({ success: true, status: 'Created', slug: slug })
       } else {
