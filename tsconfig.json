@@ -28,6 +28,7 @@
     "forceConsistentCasingInFileNames": true,
 
     "strict": true,
+    "useUnknownInCatchVariables": false,
     "allowUnreachableCode": false,
 
     "skipLibCheck": true
