@@ -14,6 +14,7 @@
       "@utils/*": ["src/utils/*"],
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"],
+      "@models/*": ["src/models/*"],
       "@types": ["src/types"]
     },
 
@@ -31,6 +32,6 @@
 
     "skipLibCheck": true
   },
-  "include": ["*.ts", "*.js", "**/*.ts", "**/*.tsx"],
+  "include": ["*.ts", "*.js", "**/*.js", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "out"]
 }
