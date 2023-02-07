@@ -22,7 +22,6 @@ async function generateUniqueSlug(
   }
 
   const page = await Page.findById(shortHash).exec()
-  console.log(page)
 
   if (page) {
     return { created: true, slug: shortHash }
