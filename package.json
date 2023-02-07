@@ -53,6 +53,7 @@
     "next": "^13.1.1",
     "next-pwa": "^5.6.0",
     "next-themes": "^0.2.1",
+    "nprogress": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sharp": "^0.31.3"
@@ -61,6 +62,7 @@
     "@next/bundle-analyzer": "^13.1.1",
     "@types/markdown-it": "^12.2.3",
     "@types/node": "18.11.15",
+    "@types/nprogress": "^0.2.0",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
