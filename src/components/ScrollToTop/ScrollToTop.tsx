@@ -1,20 +1,16 @@
-import React, { useState, useLayoutEffect, useCallback } from 'react'
-import Link from 'next/link'
+import React, { useState, useLayoutEffect } from 'react'
 import styles from './styles.module.css'
 
 const ScrollToTop = () => {
   const [showButton, setShowButton] = useState(false)
-  const [scrollDirection, setScrollDirection] = useState(null)
 
   useLayoutEffect(() => {
     let lastScrollPos = 0
     const handleScrollEvent = () => {
       const currentScrollPos = window.pageYOffset
       if (currentScrollPos > lastScrollPos) {
-        setScrollDirection('down')
         setShowButton(false)
       } else if (currentScrollPos < lastScrollPos) {
-        setScrollDirection('up')
         if (currentScrollPos > 100) {
           setShowButton(true)
         }
@@ -27,7 +23,7 @@ const ScrollToTop = () => {
     }
     window.addEventListener('scroll', handleScrollEvent)
     return () => window.removeEventListener('scroll', handleScrollEvent)
-  }, [setShowButton, setScrollDirection])
+  }, [setShowButton])
 
   const handleClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -36,7 +32,6 @@ const ScrollToTop = () => {
   return (
     <button
       className={showButton ? `${styles.top_link} ${styles.active}` : `${styles.top_link}`}
-      variant="contained"
       onClick={handleClick}
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="black" role="presentation">
