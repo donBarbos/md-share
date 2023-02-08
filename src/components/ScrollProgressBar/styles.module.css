@@ -11,7 +11,7 @@
 
   width: 100%;
 
-  background: rgb(255 255 255 / 5%);
+  background: rgb(255 255 255 / 0%);
 }
 
 .progress_bar {
@@ -29,5 +29,5 @@
 
 .progress_bar__container,
 .progress_bar {
-  height: 8px;
+  height: 5px;
 }
