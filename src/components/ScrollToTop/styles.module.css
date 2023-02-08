@@ -1,0 +1,27 @@
+.top_link {
+  display: none;
+
+  &.active {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+
+    display: block;
+
+    transition: transform 0.3s ease-in-out, background-color var(--default-delay);
+
+    border: none;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    background-color: var(--color-fg);
+    cursor: pointer;
+
+    & svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      fill: var(--color-bg);
+    }
+  }
+}
