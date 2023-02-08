@@ -21,10 +21,7 @@ const ScrollProgressBar = () => {
 
   return (
     <div className={styles.progress_bar__container}>
-      <div
-        className={styles.progress_bar}
-        style={{ transform: `scale(${scroll}, 1)`, opacity: `${scroll}` }}
-      />
+      <div className={styles.progress_bar} style={{ transform: `scale(${scroll}, 1)` }} />
     </div>
   )
 }

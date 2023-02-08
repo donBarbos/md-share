@@ -15,7 +15,6 @@
 }
 
 .progress_bar {
-  opacity: 0;
   transform: scale(0, 0);
 
   transition:
@@ -29,5 +28,5 @@
 
 .progress_bar__container,
 .progress_bar {
-  height: 5px;
+  height: 4px;
 }
