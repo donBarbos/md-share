@@ -10,7 +10,7 @@
   max-width: 50rem;
   padding: 12px 0;
 
-  background-color: var(--color-bg);
+  background-color: var(--color-canvas);
   cursor: pointer;
 
   font-size: 1.25rem;
@@ -69,7 +69,7 @@
   width: 100%;
   height: 100%;
 
-  background-color: var(--color-bg);
+  background-color: var(--color-canvas);
 }
 
 /* stylelint-disable-next-line */
