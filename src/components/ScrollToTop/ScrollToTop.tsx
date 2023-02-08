@@ -8,11 +8,9 @@ const ScrollToTop = () => {
     let lastScrollPos = 0
     const handleScrollEvent = () => {
       const currentScrollPos = window.pageYOffset
-      if (currentScrollPos > lastScrollPos) {
-        setTimeout(() => {
-          setShowButton(false)
-        }, 500)
-      } else if (currentScrollPos < lastScrollPos) {
+      if (currentScrollPos > lastScrollPos + 5) {
+        setShowButton(false)
+      } else if (currentScrollPos < lastScrollPos - 5) {
         if (currentScrollPos > 100) {
           setShowButton(true)
         }
@@ -20,9 +18,7 @@ const ScrollToTop = () => {
       lastScrollPos = currentScrollPos
 
       if (currentScrollPos === 0) {
-        setTimeout(() => {
-          setShowButton(false)
-        }, 500)
+        setShowButton(false)
       }
     }
     window.addEventListener('scroll', handleScrollEvent)
