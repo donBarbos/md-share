@@ -9,7 +9,7 @@ const ScrollProgressBar = () => {
       const totalScroll = document.documentElement.scrollTop
       const windowHeight =
         document.documentElement.scrollHeight - document.documentElement.clientHeight
-      const scroll = `${totalScroll / windowHeight}`
+      const scroll = +`${totalScroll / windowHeight}`
 
       setScroll(scroll)
     }
