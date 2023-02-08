@@ -1,0 +1,33 @@
+.progress_bar__container {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+
+  transition:
+    color var(--default-delay),
+    background-color var(--default-delay),
+    border var(--default-delay);
+
+  width: 100%;
+
+  background: rgb(255 255 255 / 5%);
+}
+
+.progress_bar {
+  opacity: 0;
+  transform: scale(0, 0);
+
+  transition:
+    color var(--default-delay),
+    background-color var(--default-delay),
+    border var(--default-delay);
+
+  background: var(--color-fg);
+  transform-origin: top left;
+}
+
+.progress_bar__container,
+.progress_bar {
+  height: 8px;
+}
