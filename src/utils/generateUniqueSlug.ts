@@ -16,9 +16,9 @@ async function generateUniqueSlug(
 
   let shortHash
   if (pageName) {
-    shortHash = pageName.toLowerCase() + '-' + Buffer.from(hash).toString('hex').slice(0, 4)
+    shortHash = pageName.toLowerCase() + '-' + Buffer.from(hash).toString().slice(0, 6)
   } else {
-    shortHash = Buffer.from(hash).toString('hex').slice(0, 6)
+    shortHash = Buffer.from(hash).toString().slice(0, 8)
   }
 
   const page = await Page.findById(shortHash).exec()
