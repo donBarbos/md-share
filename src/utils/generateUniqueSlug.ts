@@ -12,7 +12,7 @@ async function generateUniqueSlug(
   created: boolean // true - is already exists, false - not yet
   slug: string
 }> {
-  const hash = crypto.createHash('sha512').update(JSON.stringify(req.query)).digest('hex')
+  const hash = crypto.createHash('sha512').update(JSON.stringify(req.body)).digest('hex')
 
   let shortHash
   if (pageName) {
