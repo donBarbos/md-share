@@ -19,6 +19,7 @@
 }
 
 .content__icon {
+  transition: fill (--default-delay);
   fill: var(--color-fg);
 
   &:hover,

@@ -19,6 +19,8 @@
     cursor: pointer;
 
     & svg {
+      transition: fill var(--default-delay);
+
       width: 2.5rem;
       height: 2.5rem;
       fill: var(--color-bg);
