@@ -33,6 +33,7 @@ const ScrollToTop = () => {
     <button
       className={showButton ? `${styles.top_link} ${styles.active}` : `${styles.top_link}`}
       onClick={handleClick}
+      title="Scroll to top"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="black" role="presentation">
         <path
