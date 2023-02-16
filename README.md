@@ -20,20 +20,29 @@
 
 ## ℹ️ Description
 
-Imagine the situation, you have written a useful Markdown note and you decide to share it. Now you just upload a file and get a link to a page with your note that you can share
+Imagine the situation, you have written a useful Markdown note and you decide to share it. Now you just upload a file and get a link to a page with your note that you can share.
 
 ## 🚀 Getting Started
 
-- install dependens
+- Install dependens:
 
   ```bash
   yarn install
   ```
 
-- or you can run your site that reflects your source code changes
+- Build your application:
+
   ```bash
-  yarn dev
+  yarn build
   ```
+
+- Start the Node.js server:
+
+  ```bash
+  yarn start
+  ```
+
+- And you can check the site on `localhost:3000`
 
 ## 🤝 Contributing
 
