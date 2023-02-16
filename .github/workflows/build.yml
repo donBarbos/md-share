@@ -25,6 +25,6 @@ jobs:
         run: |
           yarn install --frozen-lockfile
 
-      - name: Compile
+      - name: Generate build
         run: |
           yarn build

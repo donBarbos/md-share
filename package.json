@@ -37,7 +37,7 @@
     "*.{scss,css}": [
       "yarn lint:css:fix"
     ],
-    "*.{json,md}": [
+    "*.{json,md,yml,yaml}": [
       "prettier --config ./.prettierrc --write"
     ]
   },
