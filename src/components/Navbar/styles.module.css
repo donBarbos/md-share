@@ -11,8 +11,8 @@
 }
 
 .navbar__logo {
-  cursor: default; /* supported by Chrome and Opera, Safari, Konqueror HTML, Firefox */
-  user-select: none; /* Internet Explorer, Edge */
+  cursor: pointer;
+  user-select: none;
 
   font-size: 2.1rem;
   font-weight: 900;
