@@ -8,9 +8,9 @@ const ScrollToTop = () => {
     let lastScrollPos = 0
     const handleScrollEvent = () => {
       const currentScrollPos = window.pageYOffset
-      if (currentScrollPos > lastScrollPos + 5) {
+      if (currentScrollPos > lastScrollPos + 10) {
         setShowButton(false)
-      } else if (currentScrollPos < lastScrollPos - 5) {
+      } else if (currentScrollPos < lastScrollPos - 10) {
         if (currentScrollPos > 100) {
           setShowButton(true)
         }
