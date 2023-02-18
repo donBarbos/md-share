@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import type { IPage } from '@types'
+import type { IPage } from '@interfaces'
 import Page from '@models/pageModel'
 import { generateUniqueSlug } from '@utils/generateUniqueSlug'
 

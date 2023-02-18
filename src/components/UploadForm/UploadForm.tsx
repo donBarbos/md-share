@@ -1,4 +1,4 @@
-import type { IPostPageResponse, IErrorResponse } from '@types'
+import type { IPostPageResponse, IErrorResponse } from '@interfaces'
 import { useState, useRef } from 'react'
 import { GlowButton } from '@components/GlowButton'
 import { Spinner } from '@components/Spinner'

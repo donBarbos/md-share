@@ -1,4 +1,4 @@
-import type { IPage, IGetPageResponse, IErrorResponse } from '@types'
+import type { IPage, IGetPageResponse, IErrorResponse } from '@interfaces'
 import type { GetServerSideProps } from 'next'
 import { Layout } from '@components/Layout'
 import { SEO } from '@components/SEO'

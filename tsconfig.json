@@ -16,7 +16,7 @@
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"],
       "@models/*": ["src/models/*"],
-      "@types": ["src/types"]
+      "@interfaces": ["src/interfaces"]
     },
 
     "resolveJsonModule": true,
