@@ -4,6 +4,7 @@ import Page from '@models/pageModel'
 import { generateUniqueSlug } from '@utils/generateUniqueSlug'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  /**
   // Get All Pages
   // GET: /api/v1/pages
   if (req.method === 'GET') {
@@ -23,9 +24,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.status(500).json({ success: false, message: error.message })
     }
   }
+  */
+
   // Create Page
   // POST: /api/v1/pages
-  else if (req.method === 'POST') {
+  if (req.method === 'POST') {
     console.log(`${new Date().toUTCString()} | Call endpoint: ${req.method} ${req.url}`)
 
     try {
