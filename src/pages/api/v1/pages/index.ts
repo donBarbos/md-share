@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import type { IPage } from '@types'
 import Page from '@models/pageModel'
-import generateUniqueSlug from '@utils/generateUniqueSlug'
+import { generateUniqueSlug } from '@utils/generateUniqueSlug'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // Get All Pages

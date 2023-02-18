@@ -29,4 +29,4 @@ async function generateUniqueSlug(
   return { created: false, slug: shortHash }
 }
 
-export default generateUniqueSlug
+export { generateUniqueSlug }
