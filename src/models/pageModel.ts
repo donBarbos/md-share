@@ -1,4 +1,4 @@
-import db from '@lib/database'
+import db from '@lib/db'
 
 const pageSchema = new db.Schema({
   _id: { type: String, required: true, trim: true },
