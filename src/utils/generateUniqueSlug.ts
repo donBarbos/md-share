@@ -5,7 +5,7 @@ import crypto from 'crypto'
 /**
  * Generate unique path based on GET request arguments for page.
  */
-async function generateUniqueSlug(
+export async function generateUniqueSlug(
   req: NextApiRequest,
   pageName?: string,
 ): Promise<{
@@ -28,5 +28,3 @@ async function generateUniqueSlug(
   }
   return { created: false, slug: shortHash }
 }
-
-export { generateUniqueSlug }
