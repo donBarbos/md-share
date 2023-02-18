@@ -10,6 +10,7 @@
     "paths": {
       "@root/*": ["./*"],
       "@public/*": ["public/*"],
+      "@lib/*": ["src/lib/*"],
       "@components/*": ["src/components/*"],
       "@utils/*": ["src/utils/*"],
       "@pages/*": ["src/pages/*"],
