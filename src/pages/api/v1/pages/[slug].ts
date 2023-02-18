@@ -23,7 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   // HEAD: /api/v1/pages/{slug}
   else if (req.method === 'HEAD') {
-    res.status(200).json()
+    res.status(200).end()
   }
   // *: /api/v1/pages/{slug}
   else {
