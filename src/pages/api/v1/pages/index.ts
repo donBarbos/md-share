@@ -5,7 +5,7 @@ import { generateUniqueSlug } from '@utils/generateUniqueSlug'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // Get All Pages
-  // GET: /api/v1/pages/
+  // GET: /api/v1/pages
   if (req.method === 'GET') {
     console.log(`${new Date().toUTCString()} | Call endpoint: ${req.method} ${req.url}`)
 
@@ -24,7 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   }
   // Create Page
-  // POST: /api/v1/pages/
+  // POST: /api/v1/pages
   else if (req.method === 'POST') {
     console.log(`${new Date().toUTCString()} | Call endpoint: ${req.method} ${req.url}`)
 
@@ -42,7 +42,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch (error) {
       res.status(500).json({ success: false, message: error.message })
     }
-  } else {
+  }
+  // HEAD: /api/v1/pages
+  else if (req.method === 'HEAD') {
+    res.status(200).json()
+  }
+  // *: /api/v1/pages
+  else {
     res.status(405).json({ success: false, message: 'Method Not Allowed' })
   }
 }
