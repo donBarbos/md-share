@@ -1,4 +1,6 @@
+public/
 *.*
+
 !*.json
 !*.md
 !*.mdx
@@ -7,8 +9,7 @@
 !*.js
 !*.jsx
 !*.yml
-!*.css
-!*.scss
+!*.yaml
 !.eslintrc
 !.prettierrc
 !.stylelintrc

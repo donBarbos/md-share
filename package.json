@@ -23,7 +23,7 @@
     "lint:js:fix": "yarn lint:js --fix",
     "lint:css": "stylelint src/**/*.{scss,css}",
     "lint:css:fix": "yarn lint:css --fix",
-    "prettier": "prettier --write src/**/*.{js,jsx,ts,tsx,json} *.{js,ts,json,md} .eslintrc .prettierrc .stylelintrc",
+    "prettier": "prettier . --ignore-path .prettierignore --write",
     "prettier:check": "yarn prettier --check",
     "typecheck": "tsc --noEmit",
     "prepare": "husky install",
@@ -32,10 +32,10 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --config ./.prettierrc --write",
-      "yarn lint:js:fix"
+      "eslint --ignore-path .gitignore --ext ts --ext tsx --ext js --ext jsx --fix"
     ],
     "*.{scss,css}": [
-      "yarn lint:css:fix"
+      "stylelint --fix"
     ],
     "*.{json,md,yml,yaml}": [
       "prettier --config ./.prettierrc --write"
