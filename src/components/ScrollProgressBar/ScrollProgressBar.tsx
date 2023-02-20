@@ -9,7 +9,7 @@ const ScrollProgressBar = () => {
       const totalScroll = document.documentElement.scrollTop
       const windowHeight =
         document.documentElement.scrollHeight - document.documentElement.clientHeight
-      const scroll = +`${totalScroll / windowHeight}`
+      const scroll = +`${Math.min(totalScroll / windowHeight, 1.0)}`
 
       setScroll(scroll)
     }
@@ -20,7 +20,7 @@ const ScrollProgressBar = () => {
   })
 
   return (
-    <div className={styles.progress_bar__container}>
+    <div className={styles.progress_bar__container} data-testid="progress-bar-container">
       <div className={styles.progress_bar} style={{ transform: `scale(${scroll}, 1)` }} />
     </div>
   )
