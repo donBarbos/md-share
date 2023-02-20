@@ -12,7 +12,9 @@
 
 <p align="center">
   <a href="https://github.com/donBarbos/md-share/tags"><img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/v/tag/donBarbos/md-share"></a>
+  <a href="https://codecov.io/gh/donBarbos/md-share" ><img alt="Coverage Status" src="https://codecov.io/gh/donBarbos/md-share/branch/main/graph/badge.svg?token=0O5750DY6J"/></a>
   <a href="https://github.com/donBarbos/md-share/actions/workflows/build.yml"><img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/donBarbos/md-share/build.yml?label=build"></a>
+  <a href="https://github.com/donBarbos/md-share/actions/workflows/tests.yml"><img alt="Tests Status" src="https://img.shields.io/github/actions/workflow/status/donBarbos/md-share/tests.yml?label=tests"></a>
   <a href="https://github.com/donBarbos/md-share/actions/workflows/lint.yml"><img alt="Linter Status" src="https://img.shields.io/github/actions/workflow/status/donBarbos/md-share/lint.yml?label=lint"></a>
   <a href="http://commitizen.github.io/cz-cli/"><img alt="Commitizen friendly" src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg"></a>
   <a href="https://github.com/donBarbos/md-share/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-AGPL_v3-blue.svg" alt="License"></a>
@@ -42,7 +44,7 @@ Imagine the situation, you have written a useful Markdown note and you decide to
   yarn start
   ```
 
-- And you can check the site on `localhost:3000`
+- And you can check the site on [`localhost:3000`](http://localhost:3000)
 
 ## 🤝 Contributing
 
