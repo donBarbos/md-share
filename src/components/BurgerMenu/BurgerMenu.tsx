@@ -6,6 +6,7 @@ const BurgerMenu = ({ isActive, setActive }: BurgerMenuProps) => {
     <div
       className={isActive ? `${styles.hamburger} ${styles.active}` : styles.hamburger}
       onClick={() => setActive(!isActive)}
+      data-testid="burger-menu"
     >
       <span className={styles.bar} />
       <span className={styles.bar} />

@@ -16,7 +16,7 @@ const Navbar = () => {
   const [isActive, setActive] = useState<boolean>(false)
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar} data-testid="navbar">
       <a className={styles.navbar__logo} href="#">
         .mdShare
       </a>

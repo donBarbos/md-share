@@ -3,7 +3,7 @@ import { Navbar } from '@components/Navbar'
 
 const Header = () => {
   return (
-    <header>
+    <header data-testid="header">
       <ScrollProgressBar />
       <Navbar />
     </header>
