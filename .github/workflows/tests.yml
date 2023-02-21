@@ -27,7 +27,7 @@ jobs:
 
       - name: Run test
         run: |
-          yarn test
+          yarn test:ci
 
       - name: Collect coverage
         run: |
