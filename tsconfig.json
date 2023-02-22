@@ -34,6 +34,6 @@
 
     "skipLibCheck": true
   },
-  "include": ["*.ts", "*.js", "**/*.js", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "out"]
+  "include": ["*.ts", "*.js", "**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "out", "public", "coverage"]
 }
