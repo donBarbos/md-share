@@ -1,29 +1,35 @@
 .top_link {
-  display: none;
+  position: fixed;
+  bottom: 1.4rem;
+  right: 1.4rem;
+
+  display: flex;
+  opacity: 0;
+  transform: scale(0);
+
+  transition:
+    opacity 0.2s ease-out,
+    transform 0.2s ease-in-out,
+    fill var(--default-delay),
+    color var(--default-delay),
+    background-color var(--default-delay);
+
+  border: none;
+  border-radius: 50%;
+  width: 2.8rem;
+  height: 2.8rem;
+
+  background-color: var(--color-fg);
+  cursor: pointer;
+
+  & svg {
+    width: 2.8rem;
+    height: 2.8rem;
+    fill: var(--color-bg);
+  }
 
   &.active {
-    position: fixed;
-    bottom: 1.5rem;
-    right: 1.5rem;
-
-    display: block;
-
-    transition: transform 0.3s ease-in-out, background-color var(--default-delay);
-
-    border: none;
-    border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-
-    background-color: var(--color-fg);
-    cursor: pointer;
-
-    & svg {
-      transition: fill var(--default-delay);
-
-      width: 2.5rem;
-      height: 2.5rem;
-      fill: var(--color-bg);
-    }
+    opacity: 1;
+    transform: scale(1);
   }
 }
