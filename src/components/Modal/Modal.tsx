@@ -6,6 +6,8 @@ const Modal = ({ isActive, setActive, children }: ModalProps) => {
     <div
       className={isActive ? `${styles.modal} ${styles.active}` : styles.modal}
       onClick={() => setActive(false)}
+      role="dialog"
+      aria-modal="true"
     >
       <section
         className={isActive ? `${styles.modal__content} ${styles.active}` : styles.modal__content}

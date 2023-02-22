@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './styles.module.css'
 
 const ScrollProgressBar = () => {
@@ -20,7 +20,7 @@ const ScrollProgressBar = () => {
   })
 
   return (
-    <div className={styles.progress_bar__container} data-testid="progress-bar-container">
+    <div className={styles.progress_bar__container} role="scrollbar">
       <div className={styles.progress_bar} style={{ transform: `scale(${scroll}, 1)` }} />
     </div>
   )

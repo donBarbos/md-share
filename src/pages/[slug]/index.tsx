@@ -34,7 +34,7 @@ export default function PostPage({ page }: { page: IPage }) {
   // const description = page.text[]
 
   return (
-    <div>
+    <>
       <SEO title={title} author={author} />
       <Layout>
         <section
@@ -42,6 +42,6 @@ export default function PostPage({ page }: { page: IPage }) {
           dangerouslySetInnerHTML={{ __html: md().render(text) }}
         />
       </Layout>
-    </div>
+    </>
   )
 }

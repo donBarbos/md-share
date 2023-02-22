@@ -3,15 +3,15 @@ import styles from './styles.module.css'
 
 const BurgerMenu = ({ isActive, setActive }: BurgerMenuProps) => {
   return (
-    <div
+    <button
       className={isActive ? `${styles.hamburger} ${styles.active}` : styles.hamburger}
       onClick={() => setActive(!isActive)}
-      data-testid="burger-menu"
+      aria-label="Open or close the menu"
     >
       <span className={styles.bar} />
       <span className={styles.bar} />
       <span className={styles.bar} />
-    </div>
+    </button>
   )
 }
 

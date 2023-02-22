@@ -10,6 +10,11 @@
   .hamburger {
     display: block;
 
+    transition: background-color var(--default-delay);
+
+    border: none;
+
+    background-color: var(--color-bg);
     cursor: pointer;
   }
 

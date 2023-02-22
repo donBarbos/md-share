@@ -16,8 +16,8 @@ const Navbar = () => {
   const [isActive, setActive] = useState<boolean>(false)
 
   return (
-    <nav className={styles.navbar} data-testid="navbar">
-      <a className={styles.navbar__logo} href="#">
+    <nav className={styles.navbar} role="navigation">
+      <a className={styles.navbar__logo} href="#" role="banner">
         .mdShare
       </a>
       <ul className={isActive ? `${styles.navbar__menu} ${styles.active}` : styles.navbar__menu}>
