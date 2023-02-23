@@ -3,7 +3,7 @@ import type { GetServerSideProps } from 'next'
 import { Layout } from '@components/Layout'
 import { SEO } from '@components/SEO'
 import { Source_Code_Pro } from '@next/font/google'
-import styles from './markdown.module.css'
+import styles from '@styles/markdown.module.css'
 import md from 'markdown-it'
 
 const sourceCodePro = Source_Code_Pro({
