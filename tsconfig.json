@@ -15,7 +15,7 @@
       "@utils/*": ["src/utils/*"],
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"],
-      "@models/*": ["src/models/*"],
+      "@models/*": ["src/lib/db/models/*"],
       "@interfaces": ["src/interfaces"]
     },
 
