@@ -162,6 +162,7 @@
 
   & pre {
     overflow: auto;
+    scroll-behavior: smooth;
 
     transition:
       color var(--default-delay),
@@ -176,6 +177,23 @@
     font-size: 85%;
     line-height: 1.45;
     word-wrap: normal;
+  }
+
+  & pre::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  & pre::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+
+    background-color: gray;
+  }
+
+  & pre::-webkit-scrollbar-track {
+    border-radius: 3px;
+
+    background-color: var(--color-canvas);
   }
 
   & code {
