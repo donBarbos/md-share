@@ -18,7 +18,9 @@ const ServerErrorPage: NextPage = () => {
         description="Sorry, we had some technical problems during your last operation."
       />
       <Layout>
-        <h1 className={styles.status_code}>500 | Internal Server Error.</h1>
+        <h1 className={styles.status_code} role="alert">
+          500 | Internal Server Error.
+        </h1>
         <BackHomeButton />
       </Layout>
     </>

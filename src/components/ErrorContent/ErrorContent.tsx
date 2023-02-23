@@ -11,7 +11,9 @@ const ErrorContent = ({ error }: ErrorContentProps) => {
         Try to refresh this page of feel free <Link href="./contact">contact us</Link> if the
         problem persists.
       </h3>
-      <p className={styles.content__description}>message error: {error}</p>
+      <p className={styles.content__description} role="alert">
+        message error: {error}
+      </p>
     </>
   )
 }
