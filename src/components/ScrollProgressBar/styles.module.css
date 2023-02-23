@@ -1,20 +1,9 @@
-.progress_bar__container {
+.progress_bar {
   position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
 
-  transition:
-    color var(--default-delay),
-    background-color var(--default-delay),
-    border var(--default-delay);
-
-  width: 100%;
-
-  background: rgb(255 255 255 / 0%);
-}
-
-.progress_bar {
   transform: scale(0, 0);
 
   transition:
@@ -22,11 +11,9 @@
     background-color var(--default-delay),
     border var(--default-delay);
 
+  width: 100%;
+  height: 4px;
+
   background: var(--color-fg);
   transform-origin: top left;
-}
-
-.progress_bar__container,
-.progress_bar {
-  height: 4px;
 }
