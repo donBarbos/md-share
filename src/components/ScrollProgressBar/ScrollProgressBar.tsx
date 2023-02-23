@@ -20,7 +20,14 @@ const ScrollProgressBar = () => {
   })
 
   return (
-    <div className={styles.progress_bar__container} role="scrollbar">
+    <div
+      className={styles.progress_bar__container}
+      role="scrollbar"
+      aria-controls="progress-bar"
+      aria-valuenow={scroll * 100}
+      aria-valuemin={0}
+      aria-valuemax={100}
+    >
       <div className={styles.progress_bar} style={{ transform: `scale(${scroll}, 1)` }} />
     </div>
   )
