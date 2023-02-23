@@ -2,8 +2,15 @@ import type { IPage, IGetPageResponse, IErrorResponse } from '@interfaces'
 import type { GetServerSideProps } from 'next'
 import { Layout } from '@components/Layout'
 import { SEO } from '@components/SEO'
+import { Source_Code_Pro } from '@next/font/google'
 import styles from './markdown.module.css'
 import md from 'markdown-it'
+
+const sourceCodePro = Source_Code_Pro({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-code',
+})
 
 const APP_URL = process.env.APP_URL || 'http://localhost:3000'
 
@@ -38,7 +45,7 @@ export default function PostPage({ page }: { page: IPage }) {
       <SEO title={title} author={author} />
       <Layout>
         <section
-          className={styles.markdown__body}
+          className={`${styles.markdown__body} ${sourceCodePro.variable}`}
           dangerouslySetInnerHTML={{ __html: md().render(text) }}
         />
       </Layout>

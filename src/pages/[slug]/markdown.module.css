@@ -192,8 +192,8 @@
 
     background-color: var(--color-canvas);
 
-    font-size: 85%;
-    font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-size: 90%;
+    font-family: var(--font-code);
   }
 
   & pre code {
