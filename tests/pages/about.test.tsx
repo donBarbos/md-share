@@ -1,6 +1,6 @@
+import React from 'react'
 import { render, screen } from '@testing-library/react'
 import About from '@pages/about'
-import { useRouter } from 'next/router'
 
 jest.mock('next/head', () => {
   return {
@@ -12,16 +12,10 @@ jest.mock('next/head', () => {
 })
 
 jest.mock('next/router', () => ({
-  useRouter: jest.fn(),
+  useRouter: jest.fn(() => ({ pathname: '/about' })),
 }))
 
 describe('About', () => {
-  beforeEach(() => {
-    ;(useRouter as jest.Mock).mockReturnValue({
-      pathname: '/about',
-    })
-  })
-
   it('should render the correct title and description for SEO', () => {
     render(<About />, { container: document.head })
 

@@ -11,8 +11,8 @@ describe('Spinner component', () => {
   it('should render spinner with the correct CSS class', () => {
     render(<Spinner />)
     const spinner = screen.getByRole('div')
-    expect(spinner).toHaveClass(styles.background)
+    expect(spinner).toHaveClass('background')
     const loader = screen.getByRole('img')
-    expect(loader).toHaveClass(styles.loader)
+    expect(loader).toHaveClass('loader')
   })
 })

@@ -2,22 +2,28 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import { CopyLink } from '@components/CopyLink'
 
 describe('CopyLink component', () => {
+  const mockProps = {
+    link: 'https://example.com',
+  }
+
+  it('should render', () => {
+    render(CopyLink)
+  })
+
   it('should render an input field with the provided link', () => {
-    const testLink = 'https://example.com'
-    render(<CopyLink link={testLink} />)
+    render(<CopyLink {...mockProps} />)
     const input = screen.getByLabelText('copying field')
-    expect(input).toHaveValue(testLink)
+    expect(input).toHaveValue(/example.com/i)
     expect(input).toBeReadOnly()
   })
 
   it('should copy the text to clipboard when the copy button is clicked', () => {
-    const testLink = 'https://example.com'
-    render(<CopyLink link={testLink} />)
+    render(<CopyLink {...mockProps} />)
     const button = screen.getByTitle('Copy to Clipboard')
     const input = screen.getByLabelText('copying field')
     const mockSelect = jest.fn()
     const mockBlur = jest.fn()
-    input.select = mockSelect
+    input.onselect = mockSelect
     input.blur = mockBlur
     document.execCommand = jest.fn()
     fireEvent.click(button)

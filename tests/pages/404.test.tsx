@@ -1,7 +1,6 @@
+import React from 'react'
 import { render, screen } from '@testing-library/react'
 import NotFoundPage from '@pages/404'
-import { useRouter } from 'next/router'
-import { BackHomeButton } from '@components/BackHomeButton'
 
 jest.mock('next/head', () => {
   return {
@@ -13,7 +12,7 @@ jest.mock('next/head', () => {
 })
 
 jest.mock('next/router', () => ({
-  useRouter: jest.fn(),
+  useRouter: jest.fn(() => ({ pathname: '/404' })),
 }))
 
 jest.mock('@components/BackHomeButton', () => ({
@@ -21,12 +20,6 @@ jest.mock('@components/BackHomeButton', () => ({
 }))
 
 describe('NotFoundPage', () => {
-  beforeEach(() => {
-    ;(useRouter as jest.Mock).mockReturnValue({
-      pathname: '/404',
-    })
-  })
-
   it('should render the correct title and description for SEO', () => {
     render(<NotFoundPage />, { container: document.head })
 

@@ -1,6 +1,5 @@
 import { render } from '@testing-library/react'
 import { PostPage, getServerSideProps } from '@pages/[slug]'
-import md from 'markdown-it'
 
 jest.mock('node-fetch')
 const { Response } = jest.requireActual('node-fetch')

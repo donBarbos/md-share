@@ -1,6 +1,6 @@
+import React from 'react'
 import { render, screen } from '@testing-library/react'
 import Contact from '@pages/contact'
-import { useRouter } from 'next/router'
 
 jest.mock('next/head', () => {
   return {
@@ -12,16 +12,10 @@ jest.mock('next/head', () => {
 })
 
 jest.mock('next/router', () => ({
-  useRouter: jest.fn(),
+  useRouter: jest.fn(() => ({ pathname: '/contact' })),
 }))
 
 describe('Contact', () => {
-  beforeEach(() => {
-    ;(useRouter as jest.Mock).mockReturnValue({
-      pathname: '/contact',
-    })
-  })
-
   /**
   it('should render the navbar item with accent color', () => {
     render(<Contact />)

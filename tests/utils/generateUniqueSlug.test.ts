@@ -1,6 +1,6 @@
 import type { NextApiRequest } from 'next'
-import { connect, disconnect, clearDatabase } from '../lib/testDatabase'
-// import crypto from 'crypto'
+import Page from '../lib/models/pageModel'
+import { connect, disconnect, clearDatabase } from '../lib/testDb'
 
 import { generateUniqueSlug } from '@utils/generateUniqueSlug'
 
@@ -26,7 +26,6 @@ describe('generateUniqueSlug', () => {
   })
 
   it('should return a created=true result if the page already exists', async () => {
-    // const hash = crypto.createHash('sha512').update(JSON.stringify(req.body)).digest('hex')
     const page = { _id: 'abcdefg', title: 'Test Page' }
     jest.spyOn(Page, 'findById').mockResolvedValue(page)
 

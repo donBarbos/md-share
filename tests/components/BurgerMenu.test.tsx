@@ -19,7 +19,7 @@ describe('BurgerMenu component', () => {
   it('should calls setActive when clicked', () => {
     const setActive = jest.fn()
     const { container } = render(<BurgerMenu isActive={false} setActive={setActive} />)
-    const burgerMenu = container.firstChild
+    const burgerMenu = container?.firstChild as Element | Node | Document | Window
 
     fireEvent.click(burgerMenu)
 
