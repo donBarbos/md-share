@@ -4,6 +4,7 @@
   --color-border: rgb(208 215 222);
   --color-canvas: rgb(255 255 255);
   --accent-color: rgb(224 0 0);
+  --color-neutral-muted: rgba(175 184 193 20%);
   --default-delay: 0.5s;
 }
 
