@@ -3,8 +3,6 @@ import { CopyLink } from '@components/CopyLink'
 import Link from 'next/link'
 import styles from './styles.module.css'
 
-const APP_URL = process.env.APP_URL || 'https://md-share.vercel.app'
-
 import Facebook from '@public/svgs/facebook.svg'
 import Linkedin from '@public/svgs/linkedin.svg'
 import Twitter from '@public/svgs/twitter.svg'
@@ -12,6 +10,8 @@ import Instagram from '@public/svgs/instagram.svg'
 import Telegram from '@public/svgs/telegram.svg'
 import Whatsapp from '@public/svgs/whatsapp.svg'
 import Email from '@public/svgs/envelope-solid.svg'
+
+const APP_URL = process.env.APP_URL || 'https://md-share.vercel.app'
 
 const buttons = [
   { href: 'https://www.facebook.com/sharer/sharer.php?u=', title: 'Facebook', svg: Facebook },
@@ -27,7 +27,7 @@ const buttons = [
   { href: 'mailto:?body=', title: 'Email', svg: Email },
 ]
 
-const ShareContent = ({ slug }: ShareContentProps) => {
+export const ShareContent = ({ slug }: ShareContentProps) => {
   const fullLink = `${APP_URL}/${slug}`
 
   return (
@@ -62,5 +62,3 @@ const ShareContent = ({ slug }: ShareContentProps) => {
     </>
   )
 }
-
-export { ShareContent }

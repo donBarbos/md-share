@@ -5,7 +5,7 @@ import styles from './styles.module.css'
 import Check from '@public/svgs/check-solid.svg'
 import Copy from '@public/svgs/copy-regular.svg'
 
-const CopyLink = ({ link, id = 'copylink' }: CopyLinkProps) => {
+export const CopyLink = ({ link, id = 'copylink' }: CopyLinkProps) => {
   const linkRef: any = useRef(null)
   const [isCopied, setCopied] = useState<boolean>(false)
 
@@ -47,5 +47,3 @@ const CopyLink = ({ link, id = 'copylink' }: CopyLinkProps) => {
     </div>
   )
 }
-
-export { CopyLink }

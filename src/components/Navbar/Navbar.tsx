@@ -11,7 +11,7 @@ const pages = [
   { href: '/contact', label: 'Contact' },
 ]
 
-const Navbar = () => {
+export const Navbar = () => {
   const location: string = useRouter().pathname.toString()
   const [isActive, setActive] = useState<boolean>(false)
 
@@ -43,5 +43,3 @@ const Navbar = () => {
     </nav>
   )
 }
-
-export { Navbar }

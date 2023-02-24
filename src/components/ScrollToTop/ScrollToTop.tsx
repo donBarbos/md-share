@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import styles from './styles.module.css'
 
-const ScrollToTop = () => {
-  const [showButton, setShowButton] = useState(false)
+export const ScrollToTop = () => {
+  const [showButton, setShowButton] = useState<boolean>(false)
 
   useEffect(() => {
     let lastScrollPos = 0
@@ -45,5 +45,3 @@ const ScrollToTop = () => {
     </button>
   )
 }
-
-export { ScrollToTop }

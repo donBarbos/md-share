@@ -7,7 +7,7 @@ import { ErrorContent } from '@components/ErrorContent'
 import { Modal } from '@components/Modal'
 import styles from './styles.module.css'
 
-const UploadForm = () => {
+export const UploadForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [isModalActive, setModalActive] = useState<boolean>(false)
   const [result, setResult] = useState<IPostPageResponse | IErrorResponse | null>(null)
@@ -80,5 +80,3 @@ const UploadForm = () => {
     </>
   )
 }
-
-export { UploadForm }

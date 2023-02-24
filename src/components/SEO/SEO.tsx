@@ -4,7 +4,7 @@ import Head from 'next/head'
 const SITE_NAME = 'md share'
 const SITE_URL = process.env.APP_URL || 'https://md-share.vercel.app'
 
-const SEO = ({
+export const SEO = ({
   title = '',
   author = 'donBarbos',
   description = 'Best way to share your markdown files.',
@@ -44,5 +44,3 @@ const SEO = ({
     </Head>
   )
 }
-
-export { SEO }

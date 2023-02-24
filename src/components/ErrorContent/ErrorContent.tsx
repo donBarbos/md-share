@@ -2,7 +2,7 @@ import type { ErrorContentProps } from './types'
 import Link from 'next/link'
 import styles from './styles.module.css'
 
-const ErrorContent = ({ error }: ErrorContentProps) => {
+export const ErrorContent = ({ error }: ErrorContentProps) => {
   return (
     <>
       <h1 className={styles.content__title}>Ooops! Internal Server Error</h1>
@@ -17,5 +17,3 @@ const ErrorContent = ({ error }: ErrorContentProps) => {
     </>
   )
 }
-
-export { ErrorContent }

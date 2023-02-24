@@ -2,7 +2,7 @@ import type { ModalProps } from './types'
 import { useRef, useEffect } from 'react'
 import styles from './styles.module.css'
 
-const Modal = ({ isActive, setActive, children }: ModalProps) => {
+export const Modal = ({ isActive, setActive, children }: ModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -53,5 +53,3 @@ const Modal = ({ isActive, setActive, children }: ModalProps) => {
     </div>
   )
 }
-
-export { Modal }

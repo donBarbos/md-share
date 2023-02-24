@@ -4,7 +4,7 @@ import { Footer } from '@components/Footer'
 import { ScrollToTop } from '@components/ScrollToTop'
 import styles from './styles.module.css'
 
-const Layout = ({ children }: LayoutProps) => {
+export const Layout = ({ children }: LayoutProps) => {
   return (
     <div className={styles.wrapper}>
       <Header />
@@ -14,5 +14,3 @@ const Layout = ({ children }: LayoutProps) => {
     </div>
   )
 }
-
-export { Layout }

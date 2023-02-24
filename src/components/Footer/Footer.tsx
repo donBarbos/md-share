@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styles from './styles.module.css'
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className={styles.footer} role="contentinfo">
       © {new Date().getFullYear()}&nbsp;
@@ -9,5 +9,3 @@ const Footer = () => {
     </footer>
   )
 }
-
-export { Footer }

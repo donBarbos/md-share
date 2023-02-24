@@ -1,7 +1,7 @@
 import { useTheme } from 'next-themes'
 import styles from './styles.module.css'
 
-const ThemeToggle = () => {
+export const ThemeToggle = () => {
   const { theme, setTheme } = useTheme()
 
   const icon = (
@@ -52,5 +52,3 @@ const ThemeToggle = () => {
     </button>
   )
 }
-
-export { ThemeToggle }

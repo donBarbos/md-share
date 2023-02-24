@@ -1,7 +1,7 @@
 import { ScrollProgressBar } from '@components/ScrollProgressBar'
 import { Navbar } from '@components/Navbar'
 
-const Header = () => {
+export const Header = () => {
   return (
     <header>
       <ScrollProgressBar />
@@ -9,5 +9,3 @@ const Header = () => {
     </header>
   )
 }
-
-export { Header }

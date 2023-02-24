@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import styles from './styles.module.css'
 
-const ScrollProgressBar = () => {
-  const [scroll, setScroll] = useState(0)
+export const ScrollProgressBar = () => {
+  const [scroll, setScroll] = useState<number>(0)
 
   useEffect(() => {
     const progressBarHandler = () => {
@@ -31,5 +31,3 @@ const ScrollProgressBar = () => {
     ></div>
   )
 }
-
-export { ScrollProgressBar }

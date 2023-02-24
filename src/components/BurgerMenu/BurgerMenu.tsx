@@ -1,7 +1,7 @@
 import type { BurgerMenuProps } from './types'
 import styles from './styles.module.css'
 
-const BurgerMenu = ({ isActive, setActive }: BurgerMenuProps) => {
+export const BurgerMenu = ({ isActive, setActive }: BurgerMenuProps) => {
   return (
     <button
       className={isActive ? `${styles.hamburger} ${styles.active}` : styles.hamburger}
@@ -14,5 +14,3 @@ const BurgerMenu = ({ isActive, setActive }: BurgerMenuProps) => {
     </button>
   )
 }
-
-export { BurgerMenu }

@@ -5,7 +5,7 @@ import { Lato } from '@next/font/google'
 
 const lato = Lato({ weight: ['700'], subsets: ['latin'] })
 
-const BackHomeButton = ({
+export const BackHomeButton = ({
   text = 'go back home',
   title = 'Back to Homepage',
   href = './',
@@ -16,5 +16,3 @@ const BackHomeButton = ({
     </Link>
   )
 }
-
-export { BackHomeButton }
