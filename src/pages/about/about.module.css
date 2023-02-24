@@ -19,10 +19,17 @@
   & ol {
     margin-bottom: 5px;
   }
+
+  & li {
+    padding: 5px;
+  }
 }
 
 .highlight {
-  opacity: 0.7;
+  transition:
+    color var(--default-delay),
+    background-color var(--default-delay),
+    border var(--default-delay);
 
   margin: 0;
   border-radius: 3px;
@@ -30,11 +37,10 @@
   padding-top: 0.2em;
   padding-bottom: 0.2em;
 
-  background-color: var(--color-fg);
+  background-color: var(--color-neutral-muted);
 
   font-size: 90%;
   font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  color: var(--color-bg);
 
   &::before,
   &::after {

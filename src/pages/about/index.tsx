@@ -15,17 +15,15 @@ const About: NextPage = () => {
           share it. Now you just upload a file and get a link to a page with your note that you can
           share.
         </p>
-        <ul className={styles.list}>
-          <ol>
-            <b>1.</b> Go to <Link href="./">Homepage</Link>
-          </ol>
-          <ol>
-            <b>2.</b> Upload your <code className={styles.highlight}>note.md</code>
-          </ol>
-          <ol>
-            <b>3.</b> Share a link to the generated page
-          </ol>
-        </ul>
+        <ol className={styles.list}>
+          <li>
+            Go to <Link href="./">Homepage</Link>
+          </li>
+          <li>
+            Upload your <code className={styles.highlight}>note.md</code>
+          </li>
+          <li>Share a link to the generated page</li>
+        </ol>
       </Layout>
     </>
   )

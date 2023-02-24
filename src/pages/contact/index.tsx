@@ -43,7 +43,7 @@ const Contact: NextPage = () => {
             site: <Link href="https://dontkillkenny.com">dontkillkenny.com</Link>
           </li>
           <li>
-            github: <Link href="https://github.com/donBarbos">@donBarbos</Link>
+            github: <Link href="https://github.com/donBarbos">@donbarbos</Link>
           </li>
           <li>
             telegram: <Link href="https://t.me/donbarbos">@donbarbos</Link>
