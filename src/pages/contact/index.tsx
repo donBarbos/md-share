@@ -1,11 +1,14 @@
-import type { NextPage } from 'next'
-import Link from 'next/link'
 import Image from 'next/image'
-import styles from './contact.module.css'
+import Link from 'next/link'
+
 import profilePic from '@public/avatar.jpg'
 import cuteCat from '@public/cat.jpg'
 import { SEO } from '@components/SEO'
 import { Layout } from '@components/Layout'
+
+import styles from './contact.module.css'
+
+import type { NextPage } from 'next'
 
 const Contact: NextPage = () => {
   return (

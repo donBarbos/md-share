@@ -1,5 +1,6 @@
-import type { SEOProps } from './types'
 import Head from 'next/head'
+
+import type { SEOProps } from './types'
 
 const SITE_NAME = 'md share'
 const SITE_URL = process.env.APP_URL || 'https://md-share.vercel.app'

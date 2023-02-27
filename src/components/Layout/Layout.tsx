@@ -1,8 +1,10 @@
-import type { LayoutProps } from './types'
 import { Header } from '@components/Header'
 import { Footer } from '@components/Footer'
 import { ScrollToTop } from '@components/ScrollToTop'
+
 import styles from './styles.module.css'
+
+import type { LayoutProps } from './types'
 
 export const Layout = ({ children }: LayoutProps) => {
   return (

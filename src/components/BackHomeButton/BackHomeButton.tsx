@@ -1,7 +1,9 @@
-import type { BackHomeButtonProps } from './types'
-import Link from 'next/link'
-import styles from './styles.module.css'
 import { Lato } from '@next/font/google'
+import Link from 'next/link'
+
+import styles from './styles.module.css'
+
+import type { BackHomeButtonProps } from './types'
 
 const lato = Lato({ weight: ['700'], subsets: ['latin'] })
 

@@ -1,7 +1,8 @@
-import type { NextPage } from 'next'
 import { SEO } from '@components/SEO'
 import { Layout } from '@components/Layout'
 import { UploadForm } from '@components/UploadForm'
+
+import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
   return (

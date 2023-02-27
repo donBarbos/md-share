@@ -1,8 +1,11 @@
 import { useState } from 'react'
+
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+
 import { ThemeToggle } from '@components/ThemeToggle'
 import { BurgerMenu } from '@components/BurgerMenu'
+
 import styles from './styles.module.css'
 
 const pages = [

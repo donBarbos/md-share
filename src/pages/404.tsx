@@ -1,8 +1,9 @@
-import type { NextPage } from 'next'
 import styles from '@styles/error.module.css'
 import { SEO } from '@components/SEO'
 import { Layout } from '@components/Layout'
 import { BackHomeButton } from '@components/BackHomeButton'
+
+import type { NextPage } from 'next'
 
 const NotFoundPage: NextPage = () => {
   return (

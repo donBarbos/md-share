@@ -1,6 +1,8 @@
-import type { NextApiRequest } from 'next'
-import Page from '@models/pageModel'
 import crypto from 'crypto'
+
+import Page from '@models/pageModel'
+
+import type { NextApiRequest } from 'next'
 
 /**
  * Generate unique path based on GET request arguments for page.

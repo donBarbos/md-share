@@ -1,6 +1,8 @@
-import type { ErrorContentProps } from './types'
 import Link from 'next/link'
+
 import styles from './styles.module.css'
+
+import type { ErrorContentProps } from './types'
 
 export const ErrorContent = ({ error }: ErrorContentProps) => {
   return (

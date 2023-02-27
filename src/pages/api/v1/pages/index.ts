@@ -1,7 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import type { IPage } from '@interfaces'
 import Page from '@models/pageModel'
 import { generateUniqueSlug } from '@utils/generateUniqueSlug'
+
+import type { NextApiRequest, NextApiResponse } from 'next'
+import type { IPage } from '@interfaces'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   /**

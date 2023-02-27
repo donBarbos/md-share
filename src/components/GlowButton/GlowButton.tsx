@@ -1,5 +1,6 @@
-import type { GlowButtonProps } from './types'
 import styles from './styles.module.css'
+
+import type { GlowButtonProps } from './types'
 
 export const GlowButton = ({ text, type, title, formMethod }: GlowButtonProps) => {
   return (

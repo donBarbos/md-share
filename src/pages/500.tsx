@@ -1,8 +1,9 @@
-import type { NextPage, GetStaticProps } from 'next'
 import styles from '@styles/error.module.css'
 import { SEO } from '@components/SEO'
 import { Layout } from '@components/Layout'
 import { BackHomeButton } from '@components/BackHomeButton'
+
+import type { GetStaticProps, NextPage } from 'next'
 
 export const getStaticProps: GetStaticProps = async () => {
   return {

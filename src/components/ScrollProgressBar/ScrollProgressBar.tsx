@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+
 import styles from './styles.module.css'
 
 export const ScrollProgressBar = () => {

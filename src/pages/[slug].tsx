@@ -1,10 +1,12 @@
-import type { IPage, IGetPageResponse, IErrorResponse } from '@interfaces'
-import type { GetServerSideProps } from 'next'
+import { Source_Code_Pro } from '@next/font/google'
+import md from 'markdown-it'
+
 import { Layout } from '@components/Layout'
 import { SEO } from '@components/SEO'
-import { Source_Code_Pro } from '@next/font/google'
 import styles from '@styles/markdown.module.css'
-import md from 'markdown-it'
+
+import type { GetServerSideProps } from 'next'
+import type { IErrorResponse, IGetPageResponse, IPage } from '@interfaces'
 
 const sourceCodePro = Source_Code_Pro({
   weight: '400',
@@ -37,12 +39,11 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 export default function PostPage({ page }: { page: IPage }) {
   const text = page.text
   const title = page.title || 'note'
-  const author = page.author || 'anon'
   // const description = page.text[]
 
   return (
     <>
-      <SEO title={title} author={author} />
+      <SEO title={title} />
       <Layout>
         <section
           className={`${styles.markdown__body} ${sourceCodePro.variable}`}

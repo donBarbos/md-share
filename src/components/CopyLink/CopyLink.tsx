@@ -1,9 +1,11 @@
-import type { CopyLinkProps } from './types'
-import { useState, useRef } from 'react'
-import styles from './styles.module.css'
+import { useRef, useState } from 'react'
 
 import Check from '@public/svgs/check-solid.svg'
 import Copy from '@public/svgs/copy-regular.svg'
+
+import styles from './styles.module.css'
+
+import type { CopyLinkProps } from './types'
 
 export const CopyLink = ({ link, id = 'copylink' }: CopyLinkProps) => {
   const linkRef: any = useRef(null)

@@ -1,11 +1,14 @@
-import type { IPostPageResponse, IErrorResponse } from '@interfaces'
-import { useState, useRef } from 'react'
+import { useRef, useState } from 'react'
+
 import { GlowButton } from '@components/GlowButton'
 import { Spinner } from '@components/Spinner'
 import { ShareContent } from '@components/ShareContent'
 import { ErrorContent } from '@components/ErrorContent'
 import { Modal } from '@components/Modal'
+
 import styles from './styles.module.css'
+
+import type { IErrorResponse, IPostPageResponse } from '@interfaces'
 
 export const UploadForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false)

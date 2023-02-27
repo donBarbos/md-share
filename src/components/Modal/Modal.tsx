@@ -1,6 +1,8 @@
-import type { ModalProps } from './types'
-import { useRef, useEffect } from 'react'
+import { useEffect, useRef } from 'react'
+
 import styles from './styles.module.css'
+
+import type { ModalProps } from './types'
 
 export const Modal = ({ isActive, setActive, children }: ModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null)

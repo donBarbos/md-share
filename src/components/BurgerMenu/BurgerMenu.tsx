@@ -1,5 +1,6 @@
-import type { BurgerMenuProps } from './types'
 import styles from './styles.module.css'
+
+import type { BurgerMenuProps } from './types'
 
 export const BurgerMenu = ({ isActive, setActive }: BurgerMenuProps) => {
   return (

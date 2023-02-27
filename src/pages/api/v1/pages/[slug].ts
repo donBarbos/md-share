@@ -1,6 +1,7 @@
+import Page from '@models/pageModel'
+
 import type { NextApiRequest, NextApiResponse } from 'next'
 import type { IPage } from '@interfaces'
-import Page from '@models/pageModel'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // Get Page By Id (slug)
