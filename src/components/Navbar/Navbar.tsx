@@ -17,7 +17,7 @@ export const Navbar = () => {
 
   return (
     <nav className={styles.navbar} role="navigation">
-      <a className={styles.navbar__logo} href="#" role="banner">
+      <a className={styles.navbar__logo} href="#">
         .mdShare
       </a>
       <ul className={isActive ? `${styles.navbar__menu} ${styles.active}` : styles.navbar__menu}>
