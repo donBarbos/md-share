@@ -20,8 +20,8 @@ const Contact: NextPage = () => {
           <Image
             src={cuteCat}
             alt=""
-            width={30}
-            height={30}
+            width={40}
+            height={40}
             className={styles.avatar}
             placeholder="blur"
           />
@@ -31,8 +31,8 @@ const Contact: NextPage = () => {
           <Image
             src={profilePic}
             alt=""
-            width={30}
-            height={30}
+            width={40}
+            height={40}
             className={styles.avatar}
             placeholder="blur"
           />
