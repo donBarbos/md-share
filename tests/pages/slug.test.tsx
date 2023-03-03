@@ -36,10 +36,10 @@ describe('[slug] page', () => {
 
     const expectedTitle = `${mockPage.title} | md share`
     expect(document.title).toBe(expectedTitle)
-    expect(document.querySelector('meta[name="twitter:title"]')!.getAttribute('content')).toBe(
+    expect(document.querySelector('meta[name="twitter:title"]')?.getAttribute('content')).toBe(
       expectedTitle,
     )
-    expect(document.querySelector('meta[property="og:title"]')!.getAttribute('content')).toBe(
+    expect(document.querySelector('meta[property="og:title"]')?.getAttribute('content')).toBe(
       expectedTitle,
     )
   })

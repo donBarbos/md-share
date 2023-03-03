@@ -37,29 +37,29 @@ describe('SEO component', () => {
     render(<SEO {...mockProps} />, { container: document.head })
 
     const expectedTitle = `${mockProps.title} | md share`
-    expect(document.querySelector('meta[name="description"]')!.getAttribute('content')).toBe(
+    expect(document.querySelector('meta[name="description"]')?.getAttribute('content')).toBe(
       'Test Description',
     )
-    expect(document.querySelector('meta[name="twitter:title"]')!.getAttribute('content')).toBe(
+    expect(document.querySelector('meta[name="twitter:title"]')?.getAttribute('content')).toBe(
       expectedTitle,
     )
     expect(
-      document.querySelector('meta[name="twitter:description"]')!.getAttribute('content'),
+      document.querySelector('meta[name="twitter:description"]')?.getAttribute('content'),
     ).toBe('Test Description')
-    expect(document.querySelector('meta[name="twitter:card"]')!.getAttribute('content')).toBe(
+    expect(document.querySelector('meta[name="twitter:card"]')?.getAttribute('content')).toBe(
       'summary_large_image',
     )
-    expect(document.querySelector('meta[property="og:title"]')!.getAttribute('content')).toBe(
+    expect(document.querySelector('meta[property="og:title"]')?.getAttribute('content')).toBe(
       expectedTitle,
     )
-    expect(document.querySelector('meta[property="og:description"]')!.getAttribute('content')).toBe(
+    expect(document.querySelector('meta[property="og:description"]')?.getAttribute('content')).toBe(
       'Test Description',
     )
-    expect(document.querySelector('meta[property="og:locale"]')!.getAttribute('content')).toBe('en')
-    expect(document.querySelector('meta[property="og:type"]')!.getAttribute('content')).toBe(
+    expect(document.querySelector('meta[property="og:locale"]')?.getAttribute('content')).toBe('en')
+    expect(document.querySelector('meta[property="og:type"]')?.getAttribute('content')).toBe(
       'website',
     )
-    expect(document.querySelector('meta[property="og:site_name"]')!.getAttribute('content')).toBe(
+    expect(document.querySelector('meta[property="og:site_name"]')?.getAttribute('content')).toBe(
       expectedTitle,
     )
   })
