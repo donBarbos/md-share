@@ -19,7 +19,7 @@ jest.mock('next/router', () => ({
 
 describe('About', () => {
   it('should render the correct title and description for SEO', () => {
-    render(<About />, { container: document.head })
+    render(<About />)
 
     expect(document.title).toEqual('about | md share')
   })
@@ -35,15 +35,15 @@ describe('About', () => {
   })
 
   it('should render a list of instructions', () => {
-    render(<About />)
+    const { getAllByRole } = render(<About />)
 
-    const instructions = screen.getAllByRole('list')
+    const heading = getAllByRole('heading')[0]
+    const instructions = getAllByRole('list')[1]
 
-    expect(instructions).toHaveLength(5)
-
-    expect(instructions[2]).toHaveTextContent('1. Go to Homepage')
-    expect(instructions[2].querySelector('a')).toHaveAttribute('href', './')
-    expect(instructions[3]).toHaveTextContent('2. Upload your note.md')
-    expect(instructions[4]).toHaveTextContent('3. Share a link to the generated page')
+    expect(heading).toHaveTextContent('About this site')
+    expect(instructions).toHaveTextContent('Go to Homepage')
+    expect(instructions.querySelector('a')).toHaveAttribute('href', './')
+    expect(instructions).toHaveTextContent('Upload your note.md')
+    expect(instructions).toHaveTextContent('Share a link to the generated page')
   })
 })

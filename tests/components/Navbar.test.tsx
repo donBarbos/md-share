@@ -16,7 +16,7 @@ describe('Navbar component', () => {
   it('should render the correct number of navigation links', () => {
     const { getAllByRole } = render(<Navbar />)
     const navLinks = getAllByRole('link')
-    expect(navLinks.length).toEqual(3)
+    expect(navLinks.length).toEqual(4)
   })
 
   it('should have the active class on the current page link', () => {
