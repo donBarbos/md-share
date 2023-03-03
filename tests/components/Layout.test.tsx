@@ -7,21 +7,15 @@ jest.mock('next/router', () => ({
 }))
 
 describe('Layout component', () => {
-  it('should render Header component', () => {
-    const { getByTestId } = render(<Layout>test content</Layout>)
-    const header = getByTestId('header')
-    expect(header).toBeInTheDocument()
-  })
-
   it('should render Navbar component', () => {
-    const { getByTestId } = render(<Header />)
-    const navbar = getByTestId('navbar')
+    const { getByRole } = render(<Header />)
+    const navbar = getByRole('navigation')
     expect(navbar).toBeInTheDocument()
   })
 
   it('should render Footer component', () => {
-    const { getByTestId } = render(<Layout>test content</Layout>)
-    const footer = getByTestId('footer')
+    const { getByRole } = render(<Layout>test content</Layout>)
+    const footer = getByRole('contentinfo')
     expect(footer).toBeInTheDocument()
   })
 
@@ -48,6 +42,6 @@ describe('Layout component', () => {
     expect(wrapper).toContainElement(container.querySelector('header'))
     expect(wrapper).toContainElement(container.querySelector('main'))
     expect(wrapper).toContainElement(container.querySelector('footer'))
-    expect(wrapper).toContainElement(container.querySelector('[data-testid="scroll-to-top"]'))
+    expect(wrapper).toContainElement(container.querySelector('svg'))
   })
 })

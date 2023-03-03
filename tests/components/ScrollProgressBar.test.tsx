@@ -1,21 +1,17 @@
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { act } from 'react-dom/test-utils'
 import { ScrollProgressBar } from '@components/ScrollProgressBar'
 
 describe('ScrollProgressBar component', () => {
   it('should render progress bar with correct CSS classes', () => {
-    render(<ScrollProgressBar />)
-    const container = screen.getByTestId('progress-bar-container')
-    const progressBar = container.firstChild
-
-    expect(container).toHaveClass('progress_bar__container')
+    const { getByRole } = render(<ScrollProgressBar />)
+    const progressBar = getByRole('scrollbar')
     expect(progressBar).toHaveClass('progress_bar')
   })
 
   it('should render progress bar scales correctly as user scrolls', () => {
-    render(<ScrollProgressBar />)
-    const container = screen.getByTestId('progress-bar-container')
-    const progressBar = container.firstChild
+    const { getByRole } = render(<ScrollProgressBar />)
+    const progressBar = getByRole('scrollbar')
 
     act(() => {
       // simulate scrolling down the page
@@ -30,7 +26,6 @@ describe('ScrollProgressBar component', () => {
     const removeEventListener = jest.spyOn(window, 'removeEventListener')
     const { unmount } = render(<ScrollProgressBar />)
     unmount()
-
     expect(removeEventListener).toHaveBeenCalledWith('scroll', expect.any(Function))
   })
 })

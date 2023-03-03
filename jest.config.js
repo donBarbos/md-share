@@ -12,7 +12,7 @@ const customJestConfig = {
   preset: 'ts-jest',
   testRegex: '(/tests/.*|\\.(test|spec))\\.(ts|tsx|js|jsx)$',
   testEnvironment: 'jest-environment-jsdom',
-  setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.js'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   globals: {
     'ts-jest': {
       diagnostics: false,
@@ -27,6 +27,7 @@ const customJestConfig = {
 
   moduleNameMapper: {
     // Handle module aliases (this will be automatically configured for you soon)
+    '\\.svg': 'svgr/webpack',
     '^@lib/(.*)$': '<rootDir>/src/lib/$1',
     '^@components/(.*)$': '<rootDir>/src/components/$1',
     '^@utils/(.*)$': '<rootDir>/src/utils/$1',

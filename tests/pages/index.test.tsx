@@ -17,7 +17,7 @@ jest.mock('next/router', () => ({
 
 describe('Home', () => {
   it('should render the correct title and description for SEO', () => {
-    render(<Home />, { container: document.head })
+    render(<Home />)
 
     expect(document.title).toEqual('md share')
   })

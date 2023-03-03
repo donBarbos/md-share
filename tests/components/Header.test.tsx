@@ -6,15 +6,15 @@ jest.mock('next/router', () => ({
 }))
 
 describe('Header component', () => {
-  it('should render ScrollProgressBar component', () => {
-    const { getByTestId } = render(<Header />)
-    const progressBar = getByTestId('progress-bar-container')
-    expect(progressBar).toBeInTheDocument()
+  it('should render Navbar component', () => {
+    const { getByRole } = render(<Header />)
+    const navbar = getByRole('navigation')
+    expect(navbar).toBeInTheDocument()
   })
 
-  it('should render Navbar component', () => {
-    const { getByTestId } = render(<Header />)
-    const navbar = getByTestId('navbar')
-    expect(navbar).toBeInTheDocument()
+  it('should render ScrollProgressBar component', () => {
+    const { getByRole } = render(<Header />)
+    const progressBar = getByRole('scrollbar')
+    expect(progressBar).toBeInTheDocument()
   })
 })

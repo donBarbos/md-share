@@ -23,7 +23,7 @@ describe('Contact', () => {
   */
 
   it('should render the correct title and description for SEO', () => {
-    render(<Contact />, { container: document.head })
+    render(<Contact />)
 
     expect(document.title).toEqual('contact | md share')
   })

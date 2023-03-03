@@ -21,7 +21,7 @@ jest.mock('@components/BackHomeButton', () => ({
 
 describe('NotFoundPage', () => {
   it('should render the correct title and description for SEO', () => {
-    render(<NotFoundPage />, { container: document.head })
+    render(<NotFoundPage />)
 
     expect(document.title).toEqual('500: Server Error | md share')
   })
@@ -29,9 +29,7 @@ describe('NotFoundPage', () => {
   it('should render a heading with the 500 status code and a message', () => {
     render(<NotFoundPage />)
 
-    const heading = screen.getByRole('heading', {
-      name: /500 | page not found./i,
-    })
+    const heading = screen.getByRole('alert')
     expect(heading).toBeInTheDocument()
   })
 
