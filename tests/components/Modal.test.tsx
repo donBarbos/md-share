@@ -14,10 +14,26 @@ describe('Modal component', () => {
     const firstBtn = getByTestId('first-button')
     const secondBtn = getByTestId('second-button')
 
-    firstBtn.focus()
+    firstBtn.focus() // focus ><
     expect(firstBtn).toHaveFocus()
-    await user.keyboard('{Tab}')
+    await user.keyboard('{Tab}') // focus ->
     expect(secondBtn).toHaveFocus()
+    await user.keyboard('{Tab}') // focus ->
+    expect(firstBtn).toHaveFocus()
+    await user.keyboard('{Shift}{Tab}') // focus <-
+    expect(secondBtn).toHaveFocus()
+  })
+
+  it('should focus on button when pressing Tab without focusable elements', async () => {
+    const setActive = jest.fn()
+    render(
+      <Modal isActive={true} setActive={setActive}>
+        <p>Modal content</p>
+      </Modal>,
+    )
+
+    await user.keyboard('{Escape}')
+    expect(setActive).toHaveBeenCalled()
   })
 
   it('should render with class active when isActive is true', () => {
