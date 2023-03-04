@@ -11,6 +11,10 @@ jest.mock('next/head', () => {
   }
 })
 
+jest.mock('next/router', () => ({
+  useRouter: jest.fn(() => ({ pathname: '/test-s9g8df' })),
+}))
+
 describe('SEO component', () => {
   const mockProps = {
     title: 'Test Title',
@@ -18,7 +22,6 @@ describe('SEO component', () => {
     description: 'Test Description',
     image: '/test-image.png',
     lang: 'en',
-    pathname: '/test',
   }
 
   it('should render the correct page title', async () => {
@@ -37,6 +40,9 @@ describe('SEO component', () => {
     render(<SEO {...mockProps} />, { container: document.head })
 
     const expectedTitle = `${mockProps.title} | md share`
+    expect(document.querySelector('link[rel="canonical"]')?.getAttribute('href')).toMatch(
+      '/test-s9g8df',
+    )
     expect(document.querySelector('meta[name="description"]')?.getAttribute('content')).toBe(
       'Test Description',
     )
