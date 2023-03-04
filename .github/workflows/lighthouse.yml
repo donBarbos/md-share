@@ -1,0 +1,23 @@
+name: Lighthouse CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v9
+        with:
+          urls: |
+            https://md-share.vercel.app/
+            https://md-share.vercel.app/about
+            https://md-share.vercel.app/contact
+          uploadArtifacts: true
+          temporaryPublicStorage: true
