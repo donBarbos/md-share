@@ -8,7 +8,7 @@ import styles from './styles.module.css'
 import type { CopyLinkProps } from './types'
 
 export const CopyLink = ({ link, id = 'copylink' }: CopyLinkProps) => {
-  const linkRef: any = useRef(null)
+  const linkRef = useRef<any>(null)
   const [isCopied, setCopied] = useState<boolean>(false)
 
   const copyText = () => {
