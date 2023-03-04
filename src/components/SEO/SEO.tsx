@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 import type { SEOProps } from './types'
 
@@ -11,8 +12,9 @@ export const SEO = ({
   description = 'Best way to share your markdown files.',
   image = '/favicon.svg',
   lang = 'en',
-  pathname = '',
 }: SEOProps) => {
+  const location: string = useRouter().pathname.toString()
+
   const seo = {
     title: `${title ? title + ' | ' : ''}${SITE_NAME}`,
     author: author,
@@ -20,8 +22,7 @@ export const SEO = ({
     image: image,
     imageUrl: `${SITE_URL}${image}`,
     lang: lang,
-    url: `${SITE_URL}${pathname}`,
-    siteUrl: SITE_URL,
+    url: `${SITE_URL}${location}`,
   }
 
   return (
@@ -29,7 +30,7 @@ export const SEO = ({
       <title>{seo.title}</title>
       <meta name="robots" content="index,follow" />
       <meta name="description" content={seo.description} />
-      <link rel="canonical" href={seo.siteUrl} />
+      <link rel="canonical" href={seo.url} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:title" content={seo.title} />
