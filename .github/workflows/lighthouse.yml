@@ -12,12 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Audit URLs using Lighthouse
-        uses: treosh/lighthouse-ci-action@v9
+      - name: Lighthouse Check
+        uses: foo-software/lighthouse-check-action@v9.1.1
         with:
-          urls: |
-            https://md-share.vercel.app/
-            https://md-share.vercel.app/about
-            https://md-share.vercel.app/contact
-          uploadArtifacts: true
-          temporaryPublicStorage: true
+          urls: 'https://md-share.vercel.app,https://md-share.vercel.app/about,https://md-share.vercel.app/contact'
