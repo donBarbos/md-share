@@ -1,8 +1,8 @@
-import React from 'react'
+import { render } from '@testing-library/react'
 
-import { render, screen } from '@testing-library/react'
+import NotFoundPage, { getStaticProps } from '@pages/500'
 
-import NotFoundPage from '@pages/500'
+import type { GetServerSideProps } from 'next'
 
 jest.mock('next/head', () => {
   return {
@@ -22,22 +22,28 @@ jest.mock('@components/BackHomeButton', () => ({
 }))
 
 describe('NotFoundPage', () => {
-  it('should render the correct title and description for SEO', () => {
+  it('should return the correct object from getStaticProps', async () => {
+    const context = { params: { slug: 'readme-001abc' } } as GetServerSideProps
+    const res = await getStaticProps(context)
+    expect(res).toEqual({ props: {} })
+  })
+
+  it('should render the correct title and description for SEO', async () => {
     render(<NotFoundPage />)
 
     expect(document.title).toEqual('500: Server Error | md share')
   })
 
   it('should render a heading with the 500 status code and a message', () => {
-    render(<NotFoundPage />)
+    const { getByRole } = render(<NotFoundPage />)
 
-    const heading = screen.getByRole('alert')
+    const heading = getByRole('alert')
     expect(heading).toBeInTheDocument()
   })
 
   it('should render a BackHomeButton component', () => {
-    render(<NotFoundPage />)
-    const backHomeButton = screen.getByRole('button', { name: 'Back to Home' })
+    const { getByRole } = render(<NotFoundPage />)
+    const backHomeButton = getByRole('button', { name: 'Back to Home' })
     expect(backHomeButton).toBeInTheDocument()
   })
 })

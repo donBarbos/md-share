@@ -1,8 +1,25 @@
-import { render, fireEvent } from '@testing-library/react'
+import { render, fireEvent, userEvent } from '@testing-library/react'
+import user from '@testing-library/user-event'
 
 import { Modal } from '@components/Modal'
 
 describe('Modal component', () => {
+  it('should focus on button when pressing Tab', async () => {
+    const { getByTestId } = render(
+      <Modal isActive={true} setActive={jest.fn()}>
+        <button data-testid="first-button">first button</button>
+        <button data-testid="second-button">second button</button>
+      </Modal>,
+    )
+    const firstBtn = getByTestId('first-button')
+    const secondBtn = getByTestId('second-button')
+
+    firstBtn.focus()
+    expect(firstBtn).toHaveFocus()
+    await user.keyboard('{Tab}')
+    expect(secondBtn).toHaveFocus()
+  })
+
   it('should render with class active when isActive is true', () => {
     const { container } = render(
       <Modal isActive={true} setActive={jest.fn()}>
