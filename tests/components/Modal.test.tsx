@@ -1,4 +1,4 @@
-import { render, fireEvent, userEvent } from '@testing-library/react'
+import { render, fireEvent } from '@testing-library/react'
 import user from '@testing-library/user-event'
 
 import { Modal } from '@components/Modal'

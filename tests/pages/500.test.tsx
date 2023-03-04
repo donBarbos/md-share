@@ -2,8 +2,6 @@ import { render } from '@testing-library/react'
 
 import NotFoundPage, { getStaticProps } from '@pages/500'
 
-import type { GetServerSideProps } from 'next'
-
 jest.mock('next/head', () => {
   return {
     __esModule: true,
@@ -23,8 +21,8 @@ jest.mock('@components/BackHomeButton', () => ({
 
 describe('NotFoundPage', () => {
   it('should return the correct object from getStaticProps', async () => {
-    const context = { params: { slug: 'readme-001abc' } } as GetServerSideProps
-    const res = await getStaticProps(context)
+    const context: any = { params: { slug: 'readme-001abc' } }
+    const res: any = await getStaticProps(context)
     expect(res).toEqual({ props: {} })
   })
 
