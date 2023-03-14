@@ -1,7 +1,7 @@
 {
   "name": "md-share",
   "version": "1.0.0",
-  "description": "application for share Markdown files",
+  "description": "Application to share Markdown files",
   "author": "donBarbos <donbarbos@proton.me>",
   "license": "AGPL-3.0",
   "repository": {
@@ -90,8 +90,8 @@
     "lint-staged": "^13.0.3",
     "mongodb-memory-server": "^8.11.4",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-nesting": "^10.2.0",
-    "postcss-preset-env": "^7.8.3",
+    "postcss-nesting": "^11.2.1",
+    "postcss-preset-env": "^8.0.1",
     "postcss-svgo": "^5.1.0",
     "prettier": "^2.7.1",
     "semantic-release": "^19.0.5",
