@@ -46,6 +46,28 @@ Imagine the situation, you have written a useful Markdown note and you decide to
 
 - And you can check the site on [`localhost:3000`](http://localhost:3000)
 
+## ⚙️ Settings
+
+|     variable     | description                                                                                                                            |
+| :--------------: | -------------------------------------------------------------------------------------------------------------------------------------- |
+|    `APP_URL`     | URL of your application such as your domain `https://example.com` or `http://localhost:3000` (needed for SEO and generate links)       |
+|   `MONGO_HOST`   | host is the server where your mongodb server is running                                                                                |
+|   `MONGO_PORT`   | port that mongodb server is listening on                                                                                               |
+|   `MONGO_USER`   | user is an account that is used to authenticate and access the database                                                                |
+|  `MONGO_PASSWD`  | password is used to authenticate the user who is accessing the database                                                                |
+| `MONGO_DATABASE` | name of the mongodb database that your application will connect to                                                                     |
+|   `MONGO_URI`    | you can specify the connection string for a mongodb database instead of the previous variables (has higher priority, empty by default) |
+
+## 🔧 Tech Stack
+
+- `TypeScript` — syntactic superset of JavaScript which adds static typing.
+- `React` — library for building user interfaces based on components.
+- `Next.js` — framework that allows you to create React applications that you can render on the server.
+- `Testing Library` — very light-weight solution for testing without all the implementation details.
+- `MongoDB` — NoSQL database that stores data in JSON-like documents.
+- `PostCSS` — tool for transforming CSS with JavaScript-based plugins.
+- `markdown-it` — markdown parser to generate HTML.
+
 ## 🤝 Contributing
 
 See [`CONTRIBUTING.md`](./CONTRIBUTING.md)
