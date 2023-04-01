@@ -4,6 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import type { IPage } from '@interfaces'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader('Cache-Control', 'public, max-age=31536000, must-revalidate')
   // Get Page By Id (slug)
   // GET: /api/v1/pages/{slug}
   if (req.method === 'GET') {

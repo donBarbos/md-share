@@ -39,6 +39,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (!created) {
         const page: IPage = new Page({ _id: slug, title: fileName, text: text })
         await page.save()
+        res.setHeader('Cache-Control', 'public, max-age=31536000, must-revalidate')
         res.status(201).json({ success: true, status: 'Created', slug: slug })
       } else {
         res.status(200).json({ success: true, status: 'Already exists', slug: slug })
@@ -49,10 +50,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   // HEAD: /api/v1/pages
   else if (req.method === 'HEAD') {
+    res.setHeader('Cache-Control', 'public, max-age=31536000, must-revalidate')
     res.status(200).end()
   }
   // *: /api/v1/pages
   else {
+    res.setHeader('Cache-Control', 'public, max-age=31536000, must-revalidate')
     res.status(405).json({ success: false, message: 'Method Not Allowed' })
   }
 }

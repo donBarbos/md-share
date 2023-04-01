@@ -17,6 +17,7 @@ const sourceCodePro = Source_Code_Pro({
 const APP_URL = process.env.APP_URL || 'http://localhost:3000'
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
+  context.res.setHeader('Cache-Control', 'public, max-age=31536000, must-revalidate')
   const { slug } = context.query
   const res = await fetch(`${APP_URL}/api/v1/pages/${slug}`)
   const pageData: IGetPageResponse | IErrorResponse = await res.json()
