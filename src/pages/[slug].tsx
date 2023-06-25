@@ -1,4 +1,4 @@
-import { Source_Code_Pro } from '@next/font/google'
+import { Source_Code_Pro } from 'next/font/google'
 import md from 'markdown-it'
 
 import { ScrollProgressBar } from '@components/ScrollProgressBar'

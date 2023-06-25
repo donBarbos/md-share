@@ -1,4 +1,4 @@
-import { Lato } from '@next/font/google'
+import { Lato } from 'next/font/google'
 import Link from 'next/link'
 
 import styles from './styles.module.css'
