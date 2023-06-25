@@ -1,6 +1,7 @@
 import { Source_Code_Pro } from '@next/font/google'
 import md from 'markdown-it'
 
+import { ScrollProgressBar } from '@components/ScrollProgressBar'
 import { Layout } from '@components/Layout'
 import { SEO } from '@components/SEO'
 import styles from '@styles/markdown.module.css'
@@ -46,6 +47,7 @@ export default function PostPage({ page }: { page: IPage }) {
     <>
       <SEO title={title} />
       <Layout>
+        <ScrollProgressBar />
         <section
           className={`${styles.markdown__body} ${sourceCodePro.variable}`}
           dangerouslySetInnerHTML={{ __html: md().render(text) }}
