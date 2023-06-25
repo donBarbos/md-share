@@ -37,7 +37,7 @@
     stroke-width: 2px;
   }
 
-  @nest [data-theme='dark'] & {
+  [data-theme='dark'] & {
     & > .sun {
       transform: scale(1.75);
     }
@@ -79,7 +79,7 @@
       }
     }
 
-    @nest [data-theme='dark'] & {
+    [data-theme='dark'] & {
       & > .sun {
         transform: scale(1.75);
         transition-timing-function: cubic-bezier(0.25, 0, 0.3, 1);
