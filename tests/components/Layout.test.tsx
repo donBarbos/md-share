@@ -15,30 +15,50 @@ describe('Layout component', () => {
   })
 
   it('should render Footer component', () => {
-    const { getByRole } = render(<Layout>test content</Layout>)
+    const { getByRole } = render(
+      <Layout>
+        <p>test content</p>
+      </Layout>,
+    )
     const footer = getByRole('contentinfo')
     expect(footer).toBeInTheDocument()
   })
 
   it('should render ScrollToTop component', () => {
-    const { getByTitle } = render(<Layout>test content</Layout>)
+    const { getByTitle } = render(
+      <Layout>
+        <p>test content</p>
+      </Layout>,
+    )
     const scrollToTop = getByTitle('Scroll to top')
     expect(scrollToTop).toBeInTheDocument()
   })
 
   it('should render children to main element', () => {
-    const { container } = render(<Layout>test content</Layout>)
+    const { container } = render(
+      <Layout>
+        <p>test content</p>
+      </Layout>,
+    )
     expect(container.firstChild).toHaveTextContent('test content')
   })
 
   it('should render wrapper with the correct CSS class', () => {
-    const { container } = render(<Layout>test content</Layout>)
+    const { container } = render(
+      <Layout>
+        <p>test content</p>
+      </Layout>,
+    )
     const wrapper = container.querySelector('.wrapper')
     expect(wrapper).toBeInTheDocument()
   })
 
   it('contains the expected child components', () => {
-    const { container } = render(<Layout>test content</Layout>)
+    const { container } = render(
+      <Layout>
+        <p>test content</p>
+      </Layout>,
+    )
     const wrapper = container.querySelector('.wrapper')
     expect(wrapper).toContainElement(container.querySelector('header'))
     expect(wrapper).toContainElement(container.querySelector('main'))

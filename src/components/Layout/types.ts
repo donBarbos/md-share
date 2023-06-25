@@ -1,5 +1,3 @@
-import { ReactChild } from 'react'
-
 export type LayoutProps = {
-  children?: ReactChild | ReactChild[]
+  children?: JSX.Element | JSX.Element[]
 }
