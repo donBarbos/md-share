@@ -51,4 +51,10 @@ describe('[slug] page', () => {
     expect(style.fontSize).toEqual('1.5em')
     expect(style.fontWeight).toEqual('bold')
   })
+
+  it('should render ScrollProgressBar component', () => {
+    const { getByRole } = render(<PostPage page={mockPage} />)
+    const progressBar = getByRole('scrollbar')
+    expect(progressBar).toBeInTheDocument()
+  })
 })
