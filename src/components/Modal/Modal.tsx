@@ -15,17 +15,32 @@ export const Modal = ({ isActive, setActive, children }: ModalProps) => {
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.key === 'Tab') {
-      const focusableElements =
-        modalRef.current?.querySelectorAll<HTMLElement>(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
-        ) || []
+      const focusableElements = modalRef.current?.querySelectorAll<HTMLElement>(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+      )
+      if (focusableElements.length === 0) {
+        return
+      }
       const firstElement = focusableElements[0]
       const lastElement = focusableElements[focusableElements.length - 1]
+      let isActiveElementInFocusableElements = false
+      for (let i = 0; i < focusableElements.length; i++) {
+        if (focusableElements[i] === document.activeElement) {
+          isActiveElementInFocusableElements = true
+          break
+        }
+      }
 
-      if (event.shiftKey && document.activeElement === firstElement) {
+      if (
+        event.shiftKey &&
+        (document.activeElement === firstElement || !isActiveElementInFocusableElements)
+      ) {
         event.preventDefault()
         lastElement.focus()
-      } else if (!event.shiftKey && document.activeElement === lastElement) {
+      } else if (
+        !event.shiftKey &&
+        (document.activeElement === lastElement || !isActiveElementInFocusableElements)
+      ) {
         event.preventDefault()
         firstElement.focus()
       }

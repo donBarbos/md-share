@@ -5,26 +5,29 @@ import { Modal } from '@components/Modal'
 
 describe('Modal component', () => {
   it('should focus on button when pressing Tab', async () => {
-    const { getByTestId } = render(
+    const { getByTestId, getByRole } = render(
       <Modal isActive={true} setActive={jest.fn()}>
         <button data-testid="first-button">first button</button>
         <button data-testid="second-button">second button</button>
+        <button data-testid="third-button">third button</button>
       </Modal>,
     )
+    const modalWindow = getByRole('dialog')
     const firstBtn = getByTestId('first-button')
     const secondBtn = getByTestId('second-button')
+    const thirdBtn = getByTestId('third-button')
 
-    firstBtn.focus() // focus ><
+    fireEvent.keyDown(modalWindow, { key: 'Tab', shiftKey: true }) // focus <-
+    expect(thirdBtn).toHaveFocus()
+    await user.keyboard('{Tab}') // focus ->
     expect(firstBtn).toHaveFocus()
     await user.keyboard('{Tab}') // focus ->
     expect(secondBtn).toHaveFocus()
     await user.keyboard('{Tab}') // focus ->
-    expect(firstBtn).toHaveFocus()
-    await user.keyboard('{Shift}{Tab}') // focus <-
-    expect(secondBtn).toHaveFocus()
+    expect(thirdBtn).toHaveFocus()
   })
 
-  it('should focus on button when pressing Tab without focusable elements', async () => {
+  it('should close when pressing Escape without focusable elements', async () => {
     const setActive = jest.fn()
     render(
       <Modal isActive={true} setActive={setActive}>
@@ -32,6 +35,8 @@ describe('Modal component', () => {
       </Modal>,
     )
 
+    await user.keyboard('{Tab}')
+    await user.keyboard('{Tab}')
     await user.keyboard('{Escape}')
     expect(setActive).toHaveBeenCalled()
   })
