@@ -1,6 +1,6 @@
 {
   "name": "md-share",
-  "version": "1.0.0",
+  "version": "1.8.12",
   "description": "Application to share Markdown files",
   "author": "donBarbos <donbarbos@proton.me>",
   "license": "AGPL-3.0",
@@ -30,7 +30,9 @@
     "prettier:check": "yarn prettier --check",
     "typecheck": "tsc --noEmit",
     "prepare": "husky install",
-    "commit": "cz"
+    "commit": "cz",
+    "init-changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -48,7 +50,6 @@
     "lint-staged"
   ],
   "dependencies": {
-    "@next/font": "^13.1.1",
     "@svgr/webpack": "^6.5.1",
     "focus-visible": "^5.2.0",
     "markdown-it": "^13.0.1",
@@ -73,6 +74,7 @@
     "@types/testing-library__jest-dom": "^5.14.5",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "commitizen": "^4.2.5",
+    "conventional-changelog-cli": "^3.0.0",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "8.26.0",
@@ -89,6 +91,7 @@
     "jest-environment-jsdom": "^29.4.3",
     "lint-staged": "^13.0.3",
     "mongodb-memory-server": "^8.11.4",
+    "msw": "^1.2.2",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-nesting": "^11.2.1",
     "postcss-preset-env": "^8.0.1",
