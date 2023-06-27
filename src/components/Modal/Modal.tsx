@@ -15,9 +15,10 @@ export const Modal = ({ isActive, setActive, children }: ModalProps) => {
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.key === 'Tab') {
-      const focusableElements = modalRef.current?.querySelectorAll<HTMLElement>(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
-      )
+      const focusableElements =
+        modalRef.current?.querySelectorAll<HTMLElement>(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+        ) || []
       if (focusableElements.length === 0) {
         return
       }
