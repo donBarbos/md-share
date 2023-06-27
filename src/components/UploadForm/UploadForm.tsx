@@ -1,23 +1,28 @@
 import { useRef, useState } from 'react'
 
-import { GlowButton } from '@components/GlowButton'
 import { Spinner } from '@components/Spinner'
-import { ShareContent } from '@components/ShareContent'
-import { ErrorContent } from '@components/ErrorContent'
-import { Modal } from '@components/Modal'
 
+import { SubmitButton } from './SubmitButton'
+import { ResultModal } from './ResultModal'
 import styles from './styles.module.css'
 
-import type { IErrorResponse, IPostPageResponse } from '@interfaces'
+import type { IErrorResponse, IPostPageRequest, IPostPageResponse } from '@interfaces'
 
 export const UploadForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [isModalActive, setModalActive] = useState<boolean>(false)
+  const [hasFileChanged, setHasFileChanged] = useState<boolean>(false)
   const [result, setResult] = useState<IPostPageResponse | IErrorResponse | null>(null)
   const fileInput = useRef<any>(null)
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+
+    if (!hasFileChanged && result !== null) {
+      // Return the existing result if the file input has not been changed
+      setModalActive(true)
+      return
+    }
 
     const file = fileInput.current.files[0]
     const reader = new FileReader()
@@ -25,15 +30,17 @@ export const UploadForm = () => {
     reader.readAsText(file)
 
     reader.onload = async () => {
+      const requestBody: IPostPageRequest = {
+        text: reader.result as string,
+        fileName: fileInput.current.value.replace('C:\\fakepath\\', '').replace(/\.[^/.]+$/, ''),
+      }
+
       await fetch('/api/v1/pages/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          text: reader.result,
-          fileName: fileInput.current.value.replace('C:\\fakepath\\', '').replace(/\.[^/.]+$/, ''),
-        }),
+        body: JSON.stringify(requestBody),
       })
         .then((response) => response.json())
         .then((response) => {
@@ -51,6 +58,10 @@ export const UploadForm = () => {
     setIsLoading(true)
   }
 
+  const handleFileChange = () => {
+    setHasFileChanged(true)
+  }
+
   return (
     <>
       <form className={styles.form} onSubmit={handleSubmit}>
@@ -64,22 +75,13 @@ export const UploadForm = () => {
             accept=".md, .txt"
             required
             ref={fileInput}
+            onChange={handleFileChange}
           />
         </label>
-        <GlowButton text="SHARE" type="submit" title="Share selected file" formMethod="post" />
+        <SubmitButton isLoading={isModalActive} />
       </form>
       {isLoading ? <Spinner /> : <></>}
-      <Modal isActive={isModalActive} setActive={setModalActive}>
-        {result ? (
-          result.success ? (
-            <ShareContent slug={result.slug} />
-          ) : (
-            <ErrorContent error={result.message} />
-          )
-        ) : (
-          <></>
-        )}
-      </Modal>
+      <ResultModal isActive={isModalActive} setActive={setModalActive} result={result} />
     </>
   )
 }
