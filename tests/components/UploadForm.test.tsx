@@ -36,7 +36,7 @@ describe('UploadForm component', () => {
     expect(button).toBeInTheDocument()
   })
 
-  it('submits the form and shows the result modal', async () => {
+  it('should submit the form and shows the result modal', async () => {
     const { getByRole, getByText } = render(<UploadForm />)
     const file = new File(['Hello, World!'], 'test.txt', { type: 'text/plain' })
     const fileInput = screen.getByText('Drag & drop file here')

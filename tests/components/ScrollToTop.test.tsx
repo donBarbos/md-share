@@ -18,7 +18,7 @@ describe('ScrollToTop component', () => {
     const button = getByTitle('Scroll to top')
 
     // scroll down
-    await fireEvent.scroll(window, { target: { scrollY: 500 } })
+    fireEvent.scroll(window, { target: { scrollY: 500 } })
 
     expect(window.scrollY).toEqual(500)
     fireEvent.click(button)
