@@ -17,6 +17,10 @@ const sourceCodePro = Source_Code_Pro({
 
 const APP_URL = process.env.APP_URL || 'http://localhost:3000'
 
+export type PostPageProps = {
+  page: IPage
+}
+
 export const getServerSideProps: GetServerSideProps = async (context) => {
   context.res.setHeader('Cache-Control', 'public, max-age=31536000, must-revalidate')
   const { slug } = context.query
@@ -34,11 +38,11 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: {
       page,
-    },
+    } as PostPageProps,
   }
 }
 
-export default function PostPage({ page }: { page: IPage }) {
+export default function PostPage({ page }: PostPageProps) {
   const text = page.text
   const title = page.title || 'note'
   // const description = page.text[]
