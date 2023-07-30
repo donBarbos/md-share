@@ -98,7 +98,7 @@
     "postcss-svgo": "^5.1.0",
     "prettier": "^2.7.1",
     "semantic-release": "^19.0.5",
-    "stylelint": "^14.16.1",
+    "stylelint": "^15.10.1",
     "stylelint-a11y": "^1.2.3",
     "stylelint-checkstyle-formatter": "^0.1.2",
     "stylelint-color-format": "^1.1.0",
