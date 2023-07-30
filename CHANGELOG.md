@@ -1,3 +1,9 @@
+## [1.8.14](https://github.com/donBarbos/md-share/compare/v1.8.13...v1.8.14) (2023-07-30)
+
+### Bug Fixes
+
+- update matrix of node versions ([8e58a3b](https://github.com/donBarbos/md-share/commit/8e58a3bab972198ec644c0a76ec490c94842bd82))
+
 ## [1.8.13](https://github.com/donBarbos/md-share/compare/v1.8.12...v1.8.13) (2023-06-27)
 
 ### Bug Fixes
