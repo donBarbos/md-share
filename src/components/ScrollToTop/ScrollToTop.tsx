@@ -11,10 +11,8 @@ export const ScrollToTop = () => {
       const currentScrollPos = window.pageYOffset
       if (currentScrollPos > lastScrollPos + 10) {
         setShowButton(false)
-      } else if (currentScrollPos < lastScrollPos - 10) {
-        if (currentScrollPos > 100) {
-          setShowButton(true)
-        }
+      } else if (currentScrollPos < lastScrollPos - 10 && currentScrollPos > 100) {
+        setShowButton(true)
       }
       lastScrollPos = currentScrollPos
 
