@@ -1,7 +1,7 @@
 <!-- Original file: https://www.iconfinder.com/icons/4394350/logo_logos_markdown_icon -->
 <h1 align="center">
   <a href="https://md-share.vercel.app">
-    <img alt="Markdown" src="./public/favicon.png" width="140" height="140" /><br/>
+    <img alt="Markdown" src="./public/favicon.svg" width="140" /><br/>
   </a>
   .mdShare
 </h1>
