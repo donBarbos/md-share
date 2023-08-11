@@ -1,17 +1,26 @@
+.title {
+  margin: auto;
+  margin-top: 24px;
+  max-width: 700px;
+
+  font-weight: 600;
+  text-align: center;
+}
+
 .description {
   margin: auto;
-  margin-top: 18px;
+  margin-top: 14px;
   max-width: 700px;
 
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   text-align: left;
 }
 
 .list {
   display: inline-block;
 
-  margin: 20px;
+  margin: 10px;
   padding-left: 20px;
 
   text-align: left;

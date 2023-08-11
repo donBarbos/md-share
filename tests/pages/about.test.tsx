@@ -26,7 +26,7 @@ describe('About', () => {
     render(<About />)
 
     const heading = screen.getByRole('heading', { name: /About this site/i })
-    const description = screen.getByText(/Imagine the situation/i)
+    const description = screen.getByText(/Share and Collaborate Effortlessly with/i)
 
     expect(heading).toBeInTheDocument()
     expect(description).toBeInTheDocument()
