@@ -1,3 +1,5 @@
+## [1.8.15](https://github.com/donBarbos/md-share/compare/v1.8.14...v1.8.15) (2023-08-11)
+
 ## [1.8.14](https://github.com/donBarbos/md-share/compare/v1.8.13...v1.8.14) (2023-07-30)
 
 ### Bug Fixes
