@@ -30,6 +30,12 @@ The **.mdShare** Solution: Simplify Markdown File Sharing. Effortless Sharing: U
 
 ## 🚀 Getting Started
 
+### How to deploy locally:
+
+- make sure `mongodb` is running
+
+- set up variables in `.env` file, check table [Settings](#%EF%B8%8F-settings)
+
 - Install dependens:
 
   ```bash
@@ -49,6 +55,13 @@ The **.mdShare** Solution: Simplify Markdown File Sharing. Effortless Sharing: U
   ```
 
 - And you can check the site on [`localhost:3000`](http://localhost:3000)
+
+### Use the app (deploy to vercel and mongo atlas):
+
+You can choose to use the hosted version (also don't forget to set up environment variables)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FdonBarbos%2Fmd-share)\
+[![Deploy Mongo Cloud](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/atlas/database)
 
 ## ⚙️ Settings
 
