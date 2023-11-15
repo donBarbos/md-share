@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'next-themes'
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 
 import type { AppProps } from 'next/app'
 import '@styles/global.css'
@@ -16,6 +17,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         }
       `}</style>
       <Component {...pageProps} />
+      <Analytics />
     </ThemeProvider>
   )
 }
