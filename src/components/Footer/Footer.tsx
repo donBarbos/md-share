@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <footer className={styles.footer} role="contentinfo">
       © {new Date().getFullYear()}&nbsp;
-      <Link href="https://www.dontkillkenny.com">donBarbos</Link>
+      <Link href="https://donbarbos.me">donBarbos</Link>
     </footer>
   )
 }

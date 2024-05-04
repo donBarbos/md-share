@@ -42,7 +42,7 @@ describe('Contact', () => {
   it('should render the correct contact information', () => {
     render(<Contact />)
     const email = screen.getByText(/donbarbos@proton.me/i)
-    const site = screen.getByText(/donbarbos.vercel.app/i)
+    const site = screen.getByText(/donbarbos.me/i)
     const github = screen.getAllByText(/@donBarbos/i)[0]
     const telegram = screen.getAllByText(/@donBarbos/i)[1]
     const sourceCodeLink = screen.getByText(/this link/i)
